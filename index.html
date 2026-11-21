@@ -80,29 +80,9 @@
     }
     
     #bg-portal {
-      background-image: url('images/bg_cyberpunk.jpg');
+      background-image: url('images/bg_cyberpunk.webp');
       opacity: 1;
       transform: scale(1.0);
-    }
-    
-    #bg-expanse {
-      background-image: url('images/expanse_bg.jpg');
-    }
-
-    #bg-dlc {
-      background-image: url('images/dlc_bg.jpg');
-    }
-
-    #bg-codevein {
-      background-image: url('images/codevein_bg.jpg');
-    }
-
-    #bg-outerworlds {
-      background-image: url('images/outerworlds_bg.jpg');
-    }
-
-    #bg-evilwest {
-      background-image: url('images/evilwest_bg.jpg');
     }
 
     /* Cinematic Gamer Dark Vignette Overlay */
@@ -158,13 +138,13 @@
 </head>
 <body class="min-h-screen flex flex-col font-sans text-slate-100 selection:bg-brand-cyan selection:text-black">
 
-  <!-- DYNAMIC REAL GAME BACKGROUNDS -->
+  <!-- DYNAMIC REAL GAME BACKGROUNDS (On-Demand Lazy Loaded WebP) -->
   <div id="bg-portal" class="bg-layer"></div>
-  <div id="bg-expanse" class="bg-layer"></div>
-  <div id="bg-dlc" class="bg-layer"></div>
-  <div id="bg-codevein" class="bg-layer"></div>
-  <div id="bg-outerworlds" class="bg-layer"></div>
-  <div id="bg-evilwest" class="bg-layer"></div>
+  <div id="bg-expanse" class="bg-layer" data-bg="images/expanse_bg.webp"></div>
+  <div id="bg-dlc" class="bg-layer" data-bg="images/dlc_bg.webp"></div>
+  <div id="bg-codevein" class="bg-layer" data-bg="images/codevein_bg.webp"></div>
+  <div id="bg-outerworlds" class="bg-layer" data-bg="images/outerworlds_bg.webp"></div>
+  <div id="bg-evilwest" class="bg-layer" data-bg="images/evilwest_bg.webp"></div>
   <div class="bg-overlay"></div>
 
   <!-- NAVBAR -->
@@ -368,7 +348,7 @@
     <!-- SECTION 1: PROJELERİMİZ -->
     <section id="yamalar" class="py-16 border-t border-white/10 bg-dark-950/75">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-4">
           <div>
             <h2 class="text-xs font-bold text-brand-cyan uppercase tracking-widest font-mono">KATALOG</h2>
             <p class="mt-1 text-3xl sm:text-4xl font-display font-bold text-white uppercase">Tüm Çeviri Projelerimiz</p>
@@ -378,13 +358,26 @@
           </div>
         </div>
 
+        <!-- Catalog Filter & Instant Search Bar -->
+        <div class="mb-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+          <div class="inline-flex p-1 rounded-xl bg-dark-900/90 border border-white/10 backdrop-blur self-start">
+            <button type="button" onclick="setCatalogFilter('all')" id="filter-all" class="px-3.5 py-1.5 rounded-lg text-xs font-mono font-bold text-slate-950 bg-brand-cyan transition cursor-pointer">Tümü (4)</button>
+            <button type="button" onclick="setCatalogFilter('live')" id="filter-live" class="px-3.5 py-1.5 rounded-lg text-xs font-mono text-slate-300 hover:text-emerald-300 transition cursor-pointer">Yayında (3)</button>
+            <button type="button" onclick="setCatalogFilter('upcoming')" id="filter-upcoming" class="px-3.5 py-1.5 rounded-lg text-xs font-mono text-slate-300 hover:text-amber-300 transition cursor-pointer">Sırada (1)</button>
+          </div>
+          <div class="relative sm:w-72">
+            <svg class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            <input type="text" id="catalog-search" oninput="filterCatalog()" placeholder="Oyun, DLC veya stüdyo ara..." aria-label="Oyun veya stüdyo ara" class="w-full pl-10 pr-4 py-2 rounded-xl bg-dark-900/90 border border-white/10 focus:border-brand-cyan/60 focus:outline-none text-xs text-white placeholder-slate-400 font-mono transition">
+          </div>
+        </div>
+
         <!-- Projects Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div id="catalog-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
           
           <!-- PROJECT 1: THE OUTER WORLDS: SPACER'S CHOICE (YAYINDA) -->
-          <div class="glass-card rounded-2xl overflow-hidden flex flex-col group border-emerald-500/40 cursor-pointer" onmouseenter="switchBackground('outerworlds')" onclick="goToOuterWorlds()">
+          <div data-project-card data-status="live" data-search="the outer worlds spacer choice obsidian rpg bilimkurgu peril on gorgon murder on eridanos halcyon" class="glass-card rounded-2xl overflow-hidden flex flex-col group border-emerald-500/40 cursor-pointer" onmouseenter="switchBackground('outerworlds')" onclick="goToOuterWorlds()">
             <div class="relative h-56 overflow-hidden bg-slate-900">
-              <img loading="lazy" decoding="async" src="images/outerworlds_cover.jpg" alt="The Outer Worlds: Spacer's Choice Edition" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <img loading="lazy" decoding="async" src="images/outerworlds_cover.webp" alt="The Outer Worlds: Spacer's Choice Edition" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
               <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
               <div class="absolute top-3 right-3 px-3 py-1 rounded-md bg-emerald-400 text-slate-950 text-xs font-extrabold font-mono tracking-wider shadow-lg flex items-center gap-1.5">
                 <span class="w-2 h-2 rounded-full bg-slate-950 animate-pulse"></span>
@@ -424,9 +417,9 @@
           </div>
 
           <!-- PROJECT 2: THE EXPANSE -->
-          <div class="glass-card rounded-2xl overflow-hidden flex flex-col group border-cyan-500/40 cursor-pointer" onmouseenter="switchBackground('expanse')" onclick="goToExpanse()">
+          <div data-project-card data-status="live" data-search="the expanse telltale deck nine camina drummer chrisjen avasarala archangel dlc uzay hikaye" class="glass-card rounded-2xl overflow-hidden flex flex-col group border-cyan-500/40 cursor-pointer" onmouseenter="switchBackground('expanse')" onclick="goToExpanse()">
             <div class="relative h-52 overflow-hidden bg-slate-900">
-              <img loading="lazy" decoding="async" src="images/expanse_cover.jpg" alt="The Expanse: A Telltale Series" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <img loading="lazy" decoding="async" src="images/expanse_cover.webp" alt="The Expanse: A Telltale Series" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
               <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
               <div class="absolute top-3 right-3 px-3 py-1 rounded-md bg-emerald-500 text-slate-950 text-xs font-extrabold font-mono tracking-wider shadow-lg">
                 YAYINDA • v1.0
@@ -465,9 +458,9 @@
           </div>
 
           <!-- PROJECT 2: CODE VEIN (YAYINDA) -->
-          <div class="glass-card rounded-2xl overflow-hidden flex flex-col group border-purple-500/40 cursor-pointer" onmouseenter="switchBackground('codevein')" onclick="goToCodeVein()">
+          <div data-project-card data-status="live" data-search="code vein bandai namco anime souls rpg revenant dirilmişler vampir hellfire knight frozen empress lord of thunder" class="glass-card rounded-2xl overflow-hidden flex flex-col group border-purple-500/40 cursor-pointer" onmouseenter="switchBackground('codevein')" onclick="goToCodeVein()">
             <div class="relative h-52 overflow-hidden bg-slate-900">
-              <img loading="lazy" decoding="async" src="images/codevein_cover.jpg" alt="Code Vein" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <img loading="lazy" decoding="async" src="images/codevein_cover.webp" alt="Code Vein" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
               <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
               <div class="absolute top-3 right-3 px-3 py-1 rounded-md bg-emerald-500 text-slate-950 text-xs font-extrabold font-mono tracking-wider shadow-lg flex items-center gap-1.5">
                 <span>YAYINDA • v1.0</span>
@@ -506,9 +499,9 @@
           </div>
 
           <!-- PROJECT 3: EVIL WEST (SIRADAKİ PROJE) -->
-          <div class="glass-card rounded-2xl overflow-hidden flex flex-col group border-amber-500/40 cursor-pointer" onmouseenter="switchBackground('evilwest')" onclick="goToEvilWest()">
+          <div data-project-card data-status="upcoming" data-search="evil west flying wild hog focus vahşi batı vampir jesse rentier tps aksiyon" class="glass-card rounded-2xl overflow-hidden flex flex-col group border-amber-500/40 cursor-pointer" onmouseenter="switchBackground('evilwest')" onclick="goToEvilWest()">
             <div class="relative h-52 overflow-hidden bg-slate-900">
-              <img loading="lazy" decoding="async" src="images/evilwest_cover.jpg" alt="Evil West" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <img loading="lazy" decoding="async" src="images/evilwest_cover.webp" alt="Evil West" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
               <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
               <div class="absolute top-3 right-3 px-3 py-1 rounded-md bg-gradient-to-r from-amber-500 to-orange-600 text-slate-950 text-xs font-extrabold font-mono tracking-wider shadow-lg flex items-center gap-1.5">
                 <span class="w-2 h-2 rounded-full bg-slate-950 animate-ping"></span>
@@ -550,6 +543,12 @@
             </div>
           </div>
 
+        </div>
+
+        <!-- Catalog Empty State -->
+        <div id="catalog-empty" class="hidden glass-card rounded-2xl p-10 text-center border-white/10 mt-4">
+          <p class="text-sm text-slate-300 font-mono">Aradığınız kriterlere uygun bir proje bulunamadı.</p>
+          <button type="button" onclick="resetCatalogFilter()" class="mt-3 px-4 py-2 rounded-lg bg-cyan-950 border border-cyan-500/40 text-cyan-300 text-xs font-mono hover:text-white transition cursor-pointer">Filtreyi Sıfırla</button>
         </div>
 
         <!-- COMMUNITY REQUEST BANNER -->
@@ -665,7 +664,7 @@
             <!-- Right Visual Banner -->
             <div class="lg:col-span-5">
               <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-emerald-500/30 group">
-                <img loading="lazy" decoding="async" src="images/outerworlds_cover.jpg" alt="The Outer Worlds: Spacer's Choice Edition Banner" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
+                <img loading="lazy" decoding="async" src="images/outerworlds_cover.webp" alt="The Outer Worlds: Spacer's Choice Edition Banner" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
                 <div class="absolute inset-0 bg-gradient-to-t from-dark-950/90 via-transparent to-transparent"></div>
                 <div class="absolute bottom-4 left-4 right-4 text-xs text-slate-200 font-mono flex items-center justify-between">
                   <span>Çevirmen: Atilla Çeviri</span>
@@ -690,7 +689,7 @@
             <!-- DLC 1: Peril on Gorgon -->
             <div class="glass-card rounded-2xl overflow-hidden flex flex-col sm:flex-row group border-lime-500/30">
               <div class="sm:w-52 h-44 sm:h-auto overflow-hidden shrink-0 bg-dark-900">
-                <img loading="lazy" decoding="async" src="images/outerworlds_gorgon.jpg" alt="Peril on Gorgon DLC" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <img loading="lazy" decoding="async" src="images/outerworlds_gorgon.webp" alt="Peril on Gorgon DLC" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
               </div>
               <div class="p-6 flex flex-col justify-center">
                 <div class="flex items-center justify-between gap-2">
@@ -707,7 +706,7 @@
             <!-- DLC 2: Murder on Eridanos -->
             <div class="glass-card glass-card-dlc rounded-2xl overflow-hidden flex flex-col sm:flex-row group border-amber-500/40">
               <div class="sm:w-52 h-44 sm:h-auto overflow-hidden shrink-0 bg-dark-900">
-                <img loading="lazy" decoding="async" src="images/outerworlds_eridanos.jpg" alt="Murder on Eridanos DLC" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <img loading="lazy" decoding="async" src="images/outerworlds_eridanos.webp" alt="Murder on Eridanos DLC" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
               </div>
               <div class="p-6 flex flex-col justify-center">
                 <div class="flex items-center justify-between gap-2">
@@ -899,7 +898,7 @@
         
         <!-- Spotlight Banner Card -->
         <div class="glass-card rounded-3xl p-8 sm:p-12 mb-12 border-cyan-500/50 relative overflow-hidden shadow-2xl">
-          <div class="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-overlay pointer-events-none" style="background-image: url('images/expanse_space.jpg')"></div>
+          <div class="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-overlay pointer-events-none" style="background-image: url('images/expanse_space.webp')"></div>
           <div class="absolute -right-24 -bottom-24 w-96 h-96 bg-brand-cyan/20 rounded-full blur-3xl pointer-events-none"></div>
           
           <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -970,7 +969,7 @@
             <!-- Right Visual Banner -->
             <div class="lg:col-span-5">
               <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-white/20 group">
-                <img loading="lazy" decoding="async" src="images/expanse_header.jpg" alt="The Expanse Banner" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
+                <img loading="lazy" decoding="async" src="images/expanse_header.webp" alt="The Expanse Banner" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
                 <div class="absolute inset-0 bg-gradient-to-t from-dark-950/90 via-transparent to-transparent"></div>
                 <div class="absolute bottom-4 left-4 right-4 text-xs text-slate-200 font-mono flex items-center justify-between">
                   <span>Çevirmen: Atilla (ElijahKerpy)</span>
@@ -1008,7 +1007,7 @@
                  onmouseenter="switchBackground('expanse')" 
                  onclick="switchBackground('expanse')">
               <div class="sm:w-52 h-52 sm:h-auto overflow-hidden shrink-0">
-                <img loading="lazy" decoding="async" src="images/expanse_drummer.jpg" alt="Camina Drummer" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <img loading="lazy" decoding="async" src="images/expanse_drummer.webp" alt="Camina Drummer" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
               </div>
               <div class="p-6 flex flex-col justify-center">
                 <div class="flex items-center justify-between">
@@ -1027,7 +1026,7 @@
                  onmouseenter="switchBackground('dlc')" 
                  onclick="switchBackground('dlc')">
               <div class="sm:w-52 h-52 sm:h-auto overflow-hidden shrink-0 bg-dark-900">
-                <img loading="lazy" decoding="async" src="images/dlc_avasarala.jpg" alt="Chrisjen Avasarala - Archangel DLC" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <img loading="lazy" decoding="async" src="images/dlc_avasarala.webp" alt="Chrisjen Avasarala - Archangel DLC" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
               </div>
               <div class="p-6 flex flex-col justify-center">
                 <div class="flex items-center justify-between">
@@ -1154,29 +1153,29 @@
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div class="glass-card rounded-xl overflow-hidden group cursor-pointer" onclick="openLightbox('images/screenshot1.png', 'Bölüm Diyalogları — Türkçe')">
-              <img loading="lazy" decoding="async" src="images/screenshot1.png" alt="Türkçe Ekran Görüntüsü 1" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
+            <div class="glass-card rounded-xl overflow-hidden group cursor-pointer" onclick="openLightbox('images/screenshot1.webp', 'Bölüm Diyalogları — Türkçe')">
+              <img loading="lazy" decoding="async" src="images/screenshot1.webp" alt="Türkçe Ekran Görüntüsü 1" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
               <div class="p-3 text-xs text-slate-200 font-mono flex items-center justify-between">
                 <span>Bölüm Diyalogları</span>
                 <span class="text-brand-cyan">🔍 Büyüt</span>
               </div>
             </div>
-            <div class="glass-card rounded-xl overflow-hidden group cursor-pointer" onclick="openLightbox('images/screenshot2.png', 'Karakter Etkileşimleri — Türkçe')">
-              <img loading="lazy" decoding="async" src="images/screenshot2.png" alt="Türkçe Ekran Görüntüsü 2" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
+            <div class="glass-card rounded-xl overflow-hidden group cursor-pointer" onclick="openLightbox('images/screenshot2.webp', 'Karakter Etkileşimleri — Türkçe')">
+              <img loading="lazy" decoding="async" src="images/screenshot2.webp" alt="Türkçe Ekran Görüntüsü 2" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
               <div class="p-3 text-xs text-slate-200 font-mono flex items-center justify-between">
                 <span>Karakter Etkileşimleri</span>
                 <span class="text-brand-cyan">🔍 Büyüt</span>
               </div>
             </div>
-            <div class="glass-card rounded-xl overflow-hidden group cursor-pointer" onclick="openLightbox('images/screenshot3.png', 'Seçimler ve Menü — Türkçe')">
-              <img loading="lazy" decoding="async" src="images/screenshot3.png" alt="Türkçe Ekran Görüntüsü 3" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
+            <div class="glass-card rounded-xl overflow-hidden group cursor-pointer" onclick="openLightbox('images/screenshot3.webp', 'Seçimler ve Menü — Türkçe')">
+              <img loading="lazy" decoding="async" src="images/screenshot3.webp" alt="Türkçe Ekran Görüntüsü 3" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
               <div class="p-3 text-xs text-slate-200 font-mono flex items-center justify-between">
                 <span>Seçimler ve Menü</span>
                 <span class="text-brand-cyan">🔍 Büyüt</span>
               </div>
             </div>
-            <div class="glass-card rounded-xl overflow-hidden group cursor-pointer" onclick="openLightbox('images/dlc_desk.jpg', 'Archangel DLC — Avasarala BM Masası')">
-              <img loading="lazy" decoding="async" src="images/dlc_desk.jpg" alt="Archangel DLC Avasarala Masası" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
+            <div class="glass-card rounded-xl overflow-hidden group cursor-pointer" onclick="openLightbox('images/dlc_desk.webp', 'Archangel DLC — Avasarala BM Masası')">
+              <img loading="lazy" decoding="async" src="images/dlc_desk.webp" alt="Archangel DLC Avasarala Masası" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
               <div class="p-3 text-xs text-slate-200 font-mono flex items-center justify-between">
                 <span class="text-amber-300">Archangel DLC</span>
                 <span class="text-amber-400">🔍 Büyüt</span>
@@ -1314,7 +1313,7 @@
             <!-- Right Visual Banner -->
             <div class="lg:col-span-5">
               <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-purple-500/30 group">
-                <img loading="lazy" decoding="async" src="images/codevein_cover.jpg" alt="Code Vein Banner" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
+                <img loading="lazy" decoding="async" src="images/codevein_cover.webp" alt="Code Vein Banner" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
                 <div class="absolute inset-0 bg-gradient-to-t from-dark-950/90 via-transparent to-transparent"></div>
                 <div class="absolute bottom-4 left-4 right-4 text-xs text-slate-200 font-mono flex items-center justify-between">
                   <span>Çevirmen: Atilla Çeviri</span>
@@ -1450,29 +1449,29 @@
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div class="glass-card rounded-xl overflow-hidden group cursor-pointer border-purple-500/30" onclick="openLightbox('images/codevein_showcase_01_mistle.png', 'Mistle ve Oynanış Rehberi — Türkçe')">
-              <img loading="lazy" decoding="async" src="images/codevein_showcase_01_mistle.png" alt="Mistle ve Oynanış Rehberi" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
+            <div class="glass-card rounded-xl overflow-hidden group cursor-pointer border-purple-500/30" onclick="openLightbox('images/codevein_showcase_01_mistle.webp', 'Mistle ve Oynanış Rehberi — Türkçe')">
+              <img loading="lazy" decoding="async" src="images/codevein_showcase_01_mistle.webp" alt="Mistle ve Oynanış Rehberi" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
               <div class="p-3 text-xs text-slate-200 font-mono flex items-center justify-between">
                 <span>Mistle ve Oynanış Rehberi</span>
                 <span class="text-purple-400">🔍 Büyüt</span>
               </div>
             </div>
-            <div class="glass-card rounded-xl overflow-hidden group cursor-pointer border-purple-500/30" onclick="openLightbox('images/codevein_showcase_02_anamenu.png', 'Ana Menü ve DLC Başlıkları — Türkçe')">
-              <img loading="lazy" decoding="async" src="images/codevein_showcase_02_anamenu.png" alt="Ana Menü ve DLC Başlıkları" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
+            <div class="glass-card rounded-xl overflow-hidden group cursor-pointer border-purple-500/30" onclick="openLightbox('images/codevein_showcase_02_anamenu.webp', 'Ana Menü ve DLC Başlıkları — Türkçe')">
+              <img loading="lazy" decoding="async" src="images/codevein_showcase_02_anamenu.webp" alt="Ana Menü ve DLC Başlıkları" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
               <div class="p-3 text-xs text-slate-200 font-mono flex items-center justify-between">
                 <span>Ana Menü & 3 DLC</span>
                 <span class="text-purple-400">🔍 Büyüt</span>
               </div>
             </div>
-            <div class="glass-card rounded-xl overflow-hidden group cursor-pointer border-purple-500/30" onclick="openLightbox('images/codevein_showcase_03_io_diyalog.png', 'Io ile Keşif Diyaloğu — Türkçe')">
-              <img loading="lazy" decoding="async" src="images/codevein_showcase_03_io_diyalog.png" alt="Io ile Keşif Diyaloğu" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
+            <div class="glass-card rounded-xl overflow-hidden group cursor-pointer border-purple-500/30" onclick="openLightbox('images/codevein_showcase_03_io_diyalog.webp', 'Io ile Keşif Diyaloğu — Türkçe')">
+              <img loading="lazy" decoding="async" src="images/codevein_showcase_03_io_diyalog.webp" alt="Io ile Keşif Diyaloğu" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
               <div class="p-3 text-xs text-slate-200 font-mono flex items-center justify-between">
                 <span>Io ile Keşif Diyaloğu</span>
                 <span class="text-purple-400">🔍 Büyüt</span>
               </div>
             </div>
-            <div class="glass-card rounded-xl overflow-hidden group cursor-pointer border-purple-500/30" onclick="openLightbox('images/codevein_showcase_04_arasahne.png', 'Sinematik Ara Sahne — Türkçe')">
-              <img loading="lazy" decoding="async" src="images/codevein_showcase_04_arasahne.png" alt="Sinematik Ara Sahne" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
+            <div class="glass-card rounded-xl overflow-hidden group cursor-pointer border-purple-500/30" onclick="openLightbox('images/codevein_showcase_04_arasahne.webp', 'Sinematik Ara Sahne — Türkçe')">
+              <img loading="lazy" decoding="async" src="images/codevein_showcase_04_arasahne.webp" alt="Sinematik Ara Sahne" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
               <div class="p-3 text-xs text-slate-200 font-mono flex items-center justify-between">
                 <span>Sinematik Ara Sahne</span>
                 <span class="text-purple-400">🔍 Büyüt</span>
@@ -1598,7 +1597,7 @@
             <!-- Right Visual Cover -->
             <div class="lg:col-span-5 flex flex-col items-center">
               <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-amber-500/40 group max-w-md w-full">
-                <img loading="lazy" decoding="async" src="images/evilwest_cover.jpg" alt="Evil West Türkçe Yerelleştirme" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
+                <img loading="lazy" decoding="async" src="images/evilwest_cover.webp" alt="Evil West Türkçe Yerelleştirme" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
                 <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-transparent to-transparent opacity-60"></div>
                 <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs font-mono text-white">
                   <span class="bg-black/80 px-2.5 py-1 rounded backdrop-blur border border-white/10">Rentier Enstitüsü</span>
@@ -1835,10 +1834,10 @@
     const bgOuterworlds = document.getElementById('bg-outerworlds');
     const bgEvilwest = document.getElementById('bg-evilwest');
 
-    let currentPortalWallpaper = 'images/bg_cyberpunk.jpg';
+    let currentPortalWallpaper = 'images/bg_cyberpunk.webp';
 
     function setPortalTheme(theme) {
-      currentPortalWallpaper = 'images/bg_' + theme + '.jpg';
+      currentPortalWallpaper = 'images/bg_' + theme + '.webp';
       bgPortal.style.backgroundImage = 'url(' + currentPortalWallpaper + ')';
       
       // Update button highlights
@@ -1846,14 +1845,55 @@
         const btn = document.getElementById('btn-' + t);
         if (btn) {
           if (t === theme) {
-            btn.className = 'px-2 py-0.5 rounded font-bold text-cyan-300 bg-cyan-950/80 border border-cyan-500/30 transition';
+            btn.className = 'px-3.5 py-1.5 rounded-lg font-bold text-cyan-300 bg-cyan-950/80 border border-cyan-500/40 transition';
           } else {
-            btn.className = 'px-2 py-0.5 rounded text-slate-400 hover:text-white transition';
+            btn.className = 'px-3.5 py-1.5 rounded-lg text-slate-400 hover:text-white transition';
           }
         }
       });
 
       switchBackground('portal');
+    }
+
+    let activeCatalogFilter = 'all';
+    function setCatalogFilter(status) {
+      activeCatalogFilter = status;
+      ['all', 'live', 'upcoming'].forEach(f => {
+        const btn = document.getElementById('filter-' + f);
+        if (!btn) return;
+        if (f === status) {
+          btn.className = 'px-3.5 py-1.5 rounded-lg text-xs font-mono font-bold text-slate-950 bg-brand-cyan transition cursor-pointer';
+        } else {
+          btn.className = 'px-3.5 py-1.5 rounded-lg text-xs font-mono text-slate-300 hover:text-white transition cursor-pointer';
+        }
+      });
+      filterCatalog();
+    }
+
+    function filterCatalog() {
+      const q = (document.getElementById('catalog-search')?.value || '').toLocaleLowerCase('tr-TR').trim();
+      const cards = document.querySelectorAll('[data-project-card]');
+      let visible = 0;
+      cards.forEach(card => {
+        const st = card.dataset.status || '';
+        const text = (card.dataset.search || '').toLocaleLowerCase('tr-TR');
+        const statusOk = activeCatalogFilter === 'all' || st === activeCatalogFilter;
+        const queryOk = !q || text.includes(q);
+        if (statusOk && queryOk) {
+          card.classList.remove('hidden');
+          visible++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+      const emptyEl = document.getElementById('catalog-empty');
+      if (emptyEl) emptyEl.classList.toggle('hidden', visible > 0);
+    }
+
+    function resetCatalogFilter() {
+      const input = document.getElementById('catalog-search');
+      if (input) input.value = '';
+      setCatalogFilter('all');
     }
 
     let currentMode = 'portal';
@@ -1877,6 +1917,9 @@
       layers.forEach(({ el, name }) => {
         if (!el) return;
         if (name === mode) {
+          if (el.dataset && el.dataset.bg && !el.style.backgroundImage) {
+            el.style.backgroundImage = "url('" + el.dataset.bg + "')";
+          }
           el.style.opacity = '1';
           el.style.transform = 'scale(1.0)';
         } else {
