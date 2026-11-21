@@ -16,11 +16,13 @@
   <meta property="og:title" content="Atilla Çeviri — %100 Türkçe Oyun Yerelleştirme Portalı">
   <meta property="og:description" content="The Outer Worlds: Spacer's Choice Edition, Code Vein ve The Expanse: A Telltale Series için ücretsiz, reklamsız, tüm DLC'ler dahil %100 Türkçe yamalar.">
   <meta property="og:url" content="https://atillaceviri.github.io/">
-  <meta property="og:image" content="https://atillaceviri.github.io/images/outerworlds_cover.jpg">
+  <meta property="og:image" content="https://atillaceviri.github.io/images/og_banner.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Atilla Çeviri — %100 Türkçe Oyun Yerelleştirme Portalı">
   <meta name="twitter:description" content="The Outer Worlds: Spacer's Choice Edition, Code Vein ve The Expanse için ücretsiz, reklamsız %100 Türkçe yamalar.">
-  <meta name="twitter:image" content="https://atillaceviri.github.io/images/outerworlds_cover.jpg">
+  <meta name="twitter:image" content="https://atillaceviri.github.io/images/og_banner.jpg">
 
   <!-- Schema.org Structured Data (Google Rich Snippets) -->
   <script type="application/ld+json">
@@ -81,37 +83,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Rajdhani:wght@500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            display: ['Rajdhani', 'sans-serif'],
-            heading: ['Space Grotesk', 'sans-serif'],
-          },
-          colors: {
-            brand: {
-              cyan: '#00e5ff',
-              blue: '#3a86ff',
-              violet: '#8338ec',
-              orange: '#ff6b35',
-              amber: '#f59e0b',
-            },
-            dark: {
-              950: '#05070a',
-              900: '#090c13',
-              850: '#0e131d',
-              800: '#141b29',
-              700: '#1e283d',
-            }
-          }
-        }
-      }
-    }
-  </script>
+  <!-- Compiled Tailwind CSS -->
+  <link rel="stylesheet" href="styles.css">
   
   <style>
     /* Real Game Wallpaper Dynamic Engine */
@@ -1035,8 +1008,8 @@
                 <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-purple-950/60 border border-purple-500/30 text-purple-300">
                   <span>🛡️ Temiz Paket (.pak — .exe içermez)</span>
                 </span>
-                <button type="button" onclick="copyHash('2ef1597f6737ca83e57b2bc6de08ac8b45d4f2bb56f3793d726056a9b567246d', this)" title="Tam SHA-256: 2ef1597f6737ca83e57b2bc6de08ac8b45d4f2bb56f3793d726056a9b567246d" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-dark-950/80 border border-white/10 hover:border-purple-400/50 text-slate-300 hover:text-white transition cursor-pointer">
-                  <span class="hash-label">SHA-256: 2ef1597f...7246d</span>
+                <button type="button" onclick="copyHash('0209081e8c2ac0606aba0a5d8ae57224ba40b4d7bc1cca6daf3f061ebab01c21', this)" title="Tam SHA-256: 0209081e8c2ac0606aba0a5d8ae57224ba40b4d7bc1cca6daf3f061ebab01c21" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-dark-950/80 border border-white/10 hover:border-purple-400/50 text-slate-300 hover:text-white transition cursor-pointer">
+                  <span class="hash-label">SHA-256: 0209081e...01c21</span>
                 </button>
                 <span id="dl-count-codevein" class="hidden inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-dark-950/80 border border-purple-500/30 text-purple-300"></span>
               </div>
@@ -1902,10 +1875,10 @@
             <span class="text-brand-cyan">3.</span> 6698 Sayılı KVKK & Gizlilik Güvencesi
           </h4>
           <p class="text-slate-300">
-            Bu web sitesi tamamen statik olup ziyaretçilerden hiçbir kişisel veri (ad, soyad, e-posta, telefon, IP adresi veya gezinme profili) <strong>toplanmamakta, işlenmemekte ve saklanmamaktadır</strong>.
+            Bu web sitesi tamamen statik olup üyelik, kayıt formu, reklam çerezi (cookie) veya kullanıcı profilleme pikselleri <strong>kullanmamaktadır</strong>; tarafımızca ziyaretçilere ait hiçbir kişisel veri (ad, soyad, e-posta, telefon) toplanmamakta ve saklanmamaktadır.
           </p>
           <p class="text-slate-400">
-            Sitemizde kullanıcıları takip eden üçüncü taraf analiz araçları, reklam çerezleri veya hedefli takip pikselleri kesinlikle kullanılmamaktadır.
+            Yalnızca sitenin temel işleyişi kapsamında; barındırma ve güncel indirme sayılarını göstermek için <strong>GitHub Pages / GitHub API</strong>, çerezsiz ve anonim sayfa görüntülenme istatistiği için KVKK/GDPR uyumlu <strong>GoatCounter</strong>, yazı tipleri için ise <strong>Google Fonts</strong> altyapıları kullanılmaktadır. Bu servis sağlayıcılarına tarayıcınızın standart HTTP bağlantı bilgileri (IP adresi ve tarayıcı üstbilgisi) teknik olarak iletilir.
           </p>
         </div>
 
