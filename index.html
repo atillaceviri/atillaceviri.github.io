@@ -206,6 +206,7 @@
             </div>
           </div>
         </div>
+        <a href="#sss" onclick="goToSection('sss', null, event)" class="hover:text-brand-cyan transition">SSS</a>
         <a href="#hakkinda" onclick="goToSection('hakkinda', null, event)" class="hover:text-brand-cyan transition">Hakkımızda</a>
       </nav>
 
@@ -249,9 +250,10 @@
           <span>Evil West</span>
           <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-amber-950 border border-amber-500/30">Sırada</span>
         </a>
-        <div class="pt-2 mt-2 border-t border-white/10 grid grid-cols-2 gap-2 text-xs font-mono">
-          <a href="#outerworlds-surum-notlari" onclick="closeMobileMenu(); goToSection('outerworlds-surum-notlari', 'outerworlds', event)" class="px-3 py-2 rounded-lg bg-dark-900 border border-white/10 text-slate-300 text-center">Sürüm Notları</a>
-          <a href="#hakkinda" onclick="closeMobileMenu(); goToSection('hakkinda', null, event)" class="px-3 py-2 rounded-lg bg-dark-900 border border-white/10 text-slate-300 text-center">Hakkımızda</a>
+        <div class="pt-2 mt-2 border-t border-white/10 grid grid-cols-3 gap-2 text-xs font-mono">
+          <a href="#outerworlds-surum-notlari" onclick="closeMobileMenu(); goToSection('outerworlds-surum-notlari', 'outerworlds', event)" class="px-2 py-2 rounded-lg bg-dark-900 border border-white/10 text-slate-300 text-center">Sürüm Notları</a>
+          <a href="#sss" onclick="closeMobileMenu(); goToSection('sss', null, event)" class="px-2 py-2 rounded-lg bg-dark-900 border border-white/10 text-slate-300 text-center">SSS</a>
+          <a href="#hakkinda" onclick="closeMobileMenu(); goToSection('hakkinda', null, event)" class="px-2 py-2 rounded-lg bg-dark-900 border border-white/10 text-slate-300 text-center">Hakkımızda</a>
         </div>
       </div>
     </div>
@@ -643,7 +645,7 @@
 
               <!-- Action Buttons -->
               <div class="pt-4 flex flex-col sm:flex-row items-center gap-4">
-                <a href="TheOuterWorlds_SpacersChoice_Turkce_Yama_v1.0_AtillaCeviri.zip" download class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-500 text-slate-950 font-bold font-display text-lg tracking-wide hover:brightness-110 transition shadow-xl shadow-emerald-900/40">
+                <a href="https://github.com/atillaceviri/atillaceviri.github.io/releases/download/outerworlds-v1.0/TheOuterWorlds_SpacersChoice_Turkce_Yama_v1.0_AtillaCeviri.zip" download class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-500 text-slate-950 font-bold font-display text-lg tracking-wide hover:brightness-110 transition shadow-xl shadow-emerald-900/40">
                   <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
                   <span>Yamayı İndir (v1.0)</span>
                   <span class="text-xs px-2 py-0.5 rounded bg-black/25 font-mono">3.6 MB</span>
@@ -658,6 +660,17 @@
                   <span>Son Değişiklikler</span>
                   <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                 </a>
+              </div>
+
+              <!-- Security & Live Download Verification Bar -->
+              <div class="flex flex-wrap items-center gap-2 text-[11px] font-mono text-slate-400">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-950/60 border border-emerald-500/30 text-emerald-300">
+                  <span>🛡️ Temiz Paket (.pak — .exe içermez)</span>
+                </span>
+                <button type="button" onclick="copyHash('57bff23a73f4ef8db79f8c2ec574a2016e4e1423da5a812bffd0926369d6730d', this)" title="Tam SHA-256: 57bff23a73f4ef8db79f8c2ec574a2016e4e1423da5a812bffd0926369d6730d" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-dark-950/80 border border-white/10 hover:border-emerald-400/50 text-slate-300 hover:text-white transition cursor-pointer">
+                  <span class="hash-label">SHA-256: 57bff23a...6730d</span>
+                </button>
+                <span id="dl-count-outerworlds" class="hidden inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-dark-950/80 border border-emerald-500/30 text-emerald-300"></span>
               </div>
             </div>
 
@@ -948,7 +961,7 @@
 
               <!-- Action Buttons -->
               <div class="pt-4 flex flex-col sm:flex-row items-center gap-4">
-                <a href="TheExpanse_Turkce_Yama_AtillaCeviri.zip" download class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-brand-cyan to-brand-blue text-slate-950 font-bold font-display text-lg tracking-wide hover:brightness-110 transition shadow-xl neon-cyan">
+                <a href="https://github.com/atillaceviri/atillaceviri.github.io/releases/download/expanse-v1.0/TheExpanse_Turkce_Yama_AtillaCeviri.zip" download class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-brand-cyan to-brand-blue text-slate-950 font-bold font-display text-lg tracking-wide hover:brightness-110 transition shadow-xl neon-cyan">
                   <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
                   <span>Yamayı İndir (v1.0)</span>
                   <span class="text-xs px-2 py-0.5 rounded bg-black/30 font-mono">2.5 MB</span>
@@ -963,6 +976,17 @@
                   <span>Son Değişiklikler</span>
                   <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                 </a>
+              </div>
+
+              <!-- Security & Live Download Verification Bar -->
+              <div class="flex flex-wrap items-center gap-2 text-[11px] font-mono text-slate-400">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-cyan-950/60 border border-cyan-500/30 text-cyan-300">
+                  <span>🛡️ Temiz Paket (.pak/.utoc — .exe içermez)</span>
+                </span>
+                <button type="button" onclick="copyHash('28df41f681d15398a39b29c6898100cd01b5a2a35b7c58ecc7898deb4ff31c5f', this)" title="Tam SHA-256: 28df41f681d15398a39b29c6898100cd01b5a2a35b7c58ecc7898deb4ff31c5f" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-dark-950/80 border border-white/10 hover:border-cyan-400/50 text-slate-300 hover:text-white transition cursor-pointer">
+                  <span class="hash-label">SHA-256: 28df41f6...31c5f</span>
+                </button>
+                <span id="dl-count-expanse" class="hidden inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-dark-950/80 border border-cyan-500/30 text-cyan-300"></span>
               </div>
             </div>
 
@@ -1292,7 +1316,7 @@
 
               <!-- Action Buttons -->
               <div class="pt-4 flex flex-col sm:flex-row items-center gap-4">
-                <a href="CODE_VEIN_Turkce_Yama_v1.0_AtillaCeviri.zip" download class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 text-white font-bold font-display text-lg tracking-wide hover:brightness-110 transition shadow-xl">
+                <a href="https://github.com/atillaceviri/atillaceviri.github.io/releases/download/codevein-v1.0/CODE_VEIN_Turkce_Yama_v1.0_AtillaCeviri.zip" download class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 text-white font-bold font-display text-lg tracking-wide hover:brightness-110 transition shadow-xl">
                   <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
                   <span>Code Vein Yamayı İndir (v1.0)</span>
                   <span class="text-xs px-2 py-0.5 rounded bg-black/40 font-mono">1.4 MB</span>
@@ -1307,6 +1331,17 @@
                   <span>Son Değişiklikler</span>
                   <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                 </a>
+              </div>
+
+              <!-- Security & Live Download Verification Bar -->
+              <div class="flex flex-wrap items-center gap-2 text-[11px] font-mono text-slate-400">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-purple-950/60 border border-purple-500/30 text-purple-300">
+                  <span>🛡️ Temiz Paket (.pak — .exe içermez)</span>
+                </span>
+                <button type="button" onclick="copyHash('2ef1597f6737ca83e57b2bc6de08ac8b45d4f2bb56f3793d726056a9b567246d', this)" title="Tam SHA-256: 2ef1597f6737ca83e57b2bc6de08ac8b45d4f2bb56f3793d726056a9b567246d" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-dark-950/80 border border-white/10 hover:border-purple-400/50 text-slate-300 hover:text-white transition cursor-pointer">
+                  <span class="hash-label">SHA-256: 2ef1597f...7246d</span>
+                </button>
+                <span id="dl-count-codevein" class="hidden inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-dark-950/80 border border-purple-500/30 text-purple-300"></span>
               </div>
             </div>
 
@@ -1642,6 +1677,74 @@
           </div>
         </div>
 
+      </div>
+    </section>
+
+    <!-- SECTION 2.8: SIKÇA SORULAN SORULAR (SSS) -->
+    <section id="sss" class="py-20 border-t border-white/10 bg-dark-950/75">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <h2 class="text-xs font-bold text-brand-cyan uppercase tracking-widest font-mono">YARDIM & DESTEK</h2>
+          <p class="mt-2 text-3xl sm:text-4xl font-display font-bold text-white uppercase">Sıkça Sorulan Sorular</p>
+          <p class="mt-2 text-xs sm:text-sm text-slate-400">Kurulum, uyumluluk ve güvenlik hakkında en çok merak edilenler</p>
+        </div>
+
+        <div class="space-y-3">
+          <!-- FAQ 1 -->
+          <div class="glass-card rounded-2xl overflow-hidden border-white/10">
+            <button type="button" onclick="toggleFaq(this)" aria-expanded="false" class="w-full px-6 py-4 text-left flex items-center justify-between gap-4 hover:bg-white/5 transition cursor-pointer">
+              <span class="text-sm sm:text-base font-bold text-white">Yamalar Steam veya Epic Games başarımlarını (Achievements) etkiler mi?</span>
+              <svg class="faq-chevron w-5 h-5 text-brand-cyan shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-body hidden px-6 pb-5 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-white/5 pt-4">
+              Hayır. Yamalarımız yalnızca oyunun yerelleştirme metinlerini ve Türkçe fontlarını içeren standart Unreal Engine <code class="text-cyan-300 font-mono">.pak</code> / <code class="text-cyan-300 font-mono">.utoc</code> mod dosyalarıdır. Çalıştırılabilir dosyalara (<code class="text-cyan-300 font-mono">.exe</code>) dokunmadığı için Steam veya Epic Games başarımlarını, bulut kayıtlarını (Cloud Save) ve oyun bütünlüğünü etkilemez.
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="glass-card rounded-2xl overflow-hidden border-white/10">
+            <button type="button" onclick="toggleFaq(this)" aria-expanded="false" class="w-full px-6 py-4 text-left flex items-center justify-between gap-4 hover:bg-white/5 transition cursor-pointer">
+              <span class="text-sm sm:text-base font-bold text-white">Yamalar neden tamamen ücretsiz? Virüs veya zararlı yazılım riski var mı?</span>
+              <svg class="faq-chevron w-5 h-5 text-brand-cyan shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-body hidden px-6 pb-5 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-white/5 pt-4">
+              Atilla Çeviri tamamen gönüllü ve kâr amacı gütmeyen bir topluluk inisiyatifidir. İndirdiğiniz ZIP arşivlerinin içinde hiçbir çalıştırılabilir program (<code class="text-cyan-300 font-mono">.exe</code>, <code class="text-cyan-300 font-mono">.bat</code>, <code class="text-cyan-300 font-mono">.dll</code>) veya kurulum sihirbazı bulunmaz — yalnızca saf metin/font paketleri ve kurulum metni yer alır. Her paketin altında bulunan <strong>SHA-256</strong> doğrulama kodunu tıklayıp kopyalayarak dosya bütünlüğünü kendiniz de teyit edebilirsiniz.
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="glass-card rounded-2xl overflow-hidden border-white/10">
+            <button type="button" onclick="toggleFaq(this)" aria-expanded="false" class="w-full px-6 py-4 text-left flex items-center justify-between gap-4 hover:bg-white/5 transition cursor-pointer">
+              <span class="text-sm sm:text-base font-bold text-white">Orijinal oyun şart mı? Hangi oyun sürümleriyle uyumlu?</span>
+              <svg class="faq-chevron w-5 h-5 text-brand-cyan shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-body hidden px-6 pb-5 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-white/5 pt-4">
+              Evet, yamaların çalışabilmesi için lisanslı orijinal oyuna sahip olmanız gerekir. Tüm paketlerimiz ilgili oyunların en güncel Steam ve Epic Games sürümlerine göre hazırlanmıştır. <strong>The Outer Worlds</strong> yamasının özellikle <em>Spacer's Choice Edition</em> sürümü için derlendiğini unutmayın.
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="glass-card rounded-2xl overflow-hidden border-white/10">
+            <button type="button" onclick="toggleFaq(this)" aria-expanded="false" class="w-full px-6 py-4 text-left flex items-center justify-between gap-4 hover:bg-white/5 transition cursor-pointer">
+              <span class="text-sm sm:text-base font-bold text-white">Yamayı kaldırmak veya oyunu tekrar İngilizce yapmak istersem ne yapmalıyım?</span>
+              <svg class="faq-chevron w-5 h-5 text-brand-cyan shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-body hidden px-6 pb-5 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-white/5 pt-4">
+              Yamalarımız orijinal oyun dosyalarının üzerine yazmaz. Kurulum sırasında <code class="text-cyan-300 font-mono">Paks</code> klasörüne attığınız yama dosyasını (veya dosyalarını) silmeniz oyunu tek hamlede orijinal İngilizce hâline döndürür.
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="glass-card rounded-2xl overflow-hidden border-white/10">
+            <button type="button" onclick="toggleFaq(this)" aria-expanded="false" class="w-full px-6 py-4 text-left flex items-center justify-between gap-4 hover:bg-white/5 transition cursor-pointer">
+              <span class="text-sm sm:text-base font-bold text-white">Oyunda yazım hatası veya teknik bir sorunla karşılaşırsam nasıl bildirebilirim?</span>
+              <svg class="faq-chevron w-5 h-5 text-brand-cyan shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-body hidden px-6 pb-5 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-white/5 pt-4">
+              Oyunun adını, sahne/ekran görüntüsünü veya varsa hata kaydını <code class="text-cyan-300 font-mono">atillaceviri@gmail.com</code> adresine ya da Steam profilimize (<code class="text-cyan-300 font-mono">ElijahKerpy</code>) iletmeniz yeterli. Gelen her geri bildirim incelenerek paketler güncel tutulmaktadır.
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -2182,6 +2285,80 @@
         toast.classList.add('translate-y-28', 'opacity-0', 'pointer-events-none');
       }, 4000);
     }
+
+    // Copy SHA-256 hash to clipboard
+    function copyHash(hash, btn) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(hash);
+      } else {
+        const temp = document.createElement('textarea');
+        temp.value = hash;
+        document.body.appendChild(temp);
+        temp.select();
+        document.execCommand('copy');
+        document.body.removeChild(temp);
+      }
+      if (btn) {
+        const label = btn.querySelector('.hash-label');
+        if (label && !btn.dataset.origLabel) btn.dataset.origLabel = label.textContent;
+        if (label) label.textContent = '✓ SHA-256 Kopyalandı!';
+        clearTimeout(btn._hashTimer);
+        btn._hashTimer = setTimeout(() => {
+          if (label && btn.dataset.origLabel) label.textContent = btn.dataset.origLabel;
+        }, 2000);
+      }
+    }
+
+    // FAQ Accordion toggle
+    function toggleFaq(btn) {
+      const card = btn.parentElement;
+      const body = card.querySelector('.faq-body');
+      const icon = btn.querySelector('.faq-chevron');
+      if (!body) return;
+      const isHidden = body.classList.toggle('hidden');
+      btn.setAttribute('aria-expanded', String(!isHidden));
+      if (icon) icon.classList.toggle('rotate-180', !isHidden);
+    }
+
+    // Live GitHub Releases Download Counter (cached 10 min in sessionStorage)
+    (async function loadDownloadCounts() {
+      const cacheKey = 'atillaceviri_gh_releases_v1';
+      let releases = null;
+      try {
+        const cached = sessionStorage.getItem(cacheKey);
+        if (cached) {
+          const parsed = JSON.parse(cached);
+          if (Date.now() - parsed.ts < 10 * 60 * 1000) releases = parsed.data;
+        }
+      } catch (e) {}
+
+      if (!releases) {
+        try {
+          const res = await fetch('https://api.github.com/repos/atillaceviri/atillaceviri.github.io/releases');
+          if (res.ok) {
+            releases = await res.json();
+            try { sessionStorage.setItem(cacheKey, JSON.stringify({ ts: Date.now(), data: releases })); } catch (e) {}
+          }
+        } catch (e) { return; }
+      }
+      if (!Array.isArray(releases)) return;
+
+      const map = {
+        'outerworlds-v1.0': 'dl-count-outerworlds',
+        'codevein-v1.0': 'dl-count-codevein',
+        'expanse-v1.0': 'dl-count-expanse'
+      };
+      for (const rel of releases) {
+        const targetId = map[rel.tag_name];
+        if (!targetId) continue;
+        const count = (rel.assets || []).reduce((sum, a) => sum + (a.download_count || 0), 0);
+        const el = document.getElementById(targetId);
+        if (el) {
+          el.textContent = '⬇ ' + count.toLocaleString('tr-TR') + ' İndirme';
+          el.classList.remove('hidden');
+        }
+      }
+    })();
   </script>
 
   <!-- BACK TO TOP FLOATING BUTTON -->
