@@ -5,6 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Atilla Çeviri — Türkçe Oyun Yerelleştirme Portalı</title>
   <meta name="description" content="Atilla Çeviri resmi web sitesi. The Outer Worlds: Spacer's Choice Edition, Code Vein, The Expanse: A Telltale Series ve gelecekteki tüm Türkçe yama projeleri, indirme bağlantıları, sürüm notları ve kurulum rehberleri.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="canonical" href="https://atillaceviri.github.io/">
+  <meta name="theme-color" content="#05070a">
+
+  <!-- Open Graph / Social Media & Forum Link Previews -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:site_name" content="Atilla Çeviri">
+  <meta property="og:title" content="Atilla Çeviri — %100 Türkçe Oyun Yerelleştirme Portalı">
+  <meta property="og:description" content="The Outer Worlds: Spacer's Choice Edition, Code Vein ve The Expanse: A Telltale Series için ücretsiz, reklamsız, tüm DLC'ler dahil %100 Türkçe yamalar.">
+  <meta property="og:url" content="https://atillaceviri.github.io/">
+  <meta property="og:image" content="https://atillaceviri.github.io/images/outerworlds_cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Atilla Çeviri — %100 Türkçe Oyun Yerelleştirme Portalı">
+  <meta name="twitter:description" content="The Outer Worlds: Spacer's Choice Edition, Code Vein ve The Expanse için ücretsiz, reklamsız %100 Türkçe yamalar.">
+  <meta name="twitter:image" content="https://atillaceviri.github.io/images/outerworlds_cover.jpg">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
@@ -223,8 +239,40 @@
           <svg class="w-4 h-4 fill-current text-brand-cyan shrink-0" viewBox="0 0 24 24">
             <path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174l3.197-4.662a4.47 4.47 0 01-.824-2.512c0-2.485 2.015-4.5 4.5-4.5.347 0 .684.04 1.008.115l3.208-4.678A11.942 11.942 0 0012 0zm4.5 9c-1.381 0-2.5 1.119-2.5 2.5 0 .385.089.749.246 1.074l-2.029 2.959a4.49 4.49 0 01-1.217-.133l-3.327 4.852C3.125 18.73 1.5 15.565 1.5 12c0-5.799 4.701-10.5 10.5-10.5S22.5 6.201 22.5 12c0 4.095-2.348 7.641-5.753 9.387l-2.457-3.585A4.478 4.478 0 0116.5 16.5c2.485 0 4.5-2.015 4.5-4.5S18.985 9 16.5 9zm0 1.5c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3z"/>
           </svg>
-          <span class="font-mono text-xs">ElijahKerpy</span>
+          <span class="font-mono text-xs hidden sm:inline">ElijahKerpy</span>
         </a>
+        <!-- Mobile Hamburger Menu Toggle -->
+        <button type="button" id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menüyü Aç/Kapat" aria-expanded="false" class="lg:hidden p-2 rounded-xl border border-slate-700 bg-dark-850 hover:bg-dark-800 hover:border-brand-cyan/60 text-slate-200 hover:text-white transition cursor-pointer">
+          <svg id="icon-menu-open" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="icon-menu-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-white/10 bg-dark-950/95 backdrop-blur-xl">
+      <div class="max-w-7xl mx-auto px-4 py-4 space-y-2 text-sm font-medium">
+        <a href="#yamalar" onclick="closeMobileMenu(); goToSection('yamalar', 'portal', event)" class="block px-3.5 py-2.5 rounded-xl hover:bg-white/5 text-slate-200 transition">Tüm Yamalar (Katalog)</a>
+        <a href="#outerworlds" onclick="closeMobileMenu(); goToOuterWorlds(event)" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-emerald-950/40 border border-emerald-500/25 text-emerald-300 transition">
+          <span>The Outer Worlds: Spacer's Choice</span>
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-500/40">YENİ • v1.0</span>
+        </a>
+        <a href="#codevein" onclick="closeMobileMenu(); goToCodeVein(event)" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-purple-950/40 text-purple-300 transition">
+          <span>Code Vein</span>
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-purple-950 border border-purple-500/30">v1.0</span>
+        </a>
+        <a href="#expanse" onclick="closeMobileMenu(); goToExpanse(event)" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-cyan-950/40 text-cyan-300 transition">
+          <span>The Expanse: A Telltale Series</span>
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-cyan-950 border border-cyan-500/30">v1.0</span>
+        </a>
+        <a href="#evilwest" onclick="closeMobileMenu(); goToEvilWest(event)" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-amber-950/40 text-amber-300 transition">
+          <span>Evil West</span>
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-amber-950 border border-amber-500/30">Sırada</span>
+        </a>
+        <div class="pt-2 mt-2 border-t border-white/10 grid grid-cols-2 gap-2 text-xs font-mono">
+          <a href="#outerworlds-surum-notlari" onclick="closeMobileMenu(); goToSection('outerworlds-surum-notlari', 'outerworlds', event)" class="px-3 py-2 rounded-lg bg-dark-900 border border-white/10 text-slate-300 text-center">Sürüm Notları</a>
+          <a href="#hakkinda" onclick="closeMobileMenu(); goToSection('hakkinda', null, event)" class="px-3 py-2 rounded-lg bg-dark-900 border border-white/10 text-slate-300 text-center">Hakkımızda</a>
+        </div>
       </div>
     </div>
   </header>
@@ -336,7 +384,7 @@
           <!-- PROJECT 1: THE OUTER WORLDS: SPACER'S CHOICE (YAYINDA) -->
           <div class="glass-card rounded-2xl overflow-hidden flex flex-col group border-emerald-500/40 cursor-pointer" onmouseenter="switchBackground('outerworlds')" onclick="goToOuterWorlds()">
             <div class="relative h-56 overflow-hidden bg-slate-900">
-              <img src="images/outerworlds_cover.jpg" alt="The Outer Worlds: Spacer's Choice Edition" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <img loading="lazy" decoding="async" src="images/outerworlds_cover.jpg" alt="The Outer Worlds: Spacer's Choice Edition" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
               <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
               <div class="absolute top-3 right-3 px-3 py-1 rounded-md bg-emerald-400 text-slate-950 text-xs font-extrabold font-mono tracking-wider shadow-lg flex items-center gap-1.5">
                 <span class="w-2 h-2 rounded-full bg-slate-950 animate-pulse"></span>
@@ -378,7 +426,7 @@
           <!-- PROJECT 2: THE EXPANSE -->
           <div class="glass-card rounded-2xl overflow-hidden flex flex-col group border-cyan-500/40 cursor-pointer" onmouseenter="switchBackground('expanse')" onclick="goToExpanse()">
             <div class="relative h-52 overflow-hidden bg-slate-900">
-              <img src="images/expanse_cover.jpg" alt="The Expanse: A Telltale Series" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <img loading="lazy" decoding="async" src="images/expanse_cover.jpg" alt="The Expanse: A Telltale Series" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
               <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
               <div class="absolute top-3 right-3 px-3 py-1 rounded-md bg-emerald-500 text-slate-950 text-xs font-extrabold font-mono tracking-wider shadow-lg">
                 YAYINDA • v1.0
@@ -419,7 +467,7 @@
           <!-- PROJECT 2: CODE VEIN (YAYINDA) -->
           <div class="glass-card rounded-2xl overflow-hidden flex flex-col group border-purple-500/40 cursor-pointer" onmouseenter="switchBackground('codevein')" onclick="goToCodeVein()">
             <div class="relative h-52 overflow-hidden bg-slate-900">
-              <img src="images/codevein_cover.jpg" alt="Code Vein" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <img loading="lazy" decoding="async" src="images/codevein_cover.jpg" alt="Code Vein" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
               <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
               <div class="absolute top-3 right-3 px-3 py-1 rounded-md bg-emerald-500 text-slate-950 text-xs font-extrabold font-mono tracking-wider shadow-lg flex items-center gap-1.5">
                 <span>YAYINDA • v1.0</span>
@@ -460,7 +508,7 @@
           <!-- PROJECT 3: EVIL WEST (SIRADAKİ PROJE) -->
           <div class="glass-card rounded-2xl overflow-hidden flex flex-col group border-amber-500/40 cursor-pointer" onmouseenter="switchBackground('evilwest')" onclick="goToEvilWest()">
             <div class="relative h-52 overflow-hidden bg-slate-900">
-              <img src="images/evilwest_cover.jpg" alt="Evil West" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <img loading="lazy" decoding="async" src="images/evilwest_cover.jpg" alt="Evil West" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
               <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
               <div class="absolute top-3 right-3 px-3 py-1 rounded-md bg-gradient-to-r from-amber-500 to-orange-600 text-slate-950 text-xs font-extrabold font-mono tracking-wider shadow-lg flex items-center gap-1.5">
                 <span class="w-2 h-2 rounded-full bg-slate-950 animate-ping"></span>
@@ -617,7 +665,7 @@
             <!-- Right Visual Banner -->
             <div class="lg:col-span-5">
               <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-emerald-500/30 group">
-                <img src="images/outerworlds_cover.jpg" alt="The Outer Worlds: Spacer's Choice Edition Banner" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
+                <img loading="lazy" decoding="async" src="images/outerworlds_cover.jpg" alt="The Outer Worlds: Spacer's Choice Edition Banner" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
                 <div class="absolute inset-0 bg-gradient-to-t from-dark-950/90 via-transparent to-transparent"></div>
                 <div class="absolute bottom-4 left-4 right-4 text-xs text-slate-200 font-mono flex items-center justify-between">
                   <span>Çevirmen: Atilla Çeviri</span>
@@ -642,7 +690,7 @@
             <!-- DLC 1: Peril on Gorgon -->
             <div class="glass-card rounded-2xl overflow-hidden flex flex-col sm:flex-row group border-lime-500/30">
               <div class="sm:w-52 h-44 sm:h-auto overflow-hidden shrink-0 bg-dark-900">
-                <img src="images/outerworlds_gorgon.jpg" alt="Peril on Gorgon DLC" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <img loading="lazy" decoding="async" src="images/outerworlds_gorgon.jpg" alt="Peril on Gorgon DLC" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
               </div>
               <div class="p-6 flex flex-col justify-center">
                 <div class="flex items-center justify-between gap-2">
@@ -659,7 +707,7 @@
             <!-- DLC 2: Murder on Eridanos -->
             <div class="glass-card glass-card-dlc rounded-2xl overflow-hidden flex flex-col sm:flex-row group border-amber-500/40">
               <div class="sm:w-52 h-44 sm:h-auto overflow-hidden shrink-0 bg-dark-900">
-                <img src="images/outerworlds_eridanos.jpg" alt="Murder on Eridanos DLC" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <img loading="lazy" decoding="async" src="images/outerworlds_eridanos.jpg" alt="Murder on Eridanos DLC" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
               </div>
               <div class="p-6 flex flex-col justify-center">
                 <div class="flex items-center justify-between gap-2">
@@ -922,7 +970,7 @@
             <!-- Right Visual Banner -->
             <div class="lg:col-span-5">
               <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-white/20 group">
-                <img src="images/expanse_header.jpg" alt="The Expanse Banner" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
+                <img loading="lazy" decoding="async" src="images/expanse_header.jpg" alt="The Expanse Banner" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
                 <div class="absolute inset-0 bg-gradient-to-t from-dark-950/90 via-transparent to-transparent"></div>
                 <div class="absolute bottom-4 left-4 right-4 text-xs text-slate-200 font-mono flex items-center justify-between">
                   <span>Çevirmen: Atilla (ElijahKerpy)</span>
@@ -960,7 +1008,7 @@
                  onmouseenter="switchBackground('expanse')" 
                  onclick="switchBackground('expanse')">
               <div class="sm:w-52 h-52 sm:h-auto overflow-hidden shrink-0">
-                <img src="images/expanse_drummer.jpg" alt="Camina Drummer" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <img loading="lazy" decoding="async" src="images/expanse_drummer.jpg" alt="Camina Drummer" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
               </div>
               <div class="p-6 flex flex-col justify-center">
                 <div class="flex items-center justify-between">
@@ -979,7 +1027,7 @@
                  onmouseenter="switchBackground('dlc')" 
                  onclick="switchBackground('dlc')">
               <div class="sm:w-52 h-52 sm:h-auto overflow-hidden shrink-0 bg-dark-900">
-                <img src="images/dlc_avasarala.jpg" alt="Chrisjen Avasarala - Archangel DLC" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <img loading="lazy" decoding="async" src="images/dlc_avasarala.jpg" alt="Chrisjen Avasarala - Archangel DLC" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
               </div>
               <div class="p-6 flex flex-col justify-center">
                 <div class="flex items-center justify-between">
@@ -1107,28 +1155,28 @@
 
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div class="glass-card rounded-xl overflow-hidden group cursor-pointer" onclick="openLightbox('images/screenshot1.png', 'Bölüm Diyalogları — Türkçe')">
-              <img src="images/screenshot1.png" alt="Türkçe Ekran Görüntüsü 1" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
+              <img loading="lazy" decoding="async" src="images/screenshot1.png" alt="Türkçe Ekran Görüntüsü 1" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
               <div class="p-3 text-xs text-slate-200 font-mono flex items-center justify-between">
                 <span>Bölüm Diyalogları</span>
                 <span class="text-brand-cyan">🔍 Büyüt</span>
               </div>
             </div>
             <div class="glass-card rounded-xl overflow-hidden group cursor-pointer" onclick="openLightbox('images/screenshot2.png', 'Karakter Etkileşimleri — Türkçe')">
-              <img src="images/screenshot2.png" alt="Türkçe Ekran Görüntüsü 2" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
+              <img loading="lazy" decoding="async" src="images/screenshot2.png" alt="Türkçe Ekran Görüntüsü 2" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
               <div class="p-3 text-xs text-slate-200 font-mono flex items-center justify-between">
                 <span>Karakter Etkileşimleri</span>
                 <span class="text-brand-cyan">🔍 Büyüt</span>
               </div>
             </div>
             <div class="glass-card rounded-xl overflow-hidden group cursor-pointer" onclick="openLightbox('images/screenshot3.png', 'Seçimler ve Menü — Türkçe')">
-              <img src="images/screenshot3.png" alt="Türkçe Ekran Görüntüsü 3" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
+              <img loading="lazy" decoding="async" src="images/screenshot3.png" alt="Türkçe Ekran Görüntüsü 3" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
               <div class="p-3 text-xs text-slate-200 font-mono flex items-center justify-between">
                 <span>Seçimler ve Menü</span>
                 <span class="text-brand-cyan">🔍 Büyüt</span>
               </div>
             </div>
             <div class="glass-card rounded-xl overflow-hidden group cursor-pointer" onclick="openLightbox('images/dlc_desk.jpg', 'Archangel DLC — Avasarala BM Masası')">
-              <img src="images/dlc_desk.jpg" alt="Archangel DLC Avasarala Masası" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
+              <img loading="lazy" decoding="async" src="images/dlc_desk.jpg" alt="Archangel DLC Avasarala Masası" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
               <div class="p-3 text-xs text-slate-200 font-mono flex items-center justify-between">
                 <span class="text-amber-300">Archangel DLC</span>
                 <span class="text-amber-400">🔍 Büyüt</span>
@@ -1266,7 +1314,7 @@
             <!-- Right Visual Banner -->
             <div class="lg:col-span-5">
               <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-purple-500/30 group">
-                <img src="images/codevein_cover.jpg" alt="Code Vein Banner" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
+                <img loading="lazy" decoding="async" src="images/codevein_cover.jpg" alt="Code Vein Banner" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
                 <div class="absolute inset-0 bg-gradient-to-t from-dark-950/90 via-transparent to-transparent"></div>
                 <div class="absolute bottom-4 left-4 right-4 text-xs text-slate-200 font-mono flex items-center justify-between">
                   <span>Çevirmen: Atilla Çeviri</span>
@@ -1403,28 +1451,28 @@
 
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div class="glass-card rounded-xl overflow-hidden group cursor-pointer border-purple-500/30" onclick="openLightbox('images/codevein_showcase_01_mistle.png', 'Mistle ve Oynanış Rehberi — Türkçe')">
-              <img src="images/codevein_showcase_01_mistle.png" alt="Mistle ve Oynanış Rehberi" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
+              <img loading="lazy" decoding="async" src="images/codevein_showcase_01_mistle.png" alt="Mistle ve Oynanış Rehberi" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
               <div class="p-3 text-xs text-slate-200 font-mono flex items-center justify-between">
                 <span>Mistle ve Oynanış Rehberi</span>
                 <span class="text-purple-400">🔍 Büyüt</span>
               </div>
             </div>
             <div class="glass-card rounded-xl overflow-hidden group cursor-pointer border-purple-500/30" onclick="openLightbox('images/codevein_showcase_02_anamenu.png', 'Ana Menü ve DLC Başlıkları — Türkçe')">
-              <img src="images/codevein_showcase_02_anamenu.png" alt="Ana Menü ve DLC Başlıkları" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
+              <img loading="lazy" decoding="async" src="images/codevein_showcase_02_anamenu.png" alt="Ana Menü ve DLC Başlıkları" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
               <div class="p-3 text-xs text-slate-200 font-mono flex items-center justify-between">
                 <span>Ana Menü & 3 DLC</span>
                 <span class="text-purple-400">🔍 Büyüt</span>
               </div>
             </div>
             <div class="glass-card rounded-xl overflow-hidden group cursor-pointer border-purple-500/30" onclick="openLightbox('images/codevein_showcase_03_io_diyalog.png', 'Io ile Keşif Diyaloğu — Türkçe')">
-              <img src="images/codevein_showcase_03_io_diyalog.png" alt="Io ile Keşif Diyaloğu" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
+              <img loading="lazy" decoding="async" src="images/codevein_showcase_03_io_diyalog.png" alt="Io ile Keşif Diyaloğu" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
               <div class="p-3 text-xs text-slate-200 font-mono flex items-center justify-between">
                 <span>Io ile Keşif Diyaloğu</span>
                 <span class="text-purple-400">🔍 Büyüt</span>
               </div>
             </div>
             <div class="glass-card rounded-xl overflow-hidden group cursor-pointer border-purple-500/30" onclick="openLightbox('images/codevein_showcase_04_arasahne.png', 'Sinematik Ara Sahne — Türkçe')">
-              <img src="images/codevein_showcase_04_arasahne.png" alt="Sinematik Ara Sahne" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
+              <img loading="lazy" decoding="async" src="images/codevein_showcase_04_arasahne.png" alt="Sinematik Ara Sahne" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
               <div class="p-3 text-xs text-slate-200 font-mono flex items-center justify-between">
                 <span>Sinematik Ara Sahne</span>
                 <span class="text-purple-400">🔍 Büyüt</span>
@@ -1550,7 +1598,7 @@
             <!-- Right Visual Cover -->
             <div class="lg:col-span-5 flex flex-col items-center">
               <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-amber-500/40 group max-w-md w-full">
-                <img src="images/evilwest_cover.jpg" alt="Evil West Türkçe Yerelleştirme" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
+                <img loading="lazy" decoding="async" src="images/evilwest_cover.jpg" alt="Evil West Türkçe Yerelleştirme" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
                 <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-transparent to-transparent opacity-60"></div>
                 <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs font-mono text-white">
                   <span class="bg-black/80 px-2.5 py-1 rounded backdrop-blur border border-white/10">Rentier Enstitüsü</span>
@@ -1889,11 +1937,56 @@
       smoothScrollTo('dlc-section', 'dlc');
     }
 
-    // Context-aware background transitions
+    // Context-aware background transitions & Back-to-Top button
+    function scrollToTop() {
+      isManualNavigating = true;
+      clearTimeout(navTimeout);
+      navTimeout = setTimeout(() => { isManualNavigating = false; }, 1000);
+      switchBackground('portal');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.getElementById('mobile-menu-btn');
+      const openIcon = document.getElementById('icon-menu-open');
+      const closeIcon = document.getElementById('icon-menu-close');
+      if (!menu) return;
+      const isHidden = menu.classList.toggle('hidden');
+      if (btn) btn.setAttribute('aria-expanded', String(!isHidden));
+      if (openIcon) openIcon.classList.toggle('hidden', !isHidden);
+      if (closeIcon) closeIcon.classList.toggle('hidden', isHidden);
+    }
+
+    function closeMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.getElementById('mobile-menu-btn');
+      const openIcon = document.getElementById('icon-menu-open');
+      const closeIcon = document.getElementById('icon-menu-close');
+      if (menu && !menu.classList.contains('hidden')) {
+        menu.classList.add('hidden');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+        if (openIcon) openIcon.classList.remove('hidden');
+        if (closeIcon) closeIcon.classList.add('hidden');
+      }
+    }
+
     window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY || window.pageYOffset;
+      const backToTopBtn = document.getElementById('back-to-top');
+
+      if (backToTopBtn) {
+        if (scrollY > 500) {
+          backToTopBtn.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+          backToTopBtn.classList.add('opacity-100', 'translate-y-0');
+        } else {
+          backToTopBtn.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+          backToTopBtn.classList.remove('opacity-100', 'translate-y-0');
+        }
+      }
+
       if (isManualNavigating) return;
 
-      const scrollY = window.scrollY || window.pageYOffset;
       const innerH = window.innerHeight;
 
       // 1. Top of page / Hero / Portal
@@ -1990,6 +2083,7 @@
       if (e.key === 'Escape') {
         closeLightbox();
         closeLegalModal();
+        closeMobileMenu();
       }
     });
 
@@ -2047,8 +2141,13 @@
     }
   </script>
 
+  <!-- BACK TO TOP FLOATING BUTTON -->
+  <button type="button" id="back-to-top" onclick="scrollToTop()" title="Yukarı Çık" aria-label="Yukarı Çık" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-2xl glass-card border border-cyan-500/40 bg-dark-900/90 hover:border-brand-cyan text-brand-cyan hover:text-white flex items-center justify-center shadow-2xl transition-all duration-300 opacity-0 translate-y-4 pointer-events-none cursor-pointer">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7"/></svg>
+  </button>
+
   <!-- FLOATING TOAST NOTIFICATION -->
-  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-28 opacity-0 transition-all duration-300 pointer-events-none glass-card border border-cyan-500/50 px-5 py-3.5 rounded-2xl shadow-2xl flex items-center gap-3 text-xs sm:text-sm text-white">
+  <div id="toast" class="fixed bottom-20 right-6 z-50 transform translate-y-28 opacity-0 transition-all duration-300 pointer-events-none glass-card border border-cyan-500/50 px-5 py-3.5 rounded-2xl shadow-2xl flex items-center gap-3 text-xs sm:text-sm text-white">
     <div class="w-8 h-8 rounded-xl bg-cyan-500/20 text-brand-cyan flex items-center justify-center shrink-0">
       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
     </div>
