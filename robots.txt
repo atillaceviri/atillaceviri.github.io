@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /*.zip$
 
 Sitemap: https://atillaceviri.github.io/sitemap.xml
