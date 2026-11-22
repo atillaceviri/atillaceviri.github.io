@@ -50,10 +50,11 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts (non-blocking) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Rajdhani:wght@500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Rajdhani:wght@600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Rajdhani:wght@600;700;800&display=swap"></noscript>
 
   <!-- Compiled Tailwind CSS -->
   <link rel="stylesheet" href="../styles.css">
@@ -150,8 +151,8 @@
   </div>
 
   <!-- NAVBAR -->
-  <header class="sticky top-0 z-50 backdrop-blur-md bg-dark-950/90 border-b border-white/10 transition-colors">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-6">
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-dark-950/95 border-b border-white/10 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
       
       <!-- Brand Logo -->
       <a href="../" class="flex items-center gap-3 shrink-0 group">
@@ -168,7 +169,7 @@
       </a>
       
       <!-- Clean Single-Line Nav Links -->
-      <nav class="hidden lg:flex items-center gap-4 xl:gap-6 text-sm font-medium text-slate-300 whitespace-nowrap">
+      <nav class="hidden lg:flex items-center gap-3 xl:gap-6 text-xs font-medium text-slate-200 whitespace-nowrap">
         <a href="../#yamalar" class="hover:text-brand-cyan transition">Tüm Yamalar</a>
         <a href="../duyurular/" onclick="markAnnouncementsSeen()" class="hover:text-emerald-400 transition flex items-center gap-1.5">
           <span>Duyurular</span>
@@ -177,22 +178,10 @@
             <span>YENİ</span>
           </span>
         </a>
-        <a href="../outer-worlds/" class="hover:text-emerald-400 transition flex items-center gap-1.5">
-          <span>The Outer Worlds</span>
-          <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-950 text-emerald-300 border border-emerald-500/30">v1.1</span>
-        </a>
-        <a href="../code-vein/" class="text-purple-300 font-bold transition flex items-center gap-1.5">
-          <span>Code Vein</span>
-          <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-purple-950 text-purple-300 border border-purple-500/30">v1.0</span>
-        </a>
-        <a href="../the-expanse/" class="hover:text-brand-cyan transition flex items-center gap-1.5">
-          <span>The Expanse</span>
-          <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-cyan-950 text-cyan-300 border border-cyan-500/30">v1.0</span>
-        </a>
-        <a href="../evil-west/" class="hover:text-amber-400 transition flex items-center gap-1.5">
-          <span>Evil West</span>
-          <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-amber-950 text-amber-300 border border-amber-500/30">Sırada</span>
-        </a>
+        <a href="../outer-worlds/" class="hover:text-emerald-400 transition">The Outer Worlds</a>
+        <a href="../code-vein/" class="text-purple-300 font-bold transition">Code Vein</a>
+        <a href="../the-expanse/" class="hover:text-brand-cyan transition">The Expanse</a>
+        <a href="../evil-west/" class="hover:text-amber-400 transition">Evil West</a>
         <div class="relative group">
           <button type="button" class="hover:text-brand-cyan transition flex items-center gap-1 py-1">
             <span>Sürüm Notları</span>
@@ -739,18 +728,18 @@
         </button>
       </div>
 
-      <p class="text-xs text-slate-500 max-w-xl mx-auto leading-relaxed">
+      <p class="text-xs text-slate-300 max-w-xl mx-auto leading-relaxed">
         Atilla Çeviri, oyuncular için bağımsız ve kâr amacı gütmeyen Türkçe yerelleştirmeler hazırlar. 
         Sitede yer alan tüm oyunlar, logolar, karakterler ve ticari markalar ilgili yapımcı ve dağıtıcı stüdyolara aittir.
       </p>
-      <p class="text-xs text-slate-600 mt-4 font-mono">
+      <p class="text-xs text-slate-400 mt-4 font-mono">
         © 2026 Atilla Çeviri. 5846 Sayılı FSEK & 5651 Sayılı Kanun Uyar-Kaldır Uyumlu Bağımsız Oyuncu Portalı.
       </p>
     </div>
   </footer>
 
 
-  <script src="../assets/site.js"></script>
+  <script src="../assets/site.js" defer></script>
 
   <!-- BACK TO TOP FLOATING BUTTON -->
   <button type="button" id="back-to-top" onclick="scrollToTop()" title="Yukarı Çık" aria-label="Yukarı Çık" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-2xl glass-card border border-cyan-500/40 bg-dark-900/90 hover:border-brand-cyan text-brand-cyan hover:text-white flex items-center justify-center shadow-2xl transition-all duration-300 opacity-0 translate-y-4 pointer-events-none cursor-pointer">
