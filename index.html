@@ -172,6 +172,24 @@
   <div id="bg-evilwest" class="bg-layer" data-bg="images/evilwest_bg.webp"></div>
   <div class="bg-overlay"></div>
 
+  <!-- TOP ANNOUNCEMENT BAR (Dismissible per LATEST_ANNOUNCEMENT_ID) -->
+  <div id="top-announcement-bar" data-ann-id="2026-11-22-tow-v11" class="relative z-50 bg-emerald-950/90 border-b border-emerald-500/40 backdrop-blur-md text-xs text-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex items-center justify-between gap-3">
+      <div class="flex items-center gap-2.5 flex-wrap">
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-[10px] font-mono font-bold uppercase tracking-wider shrink-0">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>GÜNCELLEME</span>
+        </span>
+        <span><strong class="text-white">The Outer Worlds Türkçe Yama v1.1 yayında!</strong> Peril on Gorgon ve Murder on Eridanos DLC'leri sıfırdan yeniden çevrildi.</span>
+        <a href="#duyurular" onclick="goToAnnouncements(event)" class="text-emerald-300 hover:text-white font-mono font-bold transition">Duyuruyu Oku →</a>
+        <a href="#outerworlds" onclick="goToOuterWorlds(event)" class="hidden sm:inline text-cyan-300 hover:text-white font-mono transition">v1.1 İndir →</a>
+      </div>
+      <button type="button" onclick="dismissTopAnnouncement()" aria-label="Duyuruyu Kapat" title="Bu duyuruyu gizle" class="p-1 rounded-lg hover:bg-white/5 text-slate-400 hover:text-white transition shrink-0 cursor-pointer">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+  </div>
+
   <!-- NAVBAR -->
   <header class="sticky top-0 z-50 backdrop-blur-md bg-dark-950/90 border-b border-white/10 transition-colors">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-6">
@@ -191,8 +209,15 @@
       </a>
       
       <!-- Clean Single-Line Nav Links -->
-      <nav class="hidden lg:flex items-center gap-5 xl:gap-6 text-sm font-medium text-slate-300 whitespace-nowrap">
+      <nav class="hidden lg:flex items-center gap-4 xl:gap-6 text-sm font-medium text-slate-300 whitespace-nowrap">
         <a href="#yamalar" onclick="goToSection('yamalar', 'portal', event)" class="hover:text-brand-cyan transition">Tüm Yamalar</a>
+        <a href="#duyurular" onclick="goToAnnouncements(event)" class="hover:text-emerald-400 transition flex items-center gap-1.5">
+          <span>Duyurular</span>
+          <span id="nav-ann-badge" class="inline-flex items-center gap-1 text-[10px] font-mono px-1.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>YENİ</span>
+          </span>
+        </a>
         <a href="#outerworlds" onclick="goToOuterWorlds(event)" class="hover:text-emerald-400 transition flex items-center gap-1.5">
           <span>The Outer Worlds</span>
           <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-950 text-emerald-300 border border-emerald-500/30">v1.1</span>
@@ -258,6 +283,10 @@
     <!-- Mobile Navigation Drawer -->
     <div id="mobile-menu" class="hidden lg:hidden border-t border-white/10 bg-dark-950/95 backdrop-blur-xl">
       <div class="max-w-7xl mx-auto px-4 py-4 space-y-2 text-sm font-medium">
+        <a href="#duyurular" onclick="closeMobileMenu(); goToAnnouncements(event)" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-emerald-950/40 border border-emerald-500/30 text-emerald-300 transition">
+          <span>Duyurular & Güncellemeler</span>
+          <span id="mobile-ann-badge" class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-300">YENİ • 22 Kas</span>
+        </a>
         <a href="#yamalar" onclick="closeMobileMenu(); goToSection('yamalar', 'portal', event)" class="block px-3.5 py-2.5 rounded-xl hover:bg-white/5 text-slate-200 transition">Tüm Yamalar (Katalog)</a>
         <a href="#outerworlds" onclick="closeMobileMenu(); goToOuterWorlds(event)" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-emerald-950/40 border border-emerald-500/25 text-emerald-300 transition">
           <span>The Outer Worlds: Spacer's Choice</span>
@@ -369,6 +398,115 @@
           </div>
         </div>
 
+      </div>
+    </section>
+
+    <!-- SECTION 0.5: DUYURULAR & GÜNCELLEMELER
+         Yeni duyuru eklemek için:
+         1) Alttaki script içinde LATEST_ANNOUNCEMENT_ID değerini yeni benzersiz ID ile değiştirin (örn. '2026-12-01-yeni-yazi').
+         2) Sayfa başındaki #top-announcement-bar metnini ve data-ann-id özelliğini güncelleyin.
+         3) Öne çıkan duyuru kartını güncelleyip önceki duyuruyu 3 sütunlu arşive ekleyin.
+    -->
+    <section id="duyurular" class="py-16 border-t border-white/10 bg-dark-950/75">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+          <div>
+            <h2 class="text-xs font-bold text-emerald-400 uppercase tracking-widest font-mono">GÜNCEL HABERLER</h2>
+            <p class="mt-1 text-3xl sm:text-4xl font-display font-bold text-white uppercase">Duyurular & Güncellemeler</p>
+            <p class="mt-1 text-xs sm:text-sm text-slate-400">Yeni yamalar, sürüm güncellemeleri ve çeviri ilerleme haberleri</p>
+          </div>
+          <div class="inline-flex flex-wrap p-1 rounded-xl bg-dark-900/90 border border-white/10 backdrop-blur self-start">
+            <button type="button" onclick="filterAnnouncements('all')" id="ann-filter-all" class="px-3.5 py-1.5 rounded-lg text-xs font-mono font-bold text-slate-950 bg-brand-cyan transition cursor-pointer">Tümü (4)</button>
+            <button type="button" onclick="filterAnnouncements('update')" id="ann-filter-update" class="px-3.5 py-1.5 rounded-lg text-xs font-mono text-slate-300 hover:text-emerald-300 transition cursor-pointer">Güncelleme</button>
+            <button type="button" onclick="filterAnnouncements('release')" id="ann-filter-release" class="px-3.5 py-1.5 rounded-lg text-xs font-mono text-slate-300 hover:text-cyan-300 transition cursor-pointer">Yeni Yama</button>
+            <button type="button" onclick="filterAnnouncements('status')" id="ann-filter-status" class="px-3.5 py-1.5 rounded-lg text-xs font-mono text-slate-300 hover:text-amber-300 transition cursor-pointer">Proje Durumu</button>
+          </div>
+        </div>
+
+        <!-- Featured Latest Announcement -->
+        <article data-ann-card data-ann-type="update" class="glass-card rounded-2xl p-6 sm:p-8 mb-6 border-emerald-500/50 bg-emerald-950/50">
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-[11px] font-mono font-bold uppercase tracking-wider">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>SON DUYURU • GÜNCELLEME</span>
+              </span>
+              <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-500/40">v1.1</span>
+            </div>
+            <span class="text-xs font-mono text-slate-400">22 Kasım 2026</span>
+          </div>
+
+          <h3 class="text-xl sm:text-2xl font-display font-bold text-white mb-2">
+            The Outer Worlds: Spacer's Choice Edition v1.1 — İki DLC Sıfırdan Yeniden Çevrildi
+          </h3>
+          <p class="text-sm text-slate-200 leading-relaxed mb-4">
+            İlk sürümdeki DLC geri bildirimlerinin ardından <strong>Peril on Gorgon</strong> (8.998 girdi) ve <strong>Murder on Eridanos</strong> (9.886 girdi) genişleme paketlerinin tamamı — toplam <strong>18.884 diyalog ve terminal girdisi</strong> — orijinal İngilizce kaynaktan sıfırdan editöryal olarak yeniden çevrildi; tespit edilen 22 kesik kodeks/eşya açıklaması onarıldı ve Halcyon terminolojisi ile <code class="text-emerald-300 font-mono">sen/siz</code> hitap uyumu %100 tektipleştirildi.
+          </p>
+          <p class="text-xs text-emerald-300 bg-emerald-950/80 border border-emerald-500/30 rounded-xl px-4 py-2.5 mb-6">
+            <strong>Mevcut v1.0 kullanıcıları için not:</strong> Önceki sürümü kullanan oyuncuların yeni v1.1 <code class="text-white font-mono">.pak</code> dosyasını indirip oyunun <code class="text-white font-mono">Paks</code> klasöründeki eski dosyanın üzerine yazması önerilir.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-3">
+            <button type="button" onclick="goToOuterWorlds(event)" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-400 to-teal-500 text-slate-950 font-bold font-display text-sm tracking-wide hover:brightness-110 transition shadow cursor-pointer">
+              <span>v1.1 Yamayı İncele & İndir</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <button type="button" onclick="goToSection('outerworlds-surum-notlari', 'outerworlds', event)" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-dark-900/90 border border-emerald-500/40 text-emerald-300 hover:text-white text-xs font-mono font-medium transition cursor-pointer">
+              <span>v1.1 Değişiklik Listesi</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Recent Announcements Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <article data-ann-card data-ann-type="release" class="glass-card rounded-2xl p-6 flex flex-col justify-between border-emerald-500/30">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">YENİ YAMA</span>
+                <span class="text-xs font-mono text-slate-400">21 Kasım 2026</span>
+              </div>
+              <h3 class="text-lg font-display font-bold text-white mb-2">The Outer Worlds v1.0 Yayınlandı</h3>
+              <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                71.345 metin girdisi, 1.272 tablo, 2 DLC ve özel Türkçe karakter destekli font paketiyle ana sürüm yayınlandı.
+              </p>
+            </div>
+            <button type="button" onclick="goToOuterWorlds(event)" class="self-start text-xs font-mono font-bold text-emerald-300 hover:text-white transition cursor-pointer">
+              Projeye Git →
+            </button>
+          </article>
+
+          <article data-ann-card data-ann-type="release" class="glass-card rounded-2xl p-6 flex flex-col justify-between border-purple-500/40">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 border border-purple-500/40">YENİ YAMA</span>
+                <span class="text-xs font-mono text-slate-400">Kasım 2026</span>
+              </div>
+              <h3 class="text-lg font-display font-bold text-white mb-2">Code Vein %100 Türkçe Yama (v1.0) Yayında</h3>
+              <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                Ana oyun ve 3 DLC (25.472 satır) tek parça <code class="text-purple-300 font-mono">.pak</code> paketiyle kullanıma sunuldu.
+              </p>
+            </div>
+            <button type="button" onclick="goToCodeVein(event)" class="self-start text-xs font-mono font-bold text-purple-300 hover:text-white transition cursor-pointer">
+              Projeye Git →
+            </button>
+          </article>
+
+          <article data-ann-card data-ann-type="status" class="glass-card rounded-2xl p-6 flex flex-col justify-between border-amber-500/40">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/40">PROJE DURUMU</span>
+                <span class="text-xs font-mono text-slate-400">Sırada</span>
+              </div>
+              <h3 class="text-lg font-display font-bold text-white mb-2">Sıradaki Proje: Evil West Hazırlanıyor</h3>
+              <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                Ana senaryo, ara sahneler, cephanelik ve arşiv belgeleri için yerelleştirme hazırlıkları sürüyor.
+              </p>
+            </div>
+            <button type="button" onclick="goToEvilWest(event)" class="self-start text-xs font-mono font-bold text-amber-300 hover:text-white transition cursor-pointer">
+              Detaylara Bak →
+            </button>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -781,7 +919,7 @@
           <!-- Changelog Items List -->
           <div class="space-y-4">
             
-            <div class="p-4 rounded-xl bg-emerald-950/50 border border-emerald-400/50 flex items-start gap-4">
+            <div class="p-4 rounded-xl bg-emerald-950/50 border border-emerald-500/50 flex items-start gap-4">
               <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-300 flex items-center justify-center shrink-0 mt-0.5">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
               </div>
@@ -2121,6 +2259,71 @@
       if (e && e.preventDefault) e.preventDefault();
       smoothScrollTo('dlc-section', 'dlc');
     }
+
+    // Announcements system (Top bar dismissal, unread badge, category filter)
+    const LATEST_ANNOUNCEMENT_ID = '2026-11-22-tow-v11';
+
+    function dismissTopAnnouncement() {
+      const bar = document.getElementById('top-announcement-bar');
+      if (bar) bar.classList.add('hidden');
+      try { localStorage.setItem('atillaceviri_dismissed_ann', LATEST_ANNOUNCEMENT_ID); } catch (e) {}
+    }
+
+    function markAnnouncementsSeen() {
+      ['nav-ann-badge', 'mobile-ann-badge'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.classList.add('hidden');
+      });
+      try { localStorage.setItem('atillaceviri_seen_ann', LATEST_ANNOUNCEMENT_ID); } catch (e) {}
+    }
+
+    function goToAnnouncements(e) {
+      if (e && e.preventDefault) e.preventDefault();
+      markAnnouncementsSeen();
+      smoothScrollTo('duyurular', 'portal');
+    }
+
+    function filterAnnouncements(type) {
+      ['all', 'update', 'release', 'status'].forEach(t => {
+        const btn = document.getElementById('ann-filter-' + t);
+        if (!btn) return;
+        if (t === type) {
+          btn.className = 'px-3.5 py-1.5 rounded-lg text-xs font-mono font-bold text-slate-950 bg-brand-cyan transition cursor-pointer';
+        } else {
+          btn.className = 'px-3.5 py-1.5 rounded-lg text-xs font-mono text-slate-300 hover:text-white transition cursor-pointer';
+        }
+      });
+      document.querySelectorAll('[data-ann-card]').forEach(card => {
+        const cardType = card.dataset.annType || '';
+        card.classList.toggle('hidden', type !== 'all' && cardType !== type);
+      });
+    }
+
+    (function initAnnouncements() {
+      try {
+        if (localStorage.getItem('atillaceviri_dismissed_ann') === LATEST_ANNOUNCEMENT_ID) {
+          const bar = document.getElementById('top-announcement-bar');
+          if (bar) bar.classList.add('hidden');
+        }
+        if (localStorage.getItem('atillaceviri_seen_ann') === LATEST_ANNOUNCEMENT_ID) {
+          ['nav-ann-badge', 'mobile-ann-badge'].forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.classList.add('hidden');
+          });
+        }
+      } catch (e) {}
+
+      const annSection = document.getElementById('duyurular');
+      if (annSection && 'IntersectionObserver' in window) {
+        const obs = new IntersectionObserver((entries) => {
+          if (entries.some(en => en.isIntersecting)) {
+            markAnnouncementsSeen();
+            obs.disconnect();
+          }
+        }, { threshold: 0.35 });
+        obs.observe(annSection);
+      }
+    })();
 
     // Context-aware background transitions & Back-to-Top button
     function scrollToTop() {
