@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth" data-base="../" data-page="evil-west">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evil West Türkçe Yama Projesi (Hazırlanıyor) — Atilla Çeviri</title>
+  <meta name="description" content="Evil West %100 Türkçe yama projesi geliştirme sayfası. Ana senaryo, diyaloglar, Rentier Eldiveni cephaneliği ve arşiv belgeleri çok yakında.">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="canonical" href="https://atillaceviri.github.io/evil-west/">
+  <meta name="theme-color" content="#05070a">
+
+  <!-- Open Graph / Social Media & Forum Link Previews -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:site_name" content="Atilla Çeviri">
+  <meta property="og:title" content="Evil West %100 Türkçe Yama Projesi (Hazırlanıyor)">
+  <meta property="og:description" content="Atilla Çeviri'nin sıradaki yerelleştirme projesi: Evil West ana hikâye, silah geliştirmeleri ve arşiv metinleriyle hazırlanıyor.">
+  <meta property="og:url" content="https://atillaceviri.github.io/evil-west/">
+  <meta property="og:image" content="https://atillaceviri.github.io/images/evilwest_cover.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Evil West %100 Türkçe Yama Projesi (Hazırlanıyor)">
+  <meta name="twitter:description" content="Atilla Çeviri'nin sıradaki yerelleştirme projesi: Evil West ana hikâye, silah geliştirmeleri ve arşiv metinleriyle hazırlanıyor.">
+  <meta name="twitter:image" content="https://atillaceviri.github.io/images/evilwest_cover.webp">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Evil West Türkçe Yama Projesi — Atilla Çeviri",
+  "url": "https://atillaceviri.github.io/evil-west/",
+  "inLanguage": "tr-TR"
+}
+  </script>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Rajdhani:wght@500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Compiled Tailwind CSS -->
+  <link rel="stylesheet" href="../styles.css">
+
+  <style>
+    /* Real Game Wallpaper Dynamic Engine */
+    .bg-layer {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      pointer-events: none;
+      z-index: -3;
+      opacity: 0;
+      transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 1.2s ease-out;
+      transform: scale(1.02);
+    }
+
+    /* Cinematic Gamer Dark Vignette Overlay */
+    .bg-overlay {
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at center, rgba(5, 7, 10, 0.5) 0%, rgba(5, 7, 10, 0.88) 75%, #05070a 100%);
+      pointer-events: none;
+      z-index: -2;
+    }
+
+    /* Glassmorphism Cards */
+    .glass-card {
+      background: rgba(14, 19, 29, 0.82);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .glass-card:hover {
+      border-color: rgba(0, 229, 255, 0.45);
+      box-shadow: 0 14px 40px -10px rgba(0, 229, 255, 0.25);
+      transform: translateY(-3px);
+    }
+
+    .glass-card-dlc:hover {
+      border-color: rgba(245, 158, 11, 0.55);
+      box-shadow: 0 14px 40px -10px rgba(245, 158, 11, 0.25);
+      transform: translateY(-3px);
+    }
+
+    .neon-cyan {
+      box-shadow: 0 0 25px -3px rgba(0, 229, 255, 0.4);
+    }
+
+    /* Lightbox Modal */
+    .lightbox-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: rgba(0, 0, 0, 0.94);
+      backdrop-filter: blur(12px);
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox-modal.active {
+      display: flex;
+    }
+  </style>
+  <!-- Privacy-friendly Web Analytics (GoatCounter - 0 Cookies / KVKK & GDPR Compliant) -->
+  <script data-goatcounter="https://elijahkerpy.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body class="min-h-screen flex flex-col font-sans text-slate-100 selection:bg-brand-cyan selection:text-black">
+
+  <div id="bg-evilwest" class="bg-layer" style="background-image: url('../images/evilwest_bg.webp'); opacity: 1; transform: scale(1.0);"></div>
+  <div class="bg-overlay"></div>
+
+  <!-- TOP ANNOUNCEMENT BAR (Dismissible per LATEST_ANNOUNCEMENT_ID) -->
+  <div id="top-announcement-bar" data-ann-id="2026-11-22-tow-v11" class="relative z-50 bg-emerald-950/90 border-b border-emerald-500/40 backdrop-blur-md text-xs text-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex items-center justify-between gap-3">
+      <div class="flex items-center gap-2.5 flex-wrap">
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-[10px] font-mono font-bold uppercase tracking-wider shrink-0">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>GÜNCELLEME</span>
+        </span>
+        <span><strong class="text-white">The Outer Worlds Türkçe Yama v1.1 yayında!</strong> Peril on Gorgon ve Murder on Eridanos DLC'leri sıfırdan yeniden çevrildi.</span>
+        <a href="../duyurular/" onclick="markAnnouncementsSeen()" class="text-emerald-300 hover:text-white font-mono font-bold transition">Duyuruyu Oku →</a>
+        <a href="../outer-worlds/" class="hidden sm:inline text-cyan-300 hover:text-white font-mono transition">v1.1 İndir →</a>
+      </div>
+      <button type="button" onclick="dismissTopAnnouncement()" aria-label="Duyuruyu Kapat" title="Bu duyuruyu gizle" class="p-1 rounded-lg hover:bg-white/5 text-slate-400 hover:text-white transition shrink-0 cursor-pointer">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-dark-950/90 border-b border-white/10 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-6">
+      
+      <!-- Brand Logo -->
+      <a href="../" class="flex items-center gap-3 shrink-0 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-cyan via-brand-blue to-brand-violet flex items-center justify-center text-slate-950 font-bold font-display text-2xl shadow-lg shadow-cyan-500/25 group-hover:scale-105 transition shrink-0">
+          A
+        </div>
+        <div class="whitespace-nowrap">
+          <div class="flex items-center gap-2">
+            <span class="font-display font-extrabold text-2xl tracking-wider text-white">ATİLLA ÇEVİRİ</span>
+            <span class="text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-cyan-950 border border-cyan-500/40 text-brand-cyan font-bold font-mono">PORTAL</span>
+          </div>
+          <p class="text-[11px] text-slate-400">Türkçe Oyun Yerelleştirme</p>
+        </div>
+      </a>
+      
+      <!-- Clean Single-Line Nav Links -->
+      <nav class="hidden lg:flex items-center gap-4 xl:gap-6 text-sm font-medium text-slate-300 whitespace-nowrap">
+        <a href="../#yamalar" class="hover:text-brand-cyan transition">Tüm Yamalar</a>
+        <a href="../duyurular/" onclick="markAnnouncementsSeen()" class="hover:text-emerald-400 transition flex items-center gap-1.5">
+          <span>Duyurular</span>
+          <span id="nav-ann-badge" class="inline-flex items-center gap-1 text-[10px] font-mono px-1.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>YENİ</span>
+          </span>
+        </a>
+        <a href="../outer-worlds/" class="hover:text-emerald-400 transition flex items-center gap-1.5">
+          <span>The Outer Worlds</span>
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-950 text-emerald-300 border border-emerald-500/30">v1.1</span>
+        </a>
+        <a href="../code-vein/" class="hover:text-purple-400 transition flex items-center gap-1.5">
+          <span>Code Vein</span>
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-purple-950 text-purple-300 border border-purple-500/30">v1.0</span>
+        </a>
+        <a href="../the-expanse/" class="hover:text-brand-cyan transition flex items-center gap-1.5">
+          <span>The Expanse</span>
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-cyan-950 text-cyan-300 border border-cyan-500/30">v1.0</span>
+        </a>
+        <a href="../evil-west/" class="text-amber-300 font-bold transition flex items-center gap-1.5">
+          <span>Evil West</span>
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-amber-950 text-amber-300 border border-amber-500/30">Sırada</span>
+        </a>
+        <div class="relative group">
+          <button type="button" class="hover:text-brand-cyan transition flex items-center gap-1 py-1">
+            <span>Sürüm Notları</span>
+            <svg class="w-3.5 h-3.5 text-slate-400 group-hover:text-cyan-400 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="absolute left-0 top-full pt-1 hidden group-hover:block z-50">
+            <div class="glass-card rounded-xl p-2 min-w-[235px] shadow-2xl border border-white/10 space-y-1">
+              <a href="../outer-worlds/#outerworlds-surum-notlari" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-emerald-950/60 text-xs text-slate-200 hover:text-emerald-300 transition">
+                <span>The Outer Worlds (v1.1)</span>
+                <span class="text-[10px] font-mono text-emerald-400 bg-emerald-950 px-1.5 py-0.5 rounded border border-emerald-800">7 Not</span>
+              </a>
+              <a href="../code-vein/#codevein-surum-notlari" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-purple-950/60 text-xs text-slate-200 hover:text-purple-300 transition">
+                <span>Code Vein (v1.0)</span>
+                <span class="text-[10px] font-mono text-purple-400 bg-purple-950 px-1.5 py-0.5 rounded border border-purple-800">6 Not</span>
+              </a>
+              <a href="../the-expanse/#expanse-surum-notlari" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-cyan-950/60 text-xs text-slate-200 hover:text-cyan-300 transition">
+                <span>The Expanse (v1.0)</span>
+                <span class="text-[10px] font-mono text-cyan-400 bg-cyan-950 px-1.5 py-0.5 rounded border border-cyan-800">5 Not</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <a href="../#sss" class="hover:text-brand-cyan transition">SSS</a>
+        <a href="../#hakkinda" class="hover:text-brand-cyan transition">Hakkımızda</a>
+      </nav>
+
+      <!-- Contact CTA Group -->
+      <div class="flex items-center gap-2.5 shrink-0">
+        <button type="button" onclick="copyEmail(event, this)" title="E-Posta Adresini Kopyala (atillaceviri@gmail.com)" class="p-2 sm:px-3 sm:py-2 rounded-xl border border-slate-700 bg-dark-850 hover:bg-dark-800 text-slate-200 text-xs sm:text-sm font-medium transition hover:border-brand-cyan/60 hover:text-white shadow-sm flex items-center gap-1.5 cursor-pointer">
+          <svg class="w-4 h-4 text-brand-cyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+          <span class="btn-label hidden sm:inline font-mono text-xs">E-Posta</span>
+        </button>
+        <a href="https://steamcommunity.com/profiles/76561198267659119/" target="_blank" rel="noopener" class="flex items-center gap-2 px-3 py-2 rounded-xl border border-slate-700 bg-dark-850 hover:bg-dark-800 text-slate-200 text-xs sm:text-sm font-medium transition hover:border-brand-cyan/60 hover:text-white shadow-sm whitespace-nowrap">
+          <svg class="w-4 h-4 fill-current text-brand-cyan shrink-0" viewBox="0 0 24 24">
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174l3.197-4.662a4.47 4.47 0 01-.824-2.512c0-2.485 2.015-4.5 4.5-4.5.347 0 .684.04 1.008.115l3.208-4.678A11.942 11.942 0 0012 0zm4.5 9c-1.381 0-2.5 1.119-2.5 2.5 0 .385.089.749.246 1.074l-2.029 2.959a4.49 4.49 0 01-1.217-.133l-3.327 4.852C3.125 18.73 1.5 15.565 1.5 12c0-5.799 4.701-10.5 10.5-10.5S22.5 6.201 22.5 12c0 4.095-2.348 7.641-5.753 9.387l-2.457-3.585A4.478 4.478 0 0116.5 16.5c2.485 0 4.5-2.015 4.5-4.5S18.985 9 16.5 9zm0 1.5c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3z"/>
+          </svg>
+          <span class="font-mono text-xs hidden sm:inline">ElijahKerpy</span>
+        </a>
+        <!-- Mobile Hamburger Menu Toggle -->
+        <button type="button" id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menüyü Aç/Kapat" aria-expanded="false" class="lg:hidden p-2 rounded-xl border border-slate-700 bg-dark-850 hover:bg-dark-800 hover:border-brand-cyan/60 text-slate-200 hover:text-white transition cursor-pointer">
+          <svg id="icon-menu-open" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="icon-menu-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-white/10 bg-dark-950/95 backdrop-blur-xl">
+      <div class="max-w-7xl mx-auto px-4 py-4 space-y-2 text-sm font-medium">
+        <a href="../duyurular/" onclick="closeMobileMenu(); markAnnouncementsSeen()" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-emerald-950/40 border border-emerald-500/30 text-emerald-300 transition">
+          <span>Duyurular & Güncellemeler</span>
+          <span id="mobile-ann-badge" class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-300">YENİ • 22 Kas</span>
+        </a>
+        <a href="../#yamalar" onclick="closeMobileMenu()" class="block px-3.5 py-2.5 rounded-xl hover:bg-white/5 text-slate-200 transition">Tüm Yamalar (Katalog)</a>
+        <a href="../outer-worlds/" onclick="closeMobileMenu()" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-emerald-950/60 text-emerald-300 transition">
+          <span>The Outer Worlds: Spacer's Choice</span>
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-500/40">YENİ • v1.1</span>
+        </a>
+        <a href="../code-vein/" onclick="closeMobileMenu()" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-purple-950/40 text-purple-300 transition">
+          <span>Code Vein</span>
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-purple-950 border border-purple-500/30">v1.0</span>
+        </a>
+        <a href="../the-expanse/" onclick="closeMobileMenu()" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-cyan-950/40 text-cyan-300 transition">
+          <span>The Expanse: A Telltale Series</span>
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-cyan-950 border border-cyan-500/30">v1.0</span>
+        </a>
+        <a href="../evil-west/" onclick="closeMobileMenu()" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-amber-950/40 text-amber-300 transition">
+          <span>Evil West</span>
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-amber-950 border border-amber-500/30">Sırada</span>
+        </a>
+        <div class="pt-2 mt-2 border-t border-white/10 grid grid-cols-3 gap-2 text-xs font-mono">
+          <a href="../outer-worlds/#outerworlds-surum-notlari" onclick="closeMobileMenu()" class="px-2 py-2 rounded-lg bg-dark-900 border border-white/10 text-slate-300 text-center">Sürüm Notları</a>
+          <a href="../#sss" onclick="closeMobileMenu()" class="px-2 py-2 rounded-lg bg-dark-900 border border-white/10 text-slate-300 text-center">SSS</a>
+          <a href="../#hakkinda" onclick="closeMobileMenu()" class="px-2 py-2 rounded-lg bg-dark-900 border border-white/10 text-slate-300 text-center">Hakkımızda</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1">
+    <!-- SECTION 2.6: SPOTLIGHT EVIL WEST (SIRADAKİ PROJE) -->
+    <section id="evilwest"  class="py-12 border-t border-white/10 relative transition-all duration-700">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav aria-label="Sayfa Yolu" class="mb-6 flex flex-wrap items-center gap-2 text-xs font-mono text-slate-400">
+        <a href="../" class="hover:text-brand-cyan transition">Ana Sayfa</a>
+        <span class="text-slate-600">/</span>
+        <a href="../#yamalar" class="hover:text-brand-cyan transition">Tüm Yamalar</a>
+        <span class="text-slate-600">/</span>
+        <span class="text-slate-200">Evil West</span>
+      </nav>
+        
+        <!-- Spotlight Banner Card -->
+        <div class="glass-card rounded-3xl p-8 sm:p-12 mb-12 border-amber-500/50 relative overflow-hidden shadow-2xl">
+          <div class="absolute -right-24 -bottom-24 w-96 h-96 bg-amber-600/20 rounded-full blur-3xl pointer-events-none"></div>
+          
+          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <!-- Left Info -->
+            <div class="lg:col-span-7 space-y-6">
+              <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-950/90 border border-amber-500/50 text-amber-300 text-xs font-mono font-bold tracking-wider uppercase shadow">
+                <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+                <span>🔥 SIRADAKİ ÇEVİRİ PROJESİ • HAZIRLANIYOR</span>
+              </div>
+              
+              <h1 class="text-4xl sm:text-5xl font-display font-extrabold text-white tracking-tight uppercase leading-tight">
+                EVIL WEST
+                <span class="block text-2xl sm:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-red-500 font-bold mt-1">
+                  %100 Türkçe Yerelleştirme Projesi
+                </span>
+              </h1>
+
+              <p class="text-sm sm:text-base text-slate-200 leading-relaxed">
+                Karanlık bir tehdit Amerikan sınırını yutarken, gizli bir vampir avcısı enstitüsünün son saha ajanlarından biri olan <strong class="text-amber-300">Jesse Rentier</strong> olarak insanlığın son savunma hattısınız. Flying Wild Hog ve Focus Entertainment imzalı bu vahşi batı & doğaüstü gotik aksiyon başyapıtı, Atilla Çeviri standartlarında Türkçeye kazandırılıyor!
+              </p>
+
+              <!-- Technical & Lore Details Grid -->
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 text-xs font-mono">
+                <div class="p-3 rounded-xl bg-dark-950/80 border border-white/5">
+                  <div class="text-slate-400 text-[10px] uppercase">Geliştirici & Yayıncı</div>
+                  <div class="text-amber-300 font-bold mt-0.5">Flying Wild Hog / Focus</div>
+                </div>
+                <div class="p-3 rounded-xl bg-dark-950/80 border border-white/5">
+                  <div class="text-slate-400 text-[10px] uppercase">Oyun Motoru</div>
+                  <div class="text-amber-300 font-bold mt-0.5">Unreal Engine 4</div>
+                </div>
+                <div class="p-3 rounded-xl bg-dark-950/80 border border-white/5">
+                  <div class="text-slate-400 text-[10px] uppercase">Tür & Atmosfer</div>
+                  <div class="text-amber-300 font-bold mt-0.5">TPS / Vahşi Batı & Vampir</div>
+                </div>
+              </div>
+
+              <!-- Metodoloji Güvencesi -->
+              <div class="p-4 rounded-xl bg-amber-950/40 border border-amber-500/30 flex items-start gap-3 text-xs text-slate-300">
+                <svg class="w-5 h-5 text-amber-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                <div class="space-y-1">
+                  <strong class="text-white block font-bold text-xs uppercase tracking-wide">Ham Makine Çevirisi Değildir</strong>
+                  <p class="leading-relaxed">
+                    Tıpkı The Expanse, Code Vein ve The Outer Worlds'te olduğu gibi; Jesse Rentier'ın sert kovboy mizacı, Rentier Enstitüsü'nün bilimsel ve askeri jargonu ile gotik yaratık terminolojisi el emeği editöryal denetimle Türkçeye aktarılacaktır.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="pt-4 flex flex-col sm:flex-row items-center gap-4">
+                <a href="https://store.steampowered.com/app/1065310/Evil_West/" target="_blank" rel="noopener" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-amber-500 via-orange-500 to-red-600 text-slate-950 font-bold font-display text-lg tracking-wide hover:brightness-110 transition shadow-xl shadow-orange-950/40">
+                  <svg class="w-6 h-6 fill-current text-slate-950" viewBox="0 0 24 24">
+                    <path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174l3.197-4.662a4.47 4.47 0 01-.824-2.512c0-2.485 2.015-4.5 4.5-4.5.347 0 .684.04 1.008.115l3.208-4.678A11.942 11.942 0 0012 0zm4.5 9c-1.381 0-2.5 1.119-2.5 2.5 0 .385.089.749.246 1.074l-2.029 2.959a4.49 4.49 0 01-1.217-.133l-3.327 4.852C3.125 18.73 1.5 15.565 1.5 12c0-5.799 4.701-10.5 10.5-10.5S22.5 6.201 22.5 12c0 4.095-2.348 7.641-5.753 9.387l-2.457-3.585A4.478 4.478 0 0116.5 16.5c2.485 0 4.5-2.015 4.5-4.5S18.985 9 16.5 9zm0 1.5c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3z"/>
+                  </svg>
+                  <span>Steam'de Oyunu İncele ↗</span>
+                </a>
+
+                <button type="button" onclick="copyEmail(event, this)" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl border border-amber-500/40 bg-dark-850 hover:bg-dark-800 text-amber-300 text-sm font-medium transition cursor-pointer">
+                  <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                  <span class="btn-label font-mono">Geri Bildirim / İletişim</span>
+                </button>
+              </div>
+
+            </div>
+
+            <!-- Right Visual Cover -->
+            <div class="lg:col-span-5 flex flex-col items-center">
+              <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-amber-500/40 group max-w-md w-full">
+                <img loading="lazy" decoding="async" src="../images/evilwest_cover.webp" alt="Evil West Türkçe Yerelleştirme" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-transparent to-transparent opacity-60"></div>
+                <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs font-mono text-white">
+                  <span class="bg-black/80 px-2.5 py-1 rounded backdrop-blur border border-white/10">Rentier Enstitüsü</span>
+                  <span class="bg-amber-500 text-slate-950 font-bold px-2.5 py-1 rounded">YAKINDA</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Project Scope Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="glass-card rounded-2xl p-6 border-amber-500/20">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-display font-bold text-lg mb-4">
+              🎯
+            </div>
+            <h3 class="text-lg font-display font-bold text-white mb-2">Ana Senaryo & Diyaloglar</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Jesse Rentier, Edgar Gravenor ve tüm saha ekibinin sinematik hikaye konuşmaları, telsiz anonsları ve görev diyalogları eksiksiz Türkçeleştirilecek.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6 border-amber-500/20">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-display font-bold text-lg mb-4">
+              ⚡
+            </div>
+            <h3 class="text-lg font-display font-bold text-white mb-2">Cephanelik & Eldiven</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Elektrikli Rentier Eldiveni geliştirmeleri, altıpatlar, av tüfeği, alev makinesi, kombo yetenekleri ve tüm arayüz terimleri özenle yerelleştirilecek.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6 border-amber-500/20">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-display font-bold text-lg mb-4">
+              📜
+            </div>
+            <h3 class="text-lg font-display font-bold text-white mb-2">Arşiv Notları & Lore</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Vahşi Batı'daki gizli vampir kovanları, Rentier Enstitüsü gizli dosyaları ve haritada toplanabilir tüm mektuplar/belgeler Türkçeye kazandırılacak.
+            </p>
+          </div>
+        </div>
+
+
+        <!-- OTHER PROJECTS NAVIGATION STRIP -->
+        <div class="border-t border-white/10 pt-4 mt-8">
+          <div class="flex items-center justify-between mb-6 gap-3">
+            <div>
+              <h3 class="text-xl sm:text-2xl font-display font-bold text-white uppercase">Diğer Çeviri Projelerimiz</h3>
+              <p class="text-xs text-slate-400">Atilla Çeviri portföyündeki diğer yamaları keşfedin</p>
+            </div>
+            <a href="../#yamalar" class="text-xs font-mono text-brand-cyan hover:text-white transition shrink-0">Tüm Katalog →</a>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <a href="../outer-worlds/" class="glass-card rounded-2xl p-5 flex items-center justify-between gap-4 border-emerald-500/40">
+            <div>
+              <div class="text-[10px] font-mono uppercase tracking-wider text-emerald-300">%100 Türkçe</div>
+              <div class="text-lg font-display font-bold text-white mt-0.5">The Outer Worlds</div>
+              <div class="text-xs text-slate-400 font-mono">Spacer's Choice • v1.1</div>
+            </div>
+            <span class="text-xs font-mono text-emerald-300 shrink-0">İncele →</span>
+          </a>
+          <a href="../code-vein/" class="glass-card rounded-2xl p-5 flex items-center justify-between gap-4 border-purple-500/40">
+            <div>
+              <div class="text-[10px] font-mono uppercase tracking-wider text-purple-300">%100 Türkçe</div>
+              <div class="text-lg font-display font-bold text-white mt-0.5">Code Vein</div>
+              <div class="text-xs text-slate-400 font-mono">Ana Oyun + 3 DLC • v1.0</div>
+            </div>
+            <span class="text-xs font-mono text-purple-300 shrink-0">İncele →</span>
+          </a>
+          <a href="../the-expanse/" class="glass-card rounded-2xl p-5 flex items-center justify-between gap-4 border-cyan-500/40">
+            <div>
+              <div class="text-[10px] font-mono uppercase tracking-wider text-cyan-300">%100 Türkçe</div>
+              <div class="text-lg font-display font-bold text-white mt-0.5">The Expanse</div>
+              <div class="text-xs text-slate-400 font-mono">Bölüm 1–5 + Archangel DLC</div>
+            </div>
+            <span class="text-xs font-mono text-cyan-300 shrink-0">İncele →</span>
+          </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- LEGAL & TAKEDOWN MODAL (5846 FSEK / 5651 / 6698 KVKK) -->
+  <div id="legal-modal" class="lightbox-modal" onclick="closeLegalModal()">
+    <div class="relative max-w-3xl w-full p-6 sm:p-8 glass-card rounded-3xl border border-cyan-500/40 text-left my-8 max-h-[85vh] overflow-y-auto" onclick="event.stopPropagation()">
+      <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-6">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-cyan-950 border border-cyan-500/40 flex items-center justify-center text-brand-cyan text-lg">⚖️</div>
+          <div>
+            <h3 class="text-xl font-display font-bold text-white uppercase">Yasal Bilgilendirme ve Bildirim İlkeleri</h3>
+            <p class="text-xs text-slate-400 font-mono">5846 Sayılı FSEK • 5651 Sayılı Kanun • 6698 Sayılı KVKK</p>
+          </div>
+        </div>
+        <button class="text-slate-400 hover:text-white text-2xl font-bold transition p-1" onclick="closeLegalModal()">&times;</button>
+      </div>
+
+      <div class="space-y-6 text-xs sm:text-sm text-slate-300 leading-relaxed font-sans">
+        
+        <!-- Madde 1 -->
+        <div class="p-4 rounded-2xl bg-dark-950/70 border border-white/5 space-y-2">
+          <h4 class="font-bold text-white flex items-center gap-2 text-sm">
+            <span class="text-brand-cyan">1.</span> 5846 Sayılı FSEK & Fikri Mülkiyet Koruması
+          </h4>
+          <p class="text-slate-300">
+            Atilla Çeviri Portalı üzerinde sunulan yerelleştirme (Türkçe yama) çalışmaları, tamamen bağımsız hayranlar tarafından gönüllü olarak hazırlanmış metin yamalarıdır (mod). Dosyalarımız; oyunların ana çalıştırılabilir dosyalarını (<code class="text-cyan-300">.exe</code> vb.), telif hakkına tabi çekirdek motor kodlarını, ses/video kütüphanelerini veya kopya korumasını aşan (crack/bypass) unsurları <strong>kesinlikle barındırmaz</strong>.
+          </p>
+          <p class="text-slate-400">
+            Yamaların çalışabilmesi için kullanıcının Steam, Epic Games veya yetkili diğer dijital platformlardan satın alınmış yasal ve lisanslı orijinal oyuna sahip olması zorunludur.
+          </p>
+        </div>
+
+        <!-- Madde 2 -->
+        <div class="p-4 rounded-2xl bg-dark-950/70 border border-white/5 space-y-2">
+          <h4 class="font-bold text-white flex items-center gap-2 text-sm">
+            <span class="text-brand-cyan">2.</span> 5651 Sayılı Kanun ve "Uyar-Kaldır" (Notice & Takedown) Prosedürü
+          </h4>
+          <p class="text-slate-300">
+            Sitemiz, 5651 Sayılı Kanun ve 5846 Sayılı Kanun Ek 4. Maddesi uyarınca <em>"Uyar-Kaldır" (Notice and Takedown)</em> prensibini benimsemiştir. Sitede yer alan herhangi bir içeriğin veya logonun telif haklarını ihlal ettiğini düşünen eser sahibi stüdyolar, yayıncılar veya resmi hukuki temsilciler, hak sahipliği belgeleri ile birlikte bildirim kanalımız üzerinden bizimle iletişime geçebilirler.
+          </p>
+          <div class="p-3 rounded-xl bg-cyan-950/40 border border-cyan-500/20 text-xs text-cyan-200">
+            İletilen hak ihlali talepleri <strong>24 ila 48 saat</strong> içerisinde ivedilikle incelenerek söz konusu içerik ve indirme bağlantıları derhal yayından kaldırılır.
+          </div>
+        </div>
+
+        <!-- Madde 3 -->
+        <div class="p-4 rounded-2xl bg-dark-950/70 border border-white/5 space-y-2">
+          <h4 class="font-bold text-white flex items-center gap-2 text-sm">
+            <span class="text-brand-cyan">3.</span> 6698 Sayılı KVKK & Gizlilik Güvencesi
+          </h4>
+          <p class="text-slate-300">
+            Bu web sitesi tamamen statik olup üyelik, kayıt formu, reklam çerezi (cookie) veya kullanıcı profilleme pikselleri <strong>kullanmamaktadır</strong>; tarafımızca ziyaretçilere ait hiçbir kişisel veri (ad, soyad, e-posta, telefon) toplanmamakta ve saklanmamaktadır.
+          </p>
+          <p class="text-slate-400">
+            Yalnızca sitenin temel işleyişi kapsamında; barındırma ve güncel indirme sayılarını göstermek için <strong>GitHub Pages / GitHub API</strong>, çerezsiz ve anonim sayfa görüntülenme istatistiği için KVKK/GDPR uyumlu <strong>GoatCounter</strong>, yazı tipleri için ise <strong>Google Fonts</strong> altyapıları kullanılmaktadır. Bu servis sağlayıcılarına tarayıcınızın standart HTTP bağlantı bilgileri (IP adresi ve tarayıcı üstbilgisi) teknik olarak iletilir.
+          </p>
+        </div>
+
+        <!-- Madde 4 -->
+        <div class="p-4 rounded-2xl bg-dark-950/70 border border-white/5 space-y-2">
+          <h4 class="font-bold text-white flex items-center gap-2 text-sm">
+            <span class="text-brand-cyan">4.</span> Ticari Kazanç Yasağı ve Sorumluluk Reddi
+          </h4>
+          <p class="text-slate-300">
+            Atilla Çeviri bünyesinde üretilen hiçbir içerikten ücret talep edilmez; bağış zorunluluğu veya abonelik sistemi bulunmaz. Yamalar ücretsiz ve "olduğu gibi" (as-is) sunulmakta olup, olası oyun güncellemeleri veya sistem uyumsuzluklarına karşı kullanıcıların orijinal oyun dosyalarını yedeklemeleri tavsiye edilir.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Action Footer -->
+      <div class="mt-6 pt-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex flex-wrap items-center gap-4 text-xs font-mono">
+          <button type="button" onclick="copyEmail(event, this)" class="inline-flex items-center gap-1.5 text-brand-cyan hover:underline cursor-pointer">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+            <span class="btn-label">atillaceviri@gmail.com</span>
+            <span class="text-[10px] text-slate-400 font-mono">(Kopyala)</span>
+          </button>
+          <a href="https://steamcommunity.com/profiles/76561198267659119/" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-slate-300 hover:text-white hover:underline">
+            <span>Steam Profili &rarr;</span>
+          </a>
+        </div>
+        <button type="button" onclick="closeLegalModal()" class="px-5 py-2 rounded-xl bg-dark-900 border border-white/20 hover:border-brand-cyan text-white text-xs font-medium transition">
+          Anladım, Kapat
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10 bg-dark-950 py-12 text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="flex flex-wrap items-center justify-center gap-3 mb-3 text-sm">
+        <span class="font-display font-bold tracking-wider text-white">ATİLLA ÇEVİRİ</span>
+        <span class="text-slate-500">•</span>
+        <button type="button" onclick="copyEmail(event, this)" title="E-Postayı Kopyala" class="text-brand-cyan hover:underline font-mono text-xs flex items-center gap-1.5 cursor-pointer">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+          <span class="btn-label">atillaceviri@gmail.com</span>
+        </button>
+        <span class="text-slate-500">•</span>
+        <a href="https://steamcommunity.com/profiles/76561198267659119/" target="_blank" rel="noopener" class="text-slate-300 hover:text-white hover:underline text-xs font-medium">ElijahKerpy (Steam)</a>
+      </div>
+
+      <!-- Legal Links Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-2.5 my-4">
+        <button type="button" onclick="openLegalModal()" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-dark-900 border border-white/10 hover:border-cyan-500/50 text-slate-300 hover:text-white text-xs font-mono transition">
+          <span>⚖️ Yasal Bildirim & Uyar-Kaldır (5651 / FSEK)</span>
+        </button>
+        <button type="button" onclick="openLegalModal()" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-dark-900 border border-white/10 hover:border-cyan-500/50 text-slate-300 hover:text-white text-xs font-mono transition">
+          <span>🔒 KVKK & Gizlilik</span>
+        </button>
+        <button type="button" onclick="openLegalModal()" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-dark-900 border border-white/10 hover:border-cyan-500/50 text-slate-300 hover:text-white text-xs font-mono transition">
+          <span>📋 Sorumluluk Reddi</span>
+        </button>
+      </div>
+
+      <p class="text-xs text-slate-500 max-w-xl mx-auto leading-relaxed">
+        Atilla Çeviri, oyuncular için bağımsız ve kâr amacı gütmeyen Türkçe yerelleştirmeler hazırlar. 
+        Sitede yer alan tüm oyunlar, logolar, karakterler ve ticari markalar ilgili yapımcı ve dağıtıcı stüdyolara aittir.
+      </p>
+      <p class="text-xs text-slate-600 mt-4 font-mono">
+        © 2026 Atilla Çeviri. 5846 Sayılı FSEK & 5651 Sayılı Kanun Uyar-Kaldır Uyumlu Bağımsız Oyuncu Portalı.
+      </p>
+    </div>
+  </footer>
+
+
+  <script src="../assets/site.js"></script>
+
+  <!-- BACK TO TOP FLOATING BUTTON -->
+  <button type="button" id="back-to-top" onclick="scrollToTop()" title="Yukarı Çık" aria-label="Yukarı Çık" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-2xl glass-card border border-cyan-500/40 bg-dark-900/90 hover:border-brand-cyan text-brand-cyan hover:text-white flex items-center justify-center shadow-2xl transition-all duration-300 opacity-0 translate-y-4 pointer-events-none cursor-pointer">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7"/></svg>
+  </button>
+
+  <!-- FLOATING TOAST NOTIFICATION -->
+  <div id="toast" class="fixed bottom-20 right-6 z-50 transform translate-y-28 opacity-0 transition-all duration-300 pointer-events-none glass-card border border-cyan-500/50 px-5 py-3.5 rounded-2xl shadow-2xl flex items-center gap-3 text-xs sm:text-sm text-white">
+    <div class="w-8 h-8 rounded-xl bg-cyan-500/20 text-brand-cyan flex items-center justify-center shrink-0">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+    </div>
+    <div>
+      <span class="font-bold font-mono text-cyan-300">atillaceviri@gmail.com</span>
+      <span class="text-slate-300 block text-xs">Adres panoya kopyalandı!</span>
+    </div>
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=atillaceviri@gmail.com" target="_blank" rel="noopener" class="pointer-events-auto ml-2 px-3 py-1.5 rounded-lg bg-cyan-950/80 border border-cyan-500/40 text-cyan-300 hover:text-white hover:bg-cyan-900 text-xs font-mono transition flex items-center gap-1 shadow">
+      <span>Gmail'de Aç</span>
+      <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+    </a>
+  </div>
+

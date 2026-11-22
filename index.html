@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="tr" class="scroll-smooth">
+<html lang="tr" class="scroll-smooth" data-base="./" data-page="home">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Atilla Çeviri — Türkçe Oyun Yerelleştirme Portalı</title>
   <meta name="google-site-verification" content="yh_0FIMYDTGgKimEdde0twncmbAxloxapu6GMvVgbJo" />
   <meta name="description" content="Atilla Çeviri resmi web sitesi. The Outer Worlds: Spacer's Choice Edition, Code Vein, The Expanse: A Telltale Series ve gelecekteki tüm Türkçe yama projeleri, indirme bağlantıları, sürüm notları ve kurulum rehberleri.">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
   <link rel="canonical" href="https://atillaceviri.github.io/">
   <meta name="theme-color" content="#05070a">
 
@@ -18,75 +18,85 @@
   <meta property="og:description" content="The Outer Worlds: Spacer's Choice Edition, Code Vein ve The Expanse: A Telltale Series için ücretsiz, reklamsız, tüm DLC'ler dahil %100 Türkçe yamalar.">
   <meta property="og:url" content="https://atillaceviri.github.io/">
   <meta property="og:image" content="https://atillaceviri.github.io/images/og_banner.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Atilla Çeviri — %100 Türkçe Oyun Yerelleştirme Portalı">
-  <meta name="twitter:description" content="The Outer Worlds: Spacer's Choice Edition, Code Vein ve The Expanse için ücretsiz, reklamsız %100 Türkçe yamalar.">
+  <meta name="twitter:description" content="The Outer Worlds: Spacer's Choice Edition, Code Vein ve The Expanse: A Telltale Series için ücretsiz, reklamsız, tüm DLC'ler dahil %100 Türkçe yamalar.">
   <meta name="twitter:image" content="https://atillaceviri.github.io/images/og_banner.jpg">
 
-  <!-- Schema.org Structured Data (Google Rich Snippets) -->
+  <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "name": "Atilla Çeviri — Türkçe Oyun Yerelleştirme Portalı",
-        "url": "https://atillaceviri.github.io/",
-        "inLanguage": "tr-TR",
-        "publisher": {
-          "@type": "Organization",
-          "name": "Atilla Çeviri",
-          "email": "atillaceviri@gmail.com",
-          "url": "https://atillaceviri.github.io/"
-        }
-      },
-      {
-        "@type": "SoftwareApplication",
-        "name": "The Outer Worlds: Spacer's Choice Edition %100 Türkçe Yama",
-        "applicationCategory": "GameApplication",
-        "operatingSystem": "Windows",
-        "softwareVersion": "1.1",
-        "inLanguage": "tr-TR",
-        "downloadUrl": "https://github.com/atillaceviri/atillaceviri.github.io/releases/download/outerworlds-v1.1/TheOuterWorlds_SpacersChoice_Turkce_Yama_v1.1_AtillaCeviri.zip",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" }
-      },
-      {
-        "@type": "SoftwareApplication",
-        "name": "Code Vein %100 Türkçe Yama (Ana Oyun + 3 DLC)",
-        "applicationCategory": "GameApplication",
-        "operatingSystem": "Windows",
-        "softwareVersion": "1.0",
-        "inLanguage": "tr-TR",
-        "downloadUrl": "https://github.com/atillaceviri/atillaceviri.github.io/releases/download/codevein-v1.0/CODE_VEIN_Turkce_Yama_v1.0_AtillaCeviri.zip",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" }
-      },
-      {
-        "@type": "SoftwareApplication",
-        "name": "The Expanse: A Telltale Series %100 Türkçe Yama (Bölüm 1-5 + Archangel DLC)",
-        "applicationCategory": "GameApplication",
-        "operatingSystem": "Windows",
-        "softwareVersion": "1.0",
-        "inLanguage": "tr-TR",
-        "downloadUrl": "https://github.com/atillaceviri/atillaceviri.github.io/releases/download/expanse-v1.0/TheExpanse_Turkce_Yama_AtillaCeviri.zip",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "Atilla Çeviri — Türkçe Oyun Yerelleştirme Portalı",
+      "url": "https://atillaceviri.github.io/",
+      "inLanguage": "tr-TR",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Atilla Çeviri",
+        "email": "atillaceviri@gmail.com",
+        "url": "https://atillaceviri.github.io/"
       }
-    ]
-  }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "The Outer Worlds: Spacer's Choice Edition %100 Türkçe Yama",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Windows",
+      "softwareVersion": "1.1",
+      "inLanguage": "tr-TR",
+      "downloadUrl": "https://github.com/atillaceviri/atillaceviri.github.io/releases/download/outerworlds-v1.1/TheOuterWorlds_SpacersChoice_Turkce_Yama_v1.1_AtillaCeviri.zip",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "TRY"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Code Vein %100 Türkçe Yama (Ana Oyun + 3 DLC)",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Windows",
+      "softwareVersion": "1.0",
+      "inLanguage": "tr-TR",
+      "downloadUrl": "https://github.com/atillaceviri/atillaceviri.github.io/releases/download/codevein-v1.0/CODE_VEIN_Turkce_Yama_v1.0_AtillaCeviri.zip",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "TRY"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "The Expanse: A Telltale Series %100 Türkçe Yama (Bölüm 1-5 + Archangel DLC)",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Windows",
+      "softwareVersion": "1.0",
+      "inLanguage": "tr-TR",
+      "downloadUrl": "https://github.com/atillaceviri/atillaceviri.github.io/releases/download/expanse-v1.0/TheExpanse_Turkce_Yama_AtillaCeviri.zip",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "TRY"
+      }
+    }
+  ]
+}
   </script>
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Rajdhani:wght@500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-  
+
   <!-- Compiled Tailwind CSS -->
-  <link rel="stylesheet" href="styles.css">
-  
+  <link rel="stylesheet" href="./styles.css">
+
   <style>
     /* Real Game Wallpaper Dynamic Engine */
     .bg-layer {
@@ -102,12 +112,6 @@
       opacity: 0;
       transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 1.2s ease-out;
       transform: scale(1.02);
-    }
-    
-    #bg-portal {
-      background-image: url('images/bg_cyberpunk.webp');
-      opacity: 1;
-      transform: scale(1.0);
     }
 
     /* Cinematic Gamer Dark Vignette Overlay */
@@ -163,12 +167,11 @@
 </head>
 <body class="min-h-screen flex flex-col font-sans text-slate-100 selection:bg-brand-cyan selection:text-black">
 
-  <!-- DYNAMIC REAL GAME BACKGROUNDS (On-Demand Lazy Loaded WebP) -->
-  <div id="bg-portal" class="bg-layer"></div>
-  <div id="bg-expanse" class="bg-layer" data-bg="images/expanse_bg.webp"></div>
-  <div id="bg-dlc" class="bg-layer" data-bg="images/dlc_bg.webp"></div>
-  <div id="bg-codevein" class="bg-layer" data-bg="images/codevein_bg.webp"></div>
+  <!-- DYNAMIC REAL GAME BACKGROUNDS -->
+  <div id="bg-portal" class="bg-layer" style="background-image: url('images/bg_cyberpunk.webp'); opacity: 1; transform: scale(1.0);"></div>
   <div id="bg-outerworlds" class="bg-layer" data-bg="images/outerworlds_bg.webp"></div>
+  <div id="bg-codevein" class="bg-layer" data-bg="images/codevein_bg.webp"></div>
+  <div id="bg-expanse" class="bg-layer" data-bg="images/expanse_bg.webp"></div>
   <div id="bg-evilwest" class="bg-layer" data-bg="images/evilwest_bg.webp"></div>
   <div class="bg-overlay"></div>
 
@@ -181,8 +184,8 @@
           <span>GÜNCELLEME</span>
         </span>
         <span><strong class="text-white">The Outer Worlds Türkçe Yama v1.1 yayında!</strong> Peril on Gorgon ve Murder on Eridanos DLC'leri sıfırdan yeniden çevrildi.</span>
-        <a href="#duyurular" onclick="goToAnnouncements(event)" class="text-emerald-300 hover:text-white font-mono font-bold transition">Duyuruyu Oku →</a>
-        <a href="#outerworlds" onclick="goToOuterWorlds(event)" class="hidden sm:inline text-cyan-300 hover:text-white font-mono transition">v1.1 İndir →</a>
+        <a href="./duyurular/" onclick="markAnnouncementsSeen()" class="text-emerald-300 hover:text-white font-mono font-bold transition">Duyuruyu Oku →</a>
+        <a href="./outer-worlds/" class="hidden sm:inline text-cyan-300 hover:text-white font-mono transition">v1.1 İndir →</a>
       </div>
       <button type="button" onclick="dismissTopAnnouncement()" aria-label="Duyuruyu Kapat" title="Bu duyuruyu gizle" class="p-1 rounded-lg hover:bg-white/5 text-slate-400 hover:text-white transition shrink-0 cursor-pointer">
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
@@ -195,7 +198,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-6">
       
       <!-- Brand Logo -->
-      <a href="#" onclick="switchBackground('portal')" class="flex items-center gap-3 shrink-0 group">
+      <a href="./" class="flex items-center gap-3 shrink-0 group">
         <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-cyan via-brand-blue to-brand-violet flex items-center justify-center text-slate-950 font-bold font-display text-2xl shadow-lg shadow-cyan-500/25 group-hover:scale-105 transition shrink-0">
           A
         </div>
@@ -211,26 +214,26 @@
       <!-- Clean Single-Line Nav Links -->
       <nav class="hidden lg:flex items-center gap-4 xl:gap-6 text-sm font-medium text-slate-300 whitespace-nowrap">
         <a href="#yamalar" onclick="goToSection('yamalar', 'portal', event)" class="hover:text-brand-cyan transition">Tüm Yamalar</a>
-        <a href="#duyurular" onclick="goToAnnouncements(event)" class="hover:text-emerald-400 transition flex items-center gap-1.5">
+        <a href="./duyurular/" onclick="markAnnouncementsSeen()" class="hover:text-emerald-400 transition flex items-center gap-1.5">
           <span>Duyurular</span>
           <span id="nav-ann-badge" class="inline-flex items-center gap-1 text-[10px] font-mono px-1.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">
             <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
             <span>YENİ</span>
           </span>
         </a>
-        <a href="#outerworlds" onclick="goToOuterWorlds(event)" class="hover:text-emerald-400 transition flex items-center gap-1.5">
+        <a href="./outer-worlds/" class="hover:text-emerald-400 transition flex items-center gap-1.5">
           <span>The Outer Worlds</span>
           <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-950 text-emerald-300 border border-emerald-500/30">v1.1</span>
         </a>
-        <a href="#codevein" onclick="goToCodeVein(event)" class="hover:text-purple-400 transition flex items-center gap-1.5">
+        <a href="./code-vein/" class="hover:text-purple-400 transition flex items-center gap-1.5">
           <span>Code Vein</span>
           <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-purple-950 text-purple-300 border border-purple-500/30">v1.0</span>
         </a>
-        <a href="#expanse" onclick="goToExpanse(event)" class="hover:text-brand-cyan transition flex items-center gap-1.5">
+        <a href="./the-expanse/" class="hover:text-brand-cyan transition flex items-center gap-1.5">
           <span>The Expanse</span>
           <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-cyan-950 text-cyan-300 border border-cyan-500/30">v1.0</span>
         </a>
-        <a href="#evilwest" onclick="goToEvilWest(event)" class="hover:text-amber-400 transition flex items-center gap-1.5">
+        <a href="./evil-west/" class="hover:text-amber-400 transition flex items-center gap-1.5">
           <span>Evil West</span>
           <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-amber-950 text-amber-300 border border-amber-500/30">Sırada</span>
         </a>
@@ -241,15 +244,15 @@
           </button>
           <div class="absolute left-0 top-full pt-1 hidden group-hover:block z-50">
             <div class="glass-card rounded-xl p-2 min-w-[235px] shadow-2xl border border-white/10 space-y-1">
-              <a href="#outerworlds-surum-notlari" onclick="goToSection('outerworlds-surum-notlari', 'outerworlds', event)" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-emerald-950/60 text-xs text-slate-200 hover:text-emerald-300 transition">
+              <a href="./outer-worlds/#outerworlds-surum-notlari" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-emerald-950/60 text-xs text-slate-200 hover:text-emerald-300 transition">
                 <span>The Outer Worlds (v1.1)</span>
                 <span class="text-[10px] font-mono text-emerald-400 bg-emerald-950 px-1.5 py-0.5 rounded border border-emerald-800">7 Not</span>
               </a>
-              <a href="#codevein-surum-notlari" onclick="goToSection('codevein-surum-notlari', 'codevein', event)" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-purple-950/60 text-xs text-slate-200 hover:text-purple-300 transition">
+              <a href="./code-vein/#codevein-surum-notlari" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-purple-950/60 text-xs text-slate-200 hover:text-purple-300 transition">
                 <span>Code Vein (v1.0)</span>
                 <span class="text-[10px] font-mono text-purple-400 bg-purple-950 px-1.5 py-0.5 rounded border border-purple-800">6 Not</span>
               </a>
-              <a href="#expanse-surum-notlari" onclick="goToSection('expanse-surum-notlari', 'expanse', event)" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-cyan-950/60 text-xs text-slate-200 hover:text-cyan-300 transition">
+              <a href="./the-expanse/#expanse-surum-notlari" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-cyan-950/60 text-xs text-slate-200 hover:text-cyan-300 transition">
                 <span>The Expanse (v1.0)</span>
                 <span class="text-[10px] font-mono text-cyan-400 bg-cyan-950 px-1.5 py-0.5 rounded border border-cyan-800">5 Not</span>
               </a>
@@ -283,37 +286,36 @@
     <!-- Mobile Navigation Drawer -->
     <div id="mobile-menu" class="hidden lg:hidden border-t border-white/10 bg-dark-950/95 backdrop-blur-xl">
       <div class="max-w-7xl mx-auto px-4 py-4 space-y-2 text-sm font-medium">
-        <a href="#duyurular" onclick="closeMobileMenu(); goToAnnouncements(event)" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-emerald-950/40 border border-emerald-500/30 text-emerald-300 transition">
+        <a href="./duyurular/" onclick="closeMobileMenu(); markAnnouncementsSeen()" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-emerald-950/40 border border-emerald-500/30 text-emerald-300 transition">
           <span>Duyurular & Güncellemeler</span>
           <span id="mobile-ann-badge" class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-300">YENİ • 22 Kas</span>
         </a>
-        <a href="#yamalar" onclick="closeMobileMenu(); goToSection('yamalar', 'portal', event)" class="block px-3.5 py-2.5 rounded-xl hover:bg-white/5 text-slate-200 transition">Tüm Yamalar (Katalog)</a>
-        <a href="#outerworlds" onclick="closeMobileMenu(); goToOuterWorlds(event)" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-emerald-950/40 border border-emerald-500/25 text-emerald-300 transition">
+        <a href="#yamalar" onclick="closeMobileMenu()" class="block px-3.5 py-2.5 rounded-xl hover:bg-white/5 text-slate-200 transition">Tüm Yamalar (Katalog)</a>
+        <a href="./outer-worlds/" onclick="closeMobileMenu()" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-emerald-950/60 text-emerald-300 transition">
           <span>The Outer Worlds: Spacer's Choice</span>
           <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-500/40">YENİ • v1.1</span>
         </a>
-        <a href="#codevein" onclick="closeMobileMenu(); goToCodeVein(event)" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-purple-950/40 text-purple-300 transition">
+        <a href="./code-vein/" onclick="closeMobileMenu()" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-purple-950/40 text-purple-300 transition">
           <span>Code Vein</span>
           <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-purple-950 border border-purple-500/30">v1.0</span>
         </a>
-        <a href="#expanse" onclick="closeMobileMenu(); goToExpanse(event)" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-cyan-950/40 text-cyan-300 transition">
+        <a href="./the-expanse/" onclick="closeMobileMenu()" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-cyan-950/40 text-cyan-300 transition">
           <span>The Expanse: A Telltale Series</span>
           <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-cyan-950 border border-cyan-500/30">v1.0</span>
         </a>
-        <a href="#evilwest" onclick="closeMobileMenu(); goToEvilWest(event)" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-amber-950/40 text-amber-300 transition">
+        <a href="./evil-west/" onclick="closeMobileMenu()" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-amber-950/40 text-amber-300 transition">
           <span>Evil West</span>
           <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-amber-950 border border-amber-500/30">Sırada</span>
         </a>
         <div class="pt-2 mt-2 border-t border-white/10 grid grid-cols-3 gap-2 text-xs font-mono">
-          <a href="#outerworlds-surum-notlari" onclick="closeMobileMenu(); goToSection('outerworlds-surum-notlari', 'outerworlds', event)" class="px-2 py-2 rounded-lg bg-dark-900 border border-white/10 text-slate-300 text-center">Sürüm Notları</a>
-          <a href="#sss" onclick="closeMobileMenu(); goToSection('sss', null, event)" class="px-2 py-2 rounded-lg bg-dark-900 border border-white/10 text-slate-300 text-center">SSS</a>
-          <a href="#hakkinda" onclick="closeMobileMenu(); goToSection('hakkinda', null, event)" class="px-2 py-2 rounded-lg bg-dark-900 border border-white/10 text-slate-300 text-center">Hakkımızda</a>
+          <a href="./outer-worlds/#outerworlds-surum-notlari" onclick="closeMobileMenu()" class="px-2 py-2 rounded-lg bg-dark-900 border border-white/10 text-slate-300 text-center">Sürüm Notları</a>
+          <a href="#sss" onclick="closeMobileMenu()" class="px-2 py-2 rounded-lg bg-dark-900 border border-white/10 text-slate-300 text-center">SSS</a>
+          <a href="#hakkinda" onclick="closeMobileMenu()" class="px-2 py-2 rounded-lg bg-dark-900 border border-white/10 text-slate-300 text-center">Hakkımızda</a>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- HERO SECTION -->
   <main class="flex-1">
     <section class="relative pt-16 pb-20 overflow-hidden text-center px-4 sm:px-6">
       <div class="max-w-4xl mx-auto relative z-10">
@@ -339,25 +341,25 @@
 
         <!-- CTA Buttons -->
         <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
-          <button type="button" onclick="goToOuterWorlds(event)" class="inline-flex items-center gap-3 px-7 py-3.5 rounded-xl bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-500 text-slate-950 font-bold font-display text-base sm:text-lg tracking-wide hover:brightness-110 transition transform hover:-translate-y-0.5 shadow-lg shadow-emerald-900/50">
+          <a href="outer-worlds/" class="inline-flex items-center gap-3 px-7 py-3.5 rounded-xl bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-500 text-slate-950 font-bold font-display text-base sm:text-lg tracking-wide hover:brightness-110 transition transform hover:-translate-y-0.5 shadow-lg shadow-emerald-900/50">
             <span>The Outer Worlds (v1.1)</span>
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
-          </button>
+          </a>
 
-          <button type="button" onclick="goToCodeVein(event)" class="inline-flex items-center gap-3 px-7 py-3.5 rounded-xl bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 text-white font-bold font-display text-base sm:text-lg tracking-wide hover:brightness-110 transition transform hover:-translate-y-0.5 shadow-lg shadow-purple-900/40">
+          <a href="code-vein/" class="inline-flex items-center gap-3 px-7 py-3.5 rounded-xl bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 text-white font-bold font-display text-base sm:text-lg tracking-wide hover:brightness-110 transition transform hover:-translate-y-0.5 shadow-lg shadow-purple-900/40">
             <span>Code Vein (v1.0)</span>
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
-          </button>
+          </a>
 
-          <button type="button" onclick="goToExpanse(event)" class="inline-flex items-center gap-3 px-7 py-3.5 rounded-xl bg-gradient-to-r from-brand-cyan to-brand-blue text-slate-950 font-bold font-display text-base sm:text-lg tracking-wide hover:brightness-110 transition transform hover:-translate-y-0.5 neon-cyan">
+          <a href="the-expanse/" class="inline-flex items-center gap-3 px-7 py-3.5 rounded-xl bg-gradient-to-r from-brand-cyan to-brand-blue text-slate-950 font-bold font-display text-base sm:text-lg tracking-wide hover:brightness-110 transition transform hover:-translate-y-0.5 neon-cyan">
             <span>The Expanse (v1.0)</span>
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
-          </button>
+          </a>
 
-          <button type="button" onclick="goToEvilWest(event)" class="inline-flex items-center gap-3 px-7 py-3.5 rounded-xl bg-gradient-to-r from-amber-600 via-orange-600 to-red-700 text-white font-bold font-display text-base sm:text-lg tracking-wide hover:brightness-110 transition transform hover:-translate-y-0.5 shadow-lg shadow-orange-950/50">
+          <a href="evil-west/" class="inline-flex items-center gap-3 px-7 py-3.5 rounded-xl bg-gradient-to-r from-amber-600 via-orange-600 to-red-700 text-white font-bold font-display text-base sm:text-lg tracking-wide hover:brightness-110 transition transform hover:-translate-y-0.5 shadow-lg shadow-orange-950/50">
             <span>Evil West (Sırada)</span>
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
-          </button>
+          </a>
           
           <a href="#yamalar" onclick="goToSection('yamalar', 'portal', event)" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl glass-card text-slate-300 hover:text-white hover:border-cyan-400 transition text-sm sm:text-base font-medium">
             <span>Tüm Projelerimiz</span>
@@ -401,30 +403,20 @@
       </div>
     </section>
 
-    <!-- SECTION 0.5: DUYURULAR & GÜNCELLEMELER
-         Yeni duyuru eklemek için:
-         1) Alttaki script içinde LATEST_ANNOUNCEMENT_ID değerini yeni benzersiz ID ile değiştirin (örn. '2026-12-01-yeni-yazi').
-         2) Sayfa başındaki #top-announcement-bar metnini ve data-ann-id özelliğini güncelleyin.
-         3) Öne çıkan duyuru kartını güncelleyip önceki duyuruyu 3 sütunlu arşive ekleyin.
-    -->
-    <section id="duyurular" class="py-16 border-t border-white/10 bg-dark-950/75">
+    <!-- SECTION 0.5: SON DUYURU ÖZETİ -->
+    <section id="duyurular-ozet" class="py-12 border-t border-white/10 bg-dark-950/75">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-3">
           <div>
-            <h2 class="text-xs font-bold text-emerald-400 uppercase tracking-widest font-mono">GÜNCEL HABERLER</h2>
-            <p class="mt-1 text-3xl sm:text-4xl font-display font-bold text-white uppercase">Duyurular & Güncellemeler</p>
-            <p class="mt-1 text-xs sm:text-sm text-slate-400">Yeni yamalar, sürüm güncellemeleri ve çeviri ilerleme haberleri</p>
+            <h2 class="text-xs font-bold text-emerald-400 uppercase tracking-widest font-mono">GÜNCEL DUYURU</h2>
+            <p class="mt-1 text-2xl sm:text-3xl font-display font-bold text-white uppercase">Son Güncelleme & Haberler</p>
           </div>
-          <div class="inline-flex flex-wrap p-1 rounded-xl bg-dark-900/90 border border-white/10 backdrop-blur self-start">
-            <button type="button" onclick="filterAnnouncements('all')" id="ann-filter-all" class="px-3.5 py-1.5 rounded-lg text-xs font-mono font-bold text-slate-950 bg-brand-cyan transition cursor-pointer">Tümü (4)</button>
-            <button type="button" onclick="filterAnnouncements('update')" id="ann-filter-update" class="px-3.5 py-1.5 rounded-lg text-xs font-mono text-slate-300 hover:text-emerald-300 transition cursor-pointer">Güncelleme</button>
-            <button type="button" onclick="filterAnnouncements('release')" id="ann-filter-release" class="px-3.5 py-1.5 rounded-lg text-xs font-mono text-slate-300 hover:text-cyan-300 transition cursor-pointer">Yeni Yama</button>
-            <button type="button" onclick="filterAnnouncements('status')" id="ann-filter-status" class="px-3.5 py-1.5 rounded-lg text-xs font-mono text-slate-300 hover:text-amber-300 transition cursor-pointer">Proje Durumu</button>
-          </div>
+          <a href="duyurular/" onclick="markAnnouncementsSeen()" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-dark-900/90 border border-emerald-500/40 text-emerald-300 hover:text-white text-xs font-mono font-bold transition self-start">
+            <span>Tüm Duyurular & Arşiv (4) →</span>
+          </a>
         </div>
 
-        <!-- Featured Latest Announcement -->
-        <article data-ann-card data-ann-type="update" class="glass-card rounded-2xl p-6 sm:p-8 mb-6 border-emerald-500/50 bg-emerald-950/50">
+        <article class="glass-card rounded-2xl p-6 sm:p-8 border-emerald-500/50 bg-emerald-950/50">
           <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
             <div class="flex flex-wrap items-center gap-2">
               <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-[11px] font-mono font-bold uppercase tracking-wider">
@@ -440,73 +432,20 @@
             The Outer Worlds: Spacer's Choice Edition v1.1 — İki DLC Sıfırdan Yeniden Çevrildi
           </h3>
           <p class="text-sm text-slate-200 leading-relaxed mb-4">
-            İlk sürümdeki DLC geri bildirimlerinin ardından <strong>Peril on Gorgon</strong> (8.998 girdi) ve <strong>Murder on Eridanos</strong> (9.886 girdi) genişleme paketlerinin tamamı — toplam <strong>18.884 diyalog ve terminal girdisi</strong> — orijinal İngilizce kaynaktan sıfırdan editöryal olarak yeniden çevrildi; tespit edilen 22 kesik kodeks/eşya açıklaması onarıldı ve Halcyon terminolojisi ile <code class="text-emerald-300 font-mono">sen/siz</code> hitap uyumu %100 tektipleştirildi.
+            İlk sürümdeki DLC geri bildirimlerinin ardından <strong>Peril on Gorgon</strong> (8.998 girdi) ve <strong>Murder on Eridanos</strong> (9.886 girdi) genişleme paketlerinin tamamı — toplam <strong>18.884 diyalog ve terminal girdisi</strong> — orijinal İngilizce kaynaktan sıfırdan editöryal olarak yeniden çevrildi; tespit edilen 22 kesik kodeks/eşya açıklaması onarıldı.
           </p>
-          <p class="text-xs text-emerald-300 bg-emerald-950/80 border border-emerald-500/30 rounded-xl px-4 py-2.5 mb-6">
-            <strong>Mevcut v1.0 kullanıcıları için not:</strong> Önceki sürümü kullanan oyuncuların yeni v1.1 <code class="text-white font-mono">.pak</code> dosyasını indirip oyunun <code class="text-white font-mono">Paks</code> klasöründeki eski dosyanın üzerine yazması önerilir.
-          </p>
-
           <div class="flex flex-wrap items-center gap-3">
-            <button type="button" onclick="goToOuterWorlds(event)" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-400 to-teal-500 text-slate-950 font-bold font-display text-sm tracking-wide hover:brightness-110 transition shadow cursor-pointer">
-              <span>v1.1 Yamayı İncele & İndir</span>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-            </button>
-            <button type="button" onclick="goToSection('outerworlds-surum-notlari', 'outerworlds', event)" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-dark-900/90 border border-emerald-500/40 text-emerald-300 hover:text-white text-xs font-mono font-medium transition cursor-pointer">
+            <a href="outer-worlds/" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-400 to-teal-500 text-slate-950 font-bold font-display text-sm tracking-wide hover:brightness-110 transition shadow">
+              <span>v1.1 Yamayı İncele & İndir →</span>
+            </a>
+            <a href="outer-worlds/#outerworlds-surum-notlari" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-dark-900/90 border border-emerald-500/40 text-emerald-300 hover:text-white text-xs font-mono font-medium transition">
               <span>v1.1 Değişiklik Listesi</span>
-            </button>
+            </a>
+            <a href="duyurular/" onclick="markAnnouncementsSeen()" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-dark-900/90 border border-white/10 text-slate-300 hover:text-white text-xs font-mono transition">
+              <span>Tüm Duyurular (4)</span>
+            </a>
           </div>
         </article>
-
-        <!-- Recent Announcements Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <article data-ann-card data-ann-type="release" class="glass-card rounded-2xl p-6 flex flex-col justify-between border-emerald-500/30">
-            <div>
-              <div class="flex items-center justify-between gap-2 mb-3">
-                <span class="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">YENİ YAMA</span>
-                <span class="text-xs font-mono text-slate-400">21 Kasım 2026</span>
-              </div>
-              <h3 class="text-lg font-display font-bold text-white mb-2">The Outer Worlds v1.0 Yayınlandı</h3>
-              <p class="text-xs text-slate-300 leading-relaxed mb-4">
-                71.345 metin girdisi, 1.272 tablo, 2 DLC ve özel Türkçe karakter destekli font paketiyle ana sürüm yayınlandı.
-              </p>
-            </div>
-            <button type="button" onclick="goToOuterWorlds(event)" class="self-start text-xs font-mono font-bold text-emerald-300 hover:text-white transition cursor-pointer">
-              Projeye Git →
-            </button>
-          </article>
-
-          <article data-ann-card data-ann-type="release" class="glass-card rounded-2xl p-6 flex flex-col justify-between border-purple-500/40">
-            <div>
-              <div class="flex items-center justify-between gap-2 mb-3">
-                <span class="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 border border-purple-500/40">YENİ YAMA</span>
-                <span class="text-xs font-mono text-slate-400">Kasım 2026</span>
-              </div>
-              <h3 class="text-lg font-display font-bold text-white mb-2">Code Vein %100 Türkçe Yama (v1.0) Yayında</h3>
-              <p class="text-xs text-slate-300 leading-relaxed mb-4">
-                Ana oyun ve 3 DLC (25.472 satır) tek parça <code class="text-purple-300 font-mono">.pak</code> paketiyle kullanıma sunuldu.
-              </p>
-            </div>
-            <button type="button" onclick="goToCodeVein(event)" class="self-start text-xs font-mono font-bold text-purple-300 hover:text-white transition cursor-pointer">
-              Projeye Git →
-            </button>
-          </article>
-
-          <article data-ann-card data-ann-type="status" class="glass-card rounded-2xl p-6 flex flex-col justify-between border-amber-500/40">
-            <div>
-              <div class="flex items-center justify-between gap-2 mb-3">
-                <span class="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/40">PROJE DURUMU</span>
-                <span class="text-xs font-mono text-slate-400">Sırada</span>
-              </div>
-              <h3 class="text-lg font-display font-bold text-white mb-2">Sıradaki Proje: Evil West Hazırlanıyor</h3>
-              <p class="text-xs text-slate-300 leading-relaxed mb-4">
-                Ana senaryo, ara sahneler, cephanelik ve arşiv belgeleri için yerelleştirme hazırlıkları sürüyor.
-              </p>
-            </div>
-            <button type="button" onclick="goToEvilWest(event)" class="self-start text-xs font-mono font-bold text-amber-300 hover:text-white transition cursor-pointer">
-              Detaylara Bak →
-            </button>
-          </article>
-        </div>
       </div>
     </section>
 
@@ -540,7 +479,7 @@
         <div id="catalog-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
           
           <!-- PROJECT 1: THE OUTER WORLDS: SPACER'S CHOICE (YAYINDA) -->
-          <div data-project-card data-status="live" data-search="the outer worlds spacer choice obsidian rpg bilimkurgu peril on gorgon murder on eridanos halcyon" class="glass-card rounded-2xl overflow-hidden flex flex-col group border-emerald-500/40 cursor-pointer" onmouseenter="switchBackground('outerworlds')" onclick="goToOuterWorlds()">
+          <a href="outer-worlds/" data-project-card data-status="live" data-search="the outer worlds spacer choice obsidian rpg bilimkurgu peril on gorgon murder on eridanos halcyon" class="glass-card rounded-2xl overflow-hidden flex flex-col group border-emerald-500/40 cursor-pointer">
             <div class="relative h-56 overflow-hidden bg-slate-900">
               <img loading="lazy" decoding="async" src="images/outerworlds_cover.webp" alt="The Outer Worlds: Spacer's Choice Edition" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
               <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
@@ -573,16 +512,16 @@
 
               <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
                 <span class="text-xs font-mono text-slate-400">3.7 MB • ZIP</span>
-                <button type="button" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-gradient-to-r from-emerald-400 to-teal-500 text-slate-950 font-bold font-display text-sm tracking-wide group-hover:brightness-110 transition shadow">
+                <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-gradient-to-r from-emerald-400 to-teal-500 text-slate-950 font-bold font-display text-sm tracking-wide group-hover:brightness-110 transition shadow">
                   <span>İncele & İndir</span>
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                </button>
+                </span>
               </div>
             </div>
-          </div>
+          </a>
 
           <!-- PROJECT 2: CODE VEIN (YAYINDA) -->
-          <div data-project-card data-status="live" data-search="code vein bandai namco anime souls rpg revenant dirilmişler vampir hellfire knight frozen empress lord of thunder" class="glass-card rounded-2xl overflow-hidden flex flex-col group border-purple-500/40 cursor-pointer" onmouseenter="switchBackground('codevein')" onclick="goToCodeVein()">
+          <a href="code-vein/" data-project-card data-status="live" data-search="code vein bandai namco anime souls rpg revenant dirilmişler vampir hellfire knight frozen empress lord of thunder" class="glass-card rounded-2xl overflow-hidden flex flex-col group border-purple-500/40 cursor-pointer">
             <div class="relative h-56 overflow-hidden bg-slate-900">
               <img loading="lazy" decoding="async" src="images/codevein_cover.webp" alt="Code Vein" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
               <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
@@ -614,16 +553,16 @@
 
               <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
                 <span class="text-xs font-mono text-slate-400">1.4 MB • ZIP</span>
-                <button type="button" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-bold font-display text-sm tracking-wide group-hover:brightness-110 transition shadow">
+                <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-bold font-display text-sm tracking-wide group-hover:brightness-110 transition shadow">
                   <span>İncele & İndir</span>
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                </button>
+                </span>
               </div>
             </div>
-          </div>
+          </a>
 
           <!-- PROJECT 3: THE EXPANSE -->
-          <div data-project-card data-status="live" data-search="the expanse telltale deck nine camina drummer chrisjen avasarala archangel dlc uzay hikaye" class="glass-card rounded-2xl overflow-hidden flex flex-col group border-cyan-500/40 cursor-pointer" onmouseenter="switchBackground('expanse')" onclick="goToExpanse()">
+          <a href="the-expanse/" data-project-card data-status="live" data-search="the expanse telltale deck nine camina drummer chrisjen avasarala archangel dlc uzay hikaye" class="glass-card rounded-2xl overflow-hidden flex flex-col group border-cyan-500/40 cursor-pointer">
             <div class="relative h-56 overflow-hidden bg-slate-900">
               <img loading="lazy" decoding="async" src="images/expanse_cover.webp" alt="The Expanse: A Telltale Series" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
               <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
@@ -655,16 +594,16 @@
 
               <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
                 <span class="text-xs font-mono text-slate-400">2.5 MB • ZIP</span>
-                <button type="button" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-gradient-to-r from-brand-cyan to-brand-blue text-slate-950 font-bold font-display text-sm tracking-wide group-hover:brightness-110 transition shadow">
+                <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-gradient-to-r from-brand-cyan to-brand-blue text-slate-950 font-bold font-display text-sm tracking-wide group-hover:brightness-110 transition shadow">
                   <span>İncele & İndir</span>
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                </button>
+                </span>
               </div>
             </div>
-          </div>
+          </a>
 
           <!-- PROJECT 4: EVIL WEST (SIRADAKİ PROJE) -->
-          <div data-project-card data-status="upcoming" data-search="evil west flying wild hog focus vahşi batı vampir jesse rentier tps aksiyon" class="glass-card rounded-2xl overflow-hidden flex flex-col group border-amber-500/40 cursor-pointer" onmouseenter="switchBackground('evilwest')" onclick="goToEvilWest()">
+          <a href="evil-west/" data-project-card data-status="upcoming" data-search="evil west flying wild hog focus vahşi batı vampir jesse rentier tps aksiyon" class="glass-card rounded-2xl overflow-hidden flex flex-col group border-amber-500/40 cursor-pointer">
             <div class="relative h-56 overflow-hidden bg-slate-900">
               <img loading="lazy" decoding="async" src="images/evilwest_cover.webp" alt="Evil West" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
               <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
@@ -700,15 +639,15 @@
                   <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
                   <span>Çeviri Hazırlık Aşaması</span>
                 </span>
-                <button type="button" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-gradient-to-r from-amber-500 to-orange-600 text-slate-950 font-bold font-display text-sm tracking-wide group-hover:brightness-110 transition shadow">
+                <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-gradient-to-r from-amber-500 to-orange-600 text-slate-950 font-bold font-display text-sm tracking-wide group-hover:brightness-110 transition shadow">
                   <span>Detayları Gör</span>
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                </button>
+                </span>
               </div>
             </div>
           </div>
 
-        </div>
+        </a>
 
         <!-- Catalog Empty State -->
         <div id="catalog-empty" class="hidden glass-card rounded-2xl p-10 text-center border-white/10 mt-4">
@@ -744,1116 +683,6 @@
             </button>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- SECTION 2.0: SPOTLIGHT THE OUTER WORLDS: SPACER'S CHOICE EDITION -->
-    <section id="outerworlds" onmouseenter="switchBackground('outerworlds')" class="py-24 border-t border-white/10 relative transition-all duration-700">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <!-- Spotlight Banner Card -->
-        <div class="glass-card rounded-3xl p-8 sm:p-12 mb-12 border-emerald-500/50 relative overflow-hidden shadow-2xl">
-          <div class="absolute -right-24 -bottom-24 w-96 h-96 bg-emerald-500/20 rounded-full blur-3xl pointer-events-none"></div>
-          
-          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            
-            <!-- Left Info -->
-            <div class="lg:col-span-7 space-y-6">
-              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-emerald-500/50 bg-emerald-950/80 text-emerald-300 text-xs font-semibold tracking-wider uppercase font-mono shadow">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                GÜNCELLENDİ • v1.1 SÜRÜMÜ
-              </div>
-
-              <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-white uppercase leading-none">
-                THE OUTER WORLDS
-                <span class="block text-xl sm:text-2xl text-amber-300 font-bold tracking-wide mt-1">
-                  SPACER'S CHOICE EDITION
-                </span>
-                <span class="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-300 mt-2">
-                  %100 Türkçe Yerelleştirme
-                </span>
-              </h2>
-
-              <p class="text-base text-slate-200 leading-relaxed drop-shadow">
-                Obsidian Entertainment'ın hiciv dolu uzay RPG başyapıtını tüm genişleme paketleriyle ana dilinizde deneyimleyin.
-                Halcyon kolonisinin keskin şirket ironileri, yoldaş diyalogları, terminaller, kodeks kayıtları ve eşyalar
-                <strong>6 fazlı adli kalite kontrol</strong> sürecinden geçirilerek sıfır hatayla Türkçeye kazandırıldı.
-              </p>
-
-              <!-- Tags -->
-              <div class="flex flex-wrap gap-2 text-xs font-mono">
-                <span class="px-3 py-1.5 rounded-lg bg-dark-900/80 border border-emerald-500/30 text-emerald-300">71.345 Metin Girdisi</span>
-                <span class="px-3 py-1.5 rounded-lg bg-dark-900/80 border border-white/10 text-slate-200">1.272 Tablo</span>
-                <span class="px-3 py-1.5 rounded-lg bg-dark-900/80 border border-lime-500/30 text-lime-300">Peril on Gorgon DLC</span>
-                <span class="px-3 py-1.5 rounded-lg bg-dark-900/80 border border-amber-500/30 text-amber-300">Murder on Eridanos DLC</span>
-                <span class="px-3 py-1.5 rounded-lg bg-dark-900/80 border border-cyan-500/30 text-cyan-300">Özel Türkçe Fontlar</span>
-                <span class="px-3 py-1.5 rounded-lg bg-dark-900/80 border border-white/10 text-emerald-400">Steam & Epic Uyumlu</span>
-              </div>
-
-              <!-- Metodoloji & Kalite Beyanı -->
-              <div class="p-4 rounded-xl bg-emerald-950/50 border border-emerald-500/40 text-xs text-slate-300 flex items-start gap-3 shadow-lg">
-                <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-300 flex items-center justify-center shrink-0 font-mono text-sm mt-0.5">
-                  <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                </div>
-                <div class="space-y-1">
-                  <div class="text-white font-bold text-sm tracking-wide flex items-center gap-2 flex-wrap">
-                    <span>Ham Makine Çevirisi Değildir</span>
-                    <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-500/40 uppercase">6 Faz Adli Kalite Kontrol</span>
-                  </div>
-                  <p class="text-slate-300 leading-relaxed text-xs">
-                    71.345 metin girdisinin tamamı orijinal İngilizce kaynaklarla 1:1 karşılaştırılarak denetlendi; 2.122'den fazla hedefli düzeltme (OEI motor etiketleri, kritik görev parolaları, kesilen terminal metinleri, deyimler ve özel isim çekimleri) uygulandı.
-                  </p>
-                </div>
-              </div>
-
-              <!-- Action Buttons -->
-              <div class="pt-4 flex flex-col sm:flex-row items-center gap-4">
-                <a href="https://github.com/atillaceviri/atillaceviri.github.io/releases/download/outerworlds-v1.1/TheOuterWorlds_SpacersChoice_Turkce_Yama_v1.1_AtillaCeviri.zip" download class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-500 text-slate-950 font-bold font-display text-lg tracking-wide hover:brightness-110 transition shadow-xl shadow-emerald-900/40">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-                  <span>Yamayı İndir (v1.1)</span>
-                  <span class="text-xs px-2 py-0.5 rounded bg-black/25 font-mono">3.7 MB</span>
-                </a>
-
-                <a href="#outerworlds-kurulum" onclick="goToSection('outerworlds-kurulum', 'outerworlds', event)" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-dark-900/90 border border-white/15 text-slate-200 font-medium hover:text-white hover:border-emerald-400 transition">
-                  <span>Kurulum Rehberi</span>
-                  <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                </a>
-
-                <a href="#outerworlds-surum-notlari" onclick="goToSection('outerworlds-surum-notlari', 'outerworlds', event)" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-dark-900/90 border border-emerald-500/30 text-emerald-300 font-medium hover:text-white hover:border-emerald-400 transition">
-                  <span>Son Değişiklikler</span>
-                  <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                </a>
-              </div>
-
-              <!-- Security & Live Download Verification Bar -->
-              <div class="flex flex-wrap items-center gap-2 text-[11px] font-mono text-slate-400">
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-950/60 border border-emerald-500/30 text-emerald-300">
-                  <span>🛡️ Temiz Paket (.pak — .exe içermez)</span>
-                </span>
-                <button type="button" onclick="copyHash('3439674c51e3053d6575b2fd5adc91934cbece83f85f155114f0f9ca33c07821', this)" title="Tam SHA-256: 3439674c51e3053d6575b2fd5adc91934cbece83f85f155114f0f9ca33c07821" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-dark-950/80 border border-white/10 hover:border-emerald-400/50 text-slate-300 hover:text-white transition cursor-pointer">
-                  <span class="hash-label">SHA-256: 3439674c...07821</span>
-                </button>
-                <span id="dl-count-outerworlds" class="hidden inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-dark-950/80 border border-emerald-500/30 text-emerald-300"></span>
-              </div>
-            </div>
-
-            <!-- Right Visual Banner -->
-            <div class="lg:col-span-5">
-              <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-emerald-500/30 group">
-                <img loading="lazy" decoding="async" src="images/outerworlds_cover.webp" alt="The Outer Worlds: Spacer's Choice Edition Banner" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
-                <div class="absolute inset-0 bg-gradient-to-t from-dark-950/90 via-transparent to-transparent"></div>
-                <div class="absolute bottom-4 left-4 right-4 text-xs text-slate-200 font-mono flex items-center justify-between">
-                  <span>Çevirmen: Atilla Çeviri</span>
-                  <span class="text-emerald-400">Kasım 2026</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- EXPANSION PACKS (DLC) HIGHLIGHTS -->
-        <div class="mb-14">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-6 gap-3">
-            <div>
-              <h3 class="text-2xl font-display font-bold text-white uppercase">Dahil Edilen Genişleme Paketleri (DLC)</h3>
-              <p class="text-xs text-slate-400">Spacer's Choice Edition ile gelen iki büyük hikâye genişleme paketi %100 Türkçedir</p>
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- DLC 1: Peril on Gorgon -->
-            <div class="glass-card rounded-2xl overflow-hidden flex flex-col sm:flex-row group border-lime-500/30">
-              <div class="sm:w-52 h-44 sm:h-auto overflow-hidden shrink-0 bg-dark-900">
-                <img loading="lazy" decoding="async" src="images/outerworlds_gorgon.webp" alt="Peril on Gorgon DLC" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-              </div>
-              <div class="p-6 flex flex-col justify-center">
-                <div class="flex items-center justify-between gap-2">
-                  <span class="text-xs font-mono text-lime-400 uppercase tracking-wider font-semibold">DLC 1 • INX1</span>
-                  <span class="text-[10px] font-mono text-lime-300 bg-lime-950 px-2 py-0.5 rounded border border-lime-500/30">10.451 Girdi</span>
-                </div>
-                <h4 class="text-2xl font-display font-bold text-white mt-1 group-hover:text-lime-300 transition">Peril on Gorgon</h4>
-                <p class="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
-                  Gorgon asteroitindeki gizli Adrena-Time deneyleri, terk edilmiş laboratuvar günlükleri, yeni bilim silahları ve Spacer's Choice'un karanlık geçmişi eksiksiz Türkçeleştirildi.
-                </p>
-              </div>
-            </div>
-
-            <!-- DLC 2: Murder on Eridanos -->
-            <div class="glass-card glass-card-dlc rounded-2xl overflow-hidden flex flex-col sm:flex-row group border-amber-500/40">
-              <div class="sm:w-52 h-44 sm:h-auto overflow-hidden shrink-0 bg-dark-900">
-                <img loading="lazy" decoding="async" src="images/outerworlds_eridanos.webp" alt="Murder on Eridanos DLC" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-              </div>
-              <div class="p-6 flex flex-col justify-center">
-                <div class="flex items-center justify-between gap-2">
-                  <span class="text-xs font-mono text-amber-400 uppercase tracking-wider font-semibold">DLC 2 • INX2</span>
-                  <span class="text-[10px] font-mono text-amber-300 bg-amber-950 px-2 py-0.5 rounded border border-amber-500/40">12.032 Girdi</span>
-                </div>
-                <h4 class="text-2xl font-display font-bold text-white mt-1 group-hover:text-amber-300 transition">Murder on Eridanos</h4>
-                <p class="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
-                  Grand Colonial Oteli'ndeki gizemli Halcyon Helen cinayeti, Tutarsızlık Büyüteci ipuçları, Rizzo's laboratuvarları ve dedektiflik sorgulamaları eksiksiz Türkçeleştirildi.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- SÜRÜM NOTLARI & DEĞİŞİKLİK GÜNLÜĞÜ (THE OUTER WORLDS CHANGELOG) -->
-        <div id="outerworlds-surum-notlari" class="glass-card rounded-2xl p-8 mb-14 border-emerald-500/40">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-8 gap-4 border-b border-white/10 pb-6">
-            <div>
-              <div class="flex items-center gap-3">
-                <span class="text-xs font-mono text-emerald-400 uppercase tracking-widest font-bold">GÜNCELLEME GEÇMİŞİ</span>
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 text-xs font-mono font-bold">
-                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                  v1.1 (Tam Sürüm)
-                </span>
-              </div>
-              <h3 class="text-2xl sm:text-3xl font-display font-bold text-white uppercase mt-1">The Outer Worlds: Yapılan En Son Değişiklikler</h3>
-            </div>
-            <div class="text-xs font-mono text-slate-400">
-              Yayın Tarihi: <span class="text-emerald-300">22 Kasım 2026</span>
-            </div>
-          </div>
-
-          <!-- Changelog Items List -->
-          <div class="space-y-4">
-            
-            <div class="p-4 rounded-xl bg-emerald-950/50 border border-emerald-500/50 flex items-start gap-4">
-              <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-300 flex items-center justify-center shrink-0 mt-0.5">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-              </div>
-              <div>
-                <h4 class="text-sm font-bold text-white flex items-center gap-2 flex-wrap">
-                  <span>v1.1 • İki DLC İçin Sıfırdan Tam Editöryal Yeniden Çeviri (18.884 Girdi)</span>
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">v1.1 Güncellemesi</span>
-                </h4>
-                <p class="text-xs text-slate-300 mt-1 leading-relaxed">
-                  <strong>Peril on Gorgon</strong> (8.998 girdi / 173 dosya) ve <strong>Murder on Eridanos</strong> (9.886 girdi / 218 dosya) genişleme paketlerinin tamamı orijinal İngilizce kaynaktan sıfırdan editöryal olarak yeniden çevrildi; 22 kesik DLC kodeks ve eşya açıklaması onarıldı. Karakter sesleri, sen/siz hitap uyumu ve Halcyon terminolojisi (<em>Piraeus Uzay Limanı</em>, <em>Kahverengi Spektrum</em>, <em>Dr. Liora Blossom</em>, <em>Grand Colonial Oteli</em>, <em>Ev Tipi Otomekanik</em>, <em>Tutarsızlık Büyüteci</em>) 502 dosyalık tam adli kalite kontrol ile %100 tektipleştirildi.
-                </p>
-              </div>
-            </div>
-
-            <div class="p-4 rounded-xl bg-dark-900/70 border border-white/5 flex items-start gap-4">
-              <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              </div>
-              <div>
-                <h4 class="text-sm font-bold text-white flex items-center gap-2 flex-wrap">
-                  <span>v1.0 • 71.345 Metin Girdisi ve 1.272 Tablonun %100 Yerelleştirilmesi</span>
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800">BaseGame + 2 DLC</span>
-                </h4>
-                <p class="text-xs text-slate-300 mt-1 leading-relaxed">
-                  Ana oyun (770 tablo / 48.862 girdi), Peril on Gorgon (214 tablo / 10.451 girdi) ve Murder on Eridanos (288 tablo / 12.032 girdi) dâhil oyunun tüm diyalog, görev, kodeks, eşya, harita ve arayüz veritabanı sıfır eksikle Türkçeleştirildi.
-                </p>
-              </div>
-            </div>
-
-            <div class="p-4 rounded-xl bg-dark-900/70 border border-white/5 flex items-start gap-4">
-              <div class="w-8 h-8 rounded-lg bg-teal-500/20 text-teal-400 flex items-center justify-center shrink-0 mt-0.5">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              </div>
-              <div>
-                <h4 class="text-sm font-bold text-white flex items-center gap-2 flex-wrap">
-                  <span>6 Fazlı Kapsamlı Adli Kalite Kontrol ve 2.122+ Hedefli Düzeltme</span>
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-teal-950 text-teal-300 border border-teal-800">Faz 1 – Faz 6 QC</span>
-                </h4>
-                <p class="text-xs text-slate-300 mt-1 leading-relaxed">
-                  GUI, Kodeks, Eşyalar, Görevler, Ana Diyaloglar ve DLC metinleri 6 ayrı kalite kontrol aşamasından geçirildi; satır sonu hizalamaları (CRLF), kadın/erkek karakter seslendirme uyumu ve terminoloji tutarlılığı %100 sertifikalandırıldı.
-                </p>
-              </div>
-            </div>
-
-            <div class="p-4 rounded-xl bg-dark-900/70 border border-white/5 flex items-start gap-4">
-              <div class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center shrink-0 mt-0.5">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"/></svg>
-              </div>
-              <div>
-                <h4 class="text-sm font-bold text-white flex items-center gap-2 flex-wrap">
-                  <span>Özel Türkçe Karakter Destekli Font Paketi Entegrasyonu</span>
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-950 text-cyan-300 border border-cyan-800">Tipografi</span>
-                </h4>
-                <p class="text-xs text-slate-300 mt-1 leading-relaxed">
-                  Oyunun orijinal fontlarında eksik olan Türkçe harfler (<code class="text-cyan-300">ğ, ü, ş, ı, İ, ö, ç</code>) için <code class="text-cyan-300 font-mono">OBSTOW_Bold</code>, <code class="text-cyan-300 font-mono">TCM_Bold</code> ve <code class="text-cyan-300 font-mono">TCM_Regular</code> font aileleri yeniden derlenip pakete dâhil edildi.
-                </p>
-              </div>
-            </div>
-
-            <div class="p-4 rounded-xl bg-dark-900/70 border border-white/5 flex items-start gap-4">
-              <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 mt-0.5">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-              </div>
-              <div>
-                <h4 class="text-sm font-bold text-white flex items-center gap-2 flex-wrap">
-                  <span>OEI Motor Etiketleri & Kritik Görev Parolaları %100 Güvenlik Doğrulaması</span>
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-950 text-amber-300 border border-amber-800">Sıfır Token Hatası</span>
-                </h4>
-                <p class="text-xs text-slate-300 mt-1 leading-relaxed">
-                  Gladys ve DLC2 ödeme/rüşvet seçeneklerindeki <code class="text-amber-300 font-mono">&lt;oeiglobal&gt;</code> / <code class="text-amber-300 font-mono">&lt;oeitoken&gt;</code> değişkenleri sıfır sözdizimi hatasıyla düzeltildi; Cascadia laboratuvar giriş parolası (<code class="text-amber-300 font-mono">ANTEDILUVIAN</code>) gibi görev kilitleyebilecek kodlar aslına uygun korundu.
-                </p>
-              </div>
-            </div>
-
-            <div class="p-4 rounded-xl bg-dark-900/70 border border-white/5 flex items-start gap-4">
-              <div class="w-8 h-8 rounded-lg bg-purple-500/20 text-purple-400 flex items-center justify-center shrink-0 mt-0.5">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
-              </div>
-              <div>
-                <h4 class="text-sm font-bold text-white flex items-center gap-2 flex-wrap">
-                  <span>Kesilen Terminal Günlükleri, Evren Terminolojisi ve Deyim Revizyonu</span>
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-950 text-purple-300 border border-purple-800">Editöryal Denetim</span>
-                </h4>
-                <p class="text-xs text-slate-300 mt-1 leading-relaxed">
-                  Eridanos Slug Lab kesik araştırma günlüğü ve kolluk terminalleri baştan çevrildi; Grand Colonial Oteli, Primal, Sub-Lighter, kimyasal kazan bulmacası ve Junlei/Adelaide/Jolicoeur özel isim çekimleri tüm oyunda tektipleştirildi.
-                </p>
-              </div>
-            </div>
-
-            <div class="p-4 rounded-xl bg-dark-900/70 border border-white/5 flex items-start gap-4">
-              <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-              </div>
-              <div>
-                <h4 class="text-sm font-bold text-white flex items-center gap-2 flex-wrap">
-                  <span>Tek Parça Tak-Çalıştır PAK Mimarisi</span>
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800">Teknik Altyapı</span>
-                </h4>
-                <p class="text-xs text-slate-300 mt-1 leading-relaxed">
-                  3 ana lokalizasyon paketi ve 3 özel Türkçe font ailesi tek bir <code class="text-emerald-300 font-mono">pakchunk0-WindowsNoEditor_Turkish_P.pak</code> dosyasında (3.7 MB ZIP) birleştirildi; harici program veya kurulum aracı gerektirmez ve başarımları etkilemez.
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- THE OUTER WORLDS INSTALLATION GUIDE -->
-        <div id="outerworlds-kurulum" class="glass-card rounded-2xl p-8 mb-12 border-emerald-500/40">
-          <h3 class="text-2xl font-display font-bold text-white uppercase mb-6 flex items-center gap-3">
-            <span class="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-sm flex items-center justify-center font-mono">🪐</span>
-            <span>The Outer Worlds: Kurulum Kılavuzu</span>
-          </h3>
-
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-dark-950/70 rounded-xl p-5 border border-white/5">
-              <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 font-bold font-display text-base flex items-center justify-center mb-3">1</div>
-              <h4 class="font-bold text-white text-sm mb-1">ZIP'i İndirin</h4>
-              <p class="text-xs text-slate-300">
-                <code class="text-emerald-300 break-all">TheOuterWorlds_SpacersChoice_Turkce_Yama_v1.1_AtillaCeviri.zip</code> dosyasını indirin ve bir klasöre çıkartın.
-              </p>
-            </div>
-
-            <div class="bg-dark-950/70 rounded-xl p-5 border border-white/5">
-              <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 font-bold font-display text-base flex items-center justify-center mb-3">2</div>
-              <h4 class="font-bold text-white text-sm mb-1">Paks Klasörüne Kopyalayın</h4>
-              <p class="text-xs text-slate-300">
-                İçinden çıkan <code class="text-emerald-300 font-mono break-all">pakchunk0-WindowsNoEditor_Turkish_P.pak</code> dosyasını oyunun <code class="text-emerald-300">Indiana\Content\Paks\</code> klasörüne yapıştırın.
-              </p>
-            </div>
-
-            <div class="bg-dark-950/70 rounded-xl p-5 border border-white/5">
-              <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 font-bold font-display text-base flex items-center justify-center mb-3">3</div>
-              <h4 class="font-bold text-white text-sm mb-1">Oyunu Başlatın</h4>
-              <p class="text-xs text-slate-300">
-                Oyunu Steam veya Epic Games üzerinden açın; Türkçe yama, 2 DLC çevirisi ve özel Türkçe fontlar otomatik olarak devreye girecektir.
-              </p>
-            </div>
-          </div>
-
-          <div class="mt-6 p-4 rounded-xl bg-black/60 border border-white/5 font-mono text-xs text-slate-300 space-y-2">
-            <div>
-              <span class="text-slate-500">Örnek Steam Konumu:</span><br>
-              C:\Program Files (x86)\Steam\steamapps\common\The Outer Worlds Spacer's Choice\Indiana\Content\Paks\
-            </div>
-            <div>
-              <span class="text-slate-500">Örnek Epic Games Konumu:</span><br>
-              C:\Program Files\Epic Games\TheOuterWorldsSpacersChoiceEdition\Indiana\Content\Paks\
-            </div>
-          </div>
-
-          <div class="mt-4 p-4 rounded-xl bg-emerald-950/40 border border-emerald-500/30 text-xs text-slate-300 flex items-start gap-3">
-            <span class="text-emerald-400 text-base shrink-0 mt-0.5">ℹ️</span>
-            <div>
-              <strong class="text-white block mb-0.5">Sürüm Uyumluluğu & Kaldırma:</strong>
-              Bu paket <strong>The Outer Worlds: Spacer's Choice Edition</strong> için özel olarak derlenmiştir. Yamayı kaldırmak isterseniz <code class="text-emerald-300 font-mono">pakchunk0-WindowsNoEditor_Turkish_P.pak</code> dosyasını silmeniz yeterlidir.
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- SECTION 2.5: SPOTLIGHT CODE VEIN -->
-    <section id="codevein" onmouseenter="switchBackground('codevein')" class="py-24 border-t border-white/10 relative transition-all duration-700">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <!-- Spotlight Banner Card -->
-        <div class="glass-card rounded-3xl p-8 sm:p-12 mb-12 border-purple-500/50 relative overflow-hidden shadow-2xl">
-          <div class="absolute -right-24 -bottom-24 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl pointer-events-none"></div>
-          
-          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            
-            <!-- Left Info -->
-            <div class="lg:col-span-7 space-y-6">
-              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-purple-500/50 bg-purple-950/80 text-purple-300 text-xs font-semibold tracking-wider uppercase font-mono shadow">
-                <span class="w-2 h-2 rounded-full bg-purple-400"></span>
-                YENİ YAYINLANAN YAMA • v1.0 SÜRÜMÜ
-              </div>
-
-              <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-white uppercase leading-none">
-                CODE VEIN
-                <span class="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-300 mt-2">
-                  %100 Türkçe Yerelleştirme
-                </span>
-              </h2>
-
-              <p class="text-base text-slate-200 leading-relaxed drop-shadow">
-                Bandai Namco'nun kıyamet sonrası aksiyon RPG başyapıtı Code Vein'i tamamen Türkçe oynayın.
-                Dirilmişler, Yitmişler, Mistle, Kan Peçeleri ve derin hafıza lore'u baştan sona eksiksiz çevrildi.
-                Oyunun karanlık ve epik vampir atmosferine, anime estetiğine ve derin hikâye örgüsüne tam uyumlu bir deneyim sunar.
-              </p>
-
-              <!-- Tags -->
-              <div class="flex flex-wrap gap-2 text-xs font-mono">
-                <span class="px-3 py-1.5 rounded-lg bg-dark-900/80 border border-purple-500/30 text-purple-300">25.472 Satır Metin</span>
-                <span class="px-3 py-1.5 rounded-lg bg-dark-900/80 border border-white/10 text-slate-200">Hellfire Knight DLC Dahil</span>
-                <span class="px-3 py-1.5 rounded-lg bg-dark-900/80 border border-white/10 text-slate-200">Frozen Empress DLC Dahil</span>
-                <span class="px-3 py-1.5 rounded-lg bg-dark-900/80 border border-white/10 text-slate-200">Lord of Thunder DLC Dahil</span>
-                <span class="px-3 py-1.5 rounded-lg bg-dark-900/80 border border-white/10 text-emerald-400">Steam Uyumlu</span>
-              </div>
-
-              <!-- Metodoloji & Kalite Beyanı -->
-              <div class="p-4 rounded-xl bg-purple-950/50 border border-purple-500/40 text-xs text-slate-300 flex items-start gap-3 shadow-lg">
-                <div class="w-8 h-8 rounded-lg bg-purple-500/20 text-purple-300 flex items-center justify-center shrink-0 font-mono text-sm mt-0.5">
-                  <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                </div>
-                <div class="space-y-1">
-                  <div class="text-white font-bold text-sm tracking-wide flex items-center gap-2">
-                    <span>Ham Makine Çevirisi Değildir</span>
-                    <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-950 text-purple-300 border border-purple-500/40 uppercase">Hibrit Metodoloji</span>
-                  </div>
-                  <p class="text-slate-300 leading-relaxed text-xs">
-                    Bu çalışma; bağlamdan yoksun, denetimsiz otomatik çeviri araçlarının (ham makine çevirisi) aksine, ileri düzey dil modelleri ile doğrudan editöryal denetimi birleştiren hibrit bir yerelleştirme metodolojisiyle hazırlanmıştır.
-                  </p>
-                </div>
-              </div>
-
-              <!-- Action Buttons -->
-              <div class="pt-4 flex flex-col sm:flex-row items-center gap-4">
-                <a href="https://github.com/atillaceviri/atillaceviri.github.io/releases/download/codevein-v1.0/CODE_VEIN_Turkce_Yama_v1.0_AtillaCeviri.zip" download class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 text-white font-bold font-display text-lg tracking-wide hover:brightness-110 transition shadow-xl">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-                  <span>Code Vein Yamayı İndir (v1.0)</span>
-                  <span class="text-xs px-2 py-0.5 rounded bg-black/40 font-mono">1.4 MB</span>
-                </a>
-
-                <a href="#codevein-kurulum" onclick="goToSection('codevein-kurulum', 'codevein', event)" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-dark-900/90 border border-white/15 text-slate-200 font-medium hover:text-white hover:border-purple-400 transition">
-                  <span>Kurulum Rehberi</span>
-                  <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                </a>
-
-                <a href="#codevein-surum-notlari" onclick="goToSection('codevein-surum-notlari', 'codevein', event)" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-dark-900/90 border border-purple-500/30 text-purple-300 font-medium hover:text-white hover:border-purple-400 transition">
-                  <span>Son Değişiklikler</span>
-                  <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                </a>
-              </div>
-
-              <!-- Security & Live Download Verification Bar -->
-              <div class="flex flex-wrap items-center gap-2 text-[11px] font-mono text-slate-400">
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-purple-950/60 border border-purple-500/30 text-purple-300">
-                  <span>🛡️ Temiz Paket (.pak — .exe içermez)</span>
-                </span>
-                <button type="button" onclick="copyHash('0209081e8c2ac0606aba0a5d8ae57224ba40b4d7bc1cca6daf3f061ebab01c21', this)" title="Tam SHA-256: 0209081e8c2ac0606aba0a5d8ae57224ba40b4d7bc1cca6daf3f061ebab01c21" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-dark-950/80 border border-white/10 hover:border-purple-400/50 text-slate-300 hover:text-white transition cursor-pointer">
-                  <span class="hash-label">SHA-256: 0209081e...01c21</span>
-                </button>
-                <span id="dl-count-codevein" class="hidden inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-dark-950/80 border border-purple-500/30 text-purple-300"></span>
-              </div>
-            </div>
-
-            <!-- Right Visual Banner -->
-            <div class="lg:col-span-5">
-              <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-purple-500/30 group">
-                <img loading="lazy" decoding="async" src="images/codevein_cover.webp" alt="Code Vein Banner" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
-                <div class="absolute inset-0 bg-gradient-to-t from-dark-950/90 via-transparent to-transparent"></div>
-                <div class="absolute bottom-4 left-4 right-4 text-xs text-slate-200 font-mono flex items-center justify-between">
-                  <span>Çevirmen: Atilla Çeviri</span>
-                  <span class="text-purple-400">Eylül 2026</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- SÜRÜM NOTLARI & DEĞİŞİKLİK GÜNLÜĞÜ (CODE VEIN CHANGELOG) -->
-        <div id="codevein-surum-notlari" class="glass-card rounded-2xl p-8 mb-14 border-purple-500/40">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-8 gap-4 border-b border-white/10 pb-6">
-            <div>
-              <div class="flex items-center gap-3">
-                <span class="text-xs font-mono text-purple-400 uppercase tracking-widest font-bold">GÜNCELLEME GEÇMİŞİ</span>
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 text-xs font-mono font-bold">
-                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                  v1.0 (İlk Yayın)
-                </span>
-              </div>
-              <h3 class="text-2xl sm:text-3xl font-display font-bold text-white uppercase mt-1">Code Vein: Yapılan En Son Değişiklikler</h3>
-            </div>
-            <div class="text-xs font-mono text-slate-400">
-              Yayın Tarihi: <span class="text-purple-300">26 Eylül 2026</span>
-            </div>
-          </div>
-
-          <!-- Changelog Items List -->
-          <div class="space-y-4">
-            
-            <div class="p-4 rounded-xl bg-purple-950/40 border border-purple-500/30 flex items-start gap-4">
-              <div class="w-8 h-8 rounded-lg bg-purple-500/20 text-purple-400 flex items-center justify-center shrink-0 mt-0.5">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              </div>
-              <div>
-                <h4 class="text-sm font-bold text-white flex items-center gap-2">
-                  <span>25.472 Satırlık Kapsamlı Veritabanı ve 59 Namespace Yerelleştirmesi</span>
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-950 text-purple-300 border border-purple-800">v1.0 Tam Sürüm</span>
-                </h4>
-                <p class="text-xs text-slate-300 mt-1 leading-relaxed">
-                  Oyunun tüm metin havuzu (kullanıcı arayüzü, ana hikâye, sinematikler, Kan Kodları, Yetenekler, Kan Peçeleri, silahlar ve eşya açıklamaları) sıfır eksik satırla Türkçeleştirildi.
-                </p>
-              </div>
-            </div>
-
-            <div class="p-4 rounded-xl bg-dark-900/70 border border-white/5 flex items-start gap-4">
-              <div class="w-8 h-8 rounded-lg bg-pink-500/20 text-pink-400 flex items-center justify-center shrink-0 mt-0.5">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
-              </div>
-              <div>
-                <h4 class="text-sm font-bold text-white flex items-center gap-2">
-                  <span>Tüm DLC Paketleri Eksiksiz Entegre Edildi</span>
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-pink-950 text-pink-300 border border-pink-800">3 Büyük DLC</span>
-                </h4>
-                <p class="text-xs text-slate-300 mt-1 leading-relaxed">
-                  Hellfire Knight (Cehennem Ateşi Şövalyesi), Frozen Empress (Buzlar İmparatoriçesi) ve Lord of Thunder (Yıldırım Efendisi) eklentilerinin tüm boss diyalogları, bellek kalıntıları ve meydan okuma gereksinimleri eksiksiz olarak pakete dahil edildi.
-                </p>
-              </div>
-            </div>
-
-            <div class="p-4 rounded-xl bg-dark-900/70 border border-white/5 flex items-start gap-4">
-              <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 mt-0.5">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
-              </div>
-              <div>
-                <h4 class="text-sm font-bold text-white flex items-center gap-2">
-                  <span>Ham Makine Çevirisi Hataları ve Yanıltıcı Çeviriler Ayıklandı</span>
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-950 text-amber-300 border border-amber-800">Kalite Kontrol</span>
-                </h4>
-                <p class="text-xs text-slate-300 mt-1 leading-relaxed">
-                  Ham makine çevirilerinde görülen absürt terimler ("poll" yerine "bir anket", "white goods" yerine "Beyaz Eşya", "vestige" yerine "gelir hakları/yelek") tespit edilerek oyunun karanlık vampir/anime fantezisi atmosferine uygun terimlerle ("Gözlem Anketi/Pusula Noktası", "Kalıntı Parçası/Bellek", "Lüks Eşyalar") tamamen yenilendi.
-                </p>
-              </div>
-            </div>
-
-            <div class="p-4 rounded-xl bg-dark-900/70 border border-white/5 flex items-start gap-4">
-              <div class="w-8 h-8 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0 mt-0.5">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              </div>
-              <div>
-                <h4 class="text-sm font-bold text-white flex items-center gap-2">
-                  <span>Ara Sahne ve Diyalog Zamanlama Senkronizasyonu</span>
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-950 text-blue-300 border border-blue-800">Altyazı Düzeltmeleri</span>
-                </h4>
-                <p class="text-xs text-slate-300 mt-1 leading-relaxed">
-                  Orijinal oyun dosyalarında bulunan 1 satırlık kaymalar (off-by-one ID shift) tek tek analiz edilerek diyalogların konuşan karakterlerle ve sinematik animasyonlarla %100 örtüşmesi sağlandı.
-                </p>
-              </div>
-            </div>
-
-            <div class="p-4 rounded-xl bg-dark-900/70 border border-white/5 flex items-start gap-4">
-              <div class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center shrink-0 mt-0.5">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
-              </div>
-              <div>
-                <h4 class="text-sm font-bold text-white flex items-center gap-2">
-                  <span>Io Yoldaş Diyaloğu ve Karakter Üslubu İyileştirmesi</span>
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-950 text-cyan-300 border border-cyan-800">Karakter Düzenlemesi</span>
-                </h4>
-                <p class="text-xs text-slate-300 mt-1 leading-relaxed">
-                  Io'nun Base03 yürüyüş sahnesindeki aceleci çevirisi ("Acelemiz yok, yavaşça gidebiliriz.") olarak düzeltildi; Louis, Yakumo, Mia, Jack ve Eva gibi tüm yoldaşların ses tonlarına uygun editöryal üslup sağlandı.
-                </p>
-              </div>
-            </div>
-
-            <div class="p-4 rounded-xl bg-dark-900/70 border border-white/5 flex items-start gap-4">
-              <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              </div>
-              <div>
-                <h4 class="text-sm font-bold text-white flex items-center gap-2">
-                  <span>Tek Parça Tak-Çalıştır Pak Dağıtımı</span>
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800">Teknik Altyapı</span>
-                </h4>
-                <p class="text-xs text-slate-300 mt-1 leading-relaxed">
-                  <code class="text-emerald-300 font-mono">pakchunk0-WindowsNoEditor__TurkishFull_P.pak</code> (1.4 MB ZIP) mimarisiyle hiçbir harici enjektör veya mod yöneticisi gerektirmeden Steam sürümüne tam uyumlu, çökmesiz ve başarımları engellemeyen kompakt paket sunuldu.
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- SCREENSHOTS GALLERY (INTERACTIVE LIGHTBOX) -->
-        <div class="mb-16">
-          <div class="flex items-center justify-between mb-6">
-            <div>
-              <h3 class="text-2xl font-display font-bold text-white uppercase">Code Vein — Türkçe Ekran Görüntüleri</h3>
-              <p class="text-xs text-slate-400">Görselleri büyütmek için üzerlerine tıklayabilirsiniz</p>
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div class="glass-card rounded-xl overflow-hidden group cursor-pointer border-purple-500/30" onclick="openLightbox('images/codevein_showcase_01_mistle.webp', 'Mistle ve Oynanış Rehberi — Türkçe')">
-              <img loading="lazy" decoding="async" src="images/codevein_showcase_01_mistle.webp" alt="Mistle ve Oynanış Rehberi" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
-              <div class="p-3 text-xs text-slate-200 font-mono flex items-center justify-between">
-                <span>Mistle ve Oynanış Rehberi</span>
-                <span class="text-purple-400">🔍 Büyüt</span>
-              </div>
-            </div>
-            <div class="glass-card rounded-xl overflow-hidden group cursor-pointer border-purple-500/30" onclick="openLightbox('images/codevein_showcase_02_anamenu.webp', 'Ana Menü ve DLC Başlıkları — Türkçe')">
-              <img loading="lazy" decoding="async" src="images/codevein_showcase_02_anamenu.webp" alt="Ana Menü ve DLC Başlıkları" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
-              <div class="p-3 text-xs text-slate-200 font-mono flex items-center justify-between">
-                <span>Ana Menü & 3 DLC</span>
-                <span class="text-purple-400">🔍 Büyüt</span>
-              </div>
-            </div>
-            <div class="glass-card rounded-xl overflow-hidden group cursor-pointer border-purple-500/30" onclick="openLightbox('images/codevein_showcase_03_io_diyalog.webp', 'Io ile Keşif Diyaloğu — Türkçe')">
-              <img loading="lazy" decoding="async" src="images/codevein_showcase_03_io_diyalog.webp" alt="Io ile Keşif Diyaloğu" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
-              <div class="p-3 text-xs text-slate-200 font-mono flex items-center justify-between">
-                <span>Io ile Keşif Diyaloğu</span>
-                <span class="text-purple-400">🔍 Büyüt</span>
-              </div>
-            </div>
-            <div class="glass-card rounded-xl overflow-hidden group cursor-pointer border-purple-500/30" onclick="openLightbox('images/codevein_showcase_04_arasahne.webp', 'Sinematik Ara Sahne — Türkçe')">
-              <img loading="lazy" decoding="async" src="images/codevein_showcase_04_arasahne.webp" alt="Sinematik Ara Sahne" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
-              <div class="p-3 text-xs text-slate-200 font-mono flex items-center justify-between">
-                <span>Sinematik Ara Sahne</span>
-                <span class="text-purple-400">🔍 Büyüt</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- CODE VEIN INSTALLATION GUIDE -->
-        <div id="codevein-kurulum" class="glass-card rounded-2xl p-8 mb-12 border-purple-500/40">
-          <h3 class="text-2xl font-display font-bold text-white uppercase mb-6 flex items-center gap-3">
-            <span class="w-8 h-8 rounded-lg bg-purple-500/20 border border-purple-500/40 text-purple-300 text-sm flex items-center justify-center font-mono">🗡️</span>
-            <span>Code Vein: Kurulum Kılavuzu</span>
-          </h3>
-
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-dark-950/70 rounded-xl p-5 border border-white/5">
-              <div class="w-8 h-8 rounded-lg bg-purple-500/20 text-purple-400 font-bold font-display text-base flex items-center justify-center mb-3">1</div>
-              <h4 class="font-bold text-white text-sm mb-1">ZIP'i İndirin</h4>
-              <p class="text-xs text-slate-300">
-                <code class="text-purple-300">CODE_VEIN_Turkce_Yama_v1.0_AtillaCeviri.zip</code> dosyasını indirin ve klasöre çıkartın.
-              </p>
-            </div>
-
-            <div class="bg-dark-950/70 rounded-xl p-5 border border-white/5">
-              <div class="w-8 h-8 rounded-lg bg-purple-500/20 text-purple-400 font-bold font-display text-base flex items-center justify-center mb-3">2</div>
-              <h4 class="font-bold text-white text-sm mb-1">Paks Klasörüne Kopyalayın</h4>
-              <p class="text-xs text-slate-300">
-                <code class="text-purple-300 font-mono">pakchunk0-WindowsNoEditor__TurkishFull_P.pak</code> dosyasını oyunun <code class="text-purple-300">Content\Paks\</code> klasörüne atın.
-              </p>
-            </div>
-
-            <div class="bg-dark-950/70 rounded-xl p-5 border border-white/5">
-              <div class="w-8 h-8 rounded-lg bg-purple-500/20 text-purple-400 font-bold font-display text-base flex items-center justify-center mb-3">3</div>
-              <h4 class="font-bold text-white text-sm mb-1">Oyunu Başlatın</h4>
-              <p class="text-xs text-slate-300">
-                Oyunu Steam üzerinden başlatın; Türkçe yama ve DLC çevirileri otomatik olarak devreye girecektir.
-              </p>
-            </div>
-          </div>
-
-          <div class="mt-6 p-4 rounded-xl bg-black/60 border border-white/5 font-mono text-xs text-slate-300">
-            <span class="text-slate-500">Örnek Steam Konumu:</span><br>
-            C:\Program Files (x86)\Steam\steamapps\common\CODE VEIN\CodeVein\Content\Paks\
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- SECTION 2: SPOTLIGHT THE EXPANSE -->
-    <section id="expanse" onmouseenter="switchBackground('expanse')" class="py-24 border-t border-white/10 relative transition-all duration-700">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <!-- Spotlight Banner Card -->
-        <div class="glass-card rounded-3xl p-8 sm:p-12 mb-12 border-cyan-500/50 relative overflow-hidden shadow-2xl">
-          <div class="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-overlay pointer-events-none" style="background-image: url('images/expanse_space.webp')"></div>
-          <div class="absolute -right-24 -bottom-24 w-96 h-96 bg-brand-cyan/20 rounded-full blur-3xl pointer-events-none"></div>
-          
-          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            
-            <!-- Left Info -->
-            <div class="lg:col-span-7 space-y-6">
-              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/50 bg-cyan-950/80 text-cyan-300 text-xs font-semibold tracking-wider uppercase font-mono shadow">
-                <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
-                ÖNE ÇIKAN YAMA • v1.0 SÜRÜMÜ
-              </div>
-
-              <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-white uppercase leading-none">
-                The Expanse: A Telltale Series
-                <span class="block text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan via-blue-400 to-indigo-300 mt-2">
-                  %100 Türkçe Yerelleştirme
-                </span>
-              </h2>
-
-              <p class="text-base text-slate-200 leading-relaxed drop-shadow">
-                Telltale Games ve Deck Nine ortaklığıyla geliştirilen bu uzay macerasını ana dilinizde deneyimleyin. 
-                The Expanse dizi evrenine, Lang Belta aksanına ve karakterlerin özgün tonlarına sadık kalınarak hazırlanmıştır.
-              </p>
-
-              <!-- Tags -->
-              <div class="flex flex-wrap gap-2 text-xs font-mono">
-                <span class="px-3 py-1.5 rounded-lg bg-dark-900/80 border border-white/10 text-slate-200">Bölüm 1 - 5 Dahil</span>
-                <span class="px-3 py-1.5 rounded-lg bg-dark-900/80 border border-amber-500/30 text-amber-300">Archangel DLC Dahil</span>
-                <span class="px-3 py-1.5 rounded-lg bg-dark-900/80 border border-white/10 text-slate-200">Steam & Epic Games</span>
-                <span class="px-3 py-1.5 rounded-lg bg-dark-900/80 border border-white/10 text-emerald-400">Başarımlar Aktif</span>
-              </div>
-
-              <!-- Metodoloji & Kalite Beyanı -->
-              <div class="p-4 rounded-xl bg-cyan-950/50 border border-cyan-500/40 text-xs text-slate-300 flex items-start gap-3 shadow-lg">
-                <div class="w-8 h-8 rounded-lg bg-cyan-500/20 text-brand-cyan flex items-center justify-center shrink-0 font-mono text-sm mt-0.5">
-                  <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                </div>
-                <div class="space-y-1">
-                  <div class="text-white font-bold text-sm tracking-wide flex items-center gap-2">
-                    <span>Ham Makine Çevirisi Değildir</span>
-                    <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-950 text-cyan-300 border border-cyan-500/40 uppercase">Hibrit Metodoloji</span>
-                  </div>
-                  <p class="text-slate-300 leading-relaxed text-xs">
-                    Bu çalışma; bağlamdan yoksun, denetimsiz otomatik çeviri araçlarının (ham makine çevirisi) aksine, ileri düzey dil modelleri ile doğrudan editöryal denetimi birleştiren hibrit bir yerelleştirme metodolojisiyle hazırlanmıştır.
-                  </p>
-                </div>
-              </div>
-
-              <!-- Action Buttons -->
-              <div class="pt-4 flex flex-col sm:flex-row items-center gap-4">
-                <a href="https://github.com/atillaceviri/atillaceviri.github.io/releases/download/expanse-v1.0/TheExpanse_Turkce_Yama_AtillaCeviri.zip" download class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-brand-cyan to-brand-blue text-slate-950 font-bold font-display text-lg tracking-wide hover:brightness-110 transition shadow-xl neon-cyan">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-                  <span>Yamayı İndir (v1.0)</span>
-                  <span class="text-xs px-2 py-0.5 rounded bg-black/30 font-mono">2.5 MB</span>
-                </a>
-
-                <a href="#kurulum-rehberi" onclick="goToSection('kurulum-rehberi', 'expanse', event)" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-dark-900/90 border border-white/15 text-slate-200 font-medium hover:text-white hover:border-brand-cyan transition">
-                  <span>Kurulum Rehberi</span>
-                  <svg class="w-4 h-4 text-brand-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                </a>
-
-                <a href="#expanse-surum-notlari" onclick="goToSection('expanse-surum-notlari', 'expanse', event)" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-dark-900/90 border border-cyan-500/30 text-cyan-300 font-medium hover:text-white hover:border-brand-cyan transition">
-                  <span>Son Değişiklikler</span>
-                  <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                </a>
-              </div>
-
-              <!-- Security & Live Download Verification Bar -->
-              <div class="flex flex-wrap items-center gap-2 text-[11px] font-mono text-slate-400">
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-cyan-950/60 border border-cyan-500/30 text-cyan-300">
-                  <span>🛡️ Temiz Paket (.pak/.utoc — .exe içermez)</span>
-                </span>
-                <button type="button" onclick="copyHash('28df41f681d15398a39b29c6898100cd01b5a2a35b7c58ecc7898deb4ff31c5f', this)" title="Tam SHA-256: 28df41f681d15398a39b29c6898100cd01b5a2a35b7c58ecc7898deb4ff31c5f" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-dark-950/80 border border-white/10 hover:border-cyan-400/50 text-slate-300 hover:text-white transition cursor-pointer">
-                  <span class="hash-label">SHA-256: 28df41f6...31c5f</span>
-                </button>
-                <span id="dl-count-expanse" class="hidden inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-dark-950/80 border border-cyan-500/30 text-cyan-300"></span>
-              </div>
-            </div>
-
-            <!-- Right Visual Banner -->
-            <div class="lg:col-span-5">
-              <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-white/20 group">
-                <img loading="lazy" decoding="async" src="images/expanse_header.webp" alt="The Expanse Banner" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
-                <div class="absolute inset-0 bg-gradient-to-t from-dark-950/90 via-transparent to-transparent"></div>
-                <div class="absolute bottom-4 left-4 right-4 text-xs text-slate-200 font-mono flex items-center justify-between">
-                  <span>Çevirmen: Atilla (ElijahKerpy)</span>
-                  <span class="text-brand-cyan">Eylül 2026</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- CHARACTER & STORY HIGHLIGHTS -->
-        <div id="dlc-section" class="mb-14">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-6 gap-3">
-            <div>
-              <h3 class="text-2xl font-display font-bold text-white uppercase">Hikaye ve Karakterler</h3>
-              <p class="text-xs text-slate-400">Kartlara tıklayarak veya üzerine gelerek arka planı dinamik olarak değiştirebilirsiniz</p>
-            </div>
-            
-            <!-- Quick View Toggle Buttons -->
-            <div class="flex items-center gap-2">
-              <button type="button" onclick="switchBackground('expanse')" class="px-3.5 py-1.5 rounded-lg bg-dark-850 border border-cyan-500/40 text-cyan-300 text-xs font-mono font-semibold hover:bg-cyan-950 transition">
-                🚀 Ana Hikaye (Drummer)
-              </button>
-              <button type="button" onclick="switchBackground('dlc')" class="px-3.5 py-1.5 rounded-lg bg-dark-850 border border-amber-500/40 text-amber-300 text-xs font-mono font-semibold hover:bg-amber-950 transition">
-                🏛️ Archangel DLC (Avasarala)
-              </button>
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            
-            <!-- Drummer Card (Ana Hikaye) -->
-            <div class="glass-card rounded-2xl overflow-hidden flex flex-col sm:flex-row group cursor-pointer border-cyan-500/30" 
-                 onmouseenter="switchBackground('expanse')" 
-                 onclick="switchBackground('expanse')">
-              <div class="sm:w-52 h-52 sm:h-auto overflow-hidden shrink-0">
-                <img loading="lazy" decoding="async" src="images/expanse_drummer.webp" alt="Camina Drummer" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-              </div>
-              <div class="p-6 flex flex-col justify-center">
-                <div class="flex items-center justify-between">
-                  <span class="text-xs font-mono text-cyan-400 uppercase tracking-wider font-semibold">Ana Hikaye • Artemis Gemisi</span>
-                  <span class="text-[10px] font-mono text-cyan-400/80 bg-cyan-950 px-2 py-0.5 rounded border border-cyan-500/30">Bölüm 1–5</span>
-                </div>
-                <h3 class="text-2xl font-display font-bold text-white mt-1 group-hover:text-cyan-300 transition">Camina Drummer</h3>
-                <p class="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
-                  Korsan baskınları, uzay boşluğunda enkaz arayışı ve mürettebatın isyan tehlikesi. Yaptığınız her kritik seçim hikayenin sonunu doğrudan şekillendirir.
-                </p>
-              </div>
-            </div>
-
-            <!-- Avasarala Card (Archangel DLC) -->
-            <div class="glass-card glass-card-dlc rounded-2xl overflow-hidden flex flex-col sm:flex-row group cursor-pointer border-amber-500/40" 
-                 onmouseenter="switchBackground('dlc')" 
-                 onclick="switchBackground('dlc')">
-              <div class="sm:w-52 h-52 sm:h-auto overflow-hidden shrink-0 bg-dark-900">
-                <img loading="lazy" decoding="async" src="images/dlc_avasarala.webp" alt="Chrisjen Avasarala - Archangel DLC" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-              </div>
-              <div class="p-6 flex flex-col justify-center">
-                <div class="flex items-center justify-between">
-                  <span class="text-xs font-mono text-amber-400 uppercase tracking-wider font-semibold">Archangel DLC • Birleşmiş Milletler</span>
-                  <span class="text-[10px] font-mono text-amber-300 bg-amber-950 px-2 py-0.5 rounded border border-amber-500/40">DLC Paketi</span>
-                </div>
-                <h3 class="text-2xl font-display font-bold text-white mt-1 group-hover:text-amber-300 transition">Chrisjen Avasarala</h3>
-                <p class="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
-                  Dünya ve Mars arasındaki barışı korumak için Dünya'nın derinliklerinde siyasi entrikalar, delege pazarlıkları ve yüksek tansiyonlu kriz yönetimi.
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- SÜRÜM NOTLARI & DEĞİŞİKLİK GÜNLÜĞÜ (THE EXPANSE CHANGELOG) -->
-        <span id="surum-notlari" class="sr-only"></span>
-        <div id="expanse-surum-notlari" class="glass-card rounded-2xl p-8 mb-14 border-cyan-500/30">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-8 gap-4 border-b border-white/10 pb-6">
-            <div>
-              <div class="flex items-center gap-3">
-                <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest font-bold">GÜNCELLEME GEÇMİŞİ</span>
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 text-xs font-mono font-bold">
-                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                  v1.0 (Son Sürüm)
-                </span>
-              </div>
-              <h3 class="text-2xl sm:text-3xl font-display font-bold text-white uppercase mt-1">The Expanse: Yapılan En Son Değişiklikler</h3>
-            </div>
-            <div class="text-xs font-mono text-slate-400">
-              Yayın Tarihi: <span class="text-cyan-300">26 Eylül 2026</span>
-            </div>
-          </div>
-
-          <!-- Changelog Items List -->
-          <div class="space-y-4">
-            
-            <div class="p-4 rounded-xl bg-dark-900/70 border border-white/5 flex items-start gap-4">
-              <div class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center shrink-0 mt-0.5">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              </div>
-              <div>
-                <h4 class="text-sm font-bold text-white flex items-center gap-2">
-                  <span>Diyalog Tonu ve Karakter Samimiyeti İyileştirmesi</span>
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-950 text-cyan-400 border border-cyan-800">Bölüm 4 & 5</span>
-                </h4>
-                <p class="text-xs text-slate-300 mt-1 leading-relaxed">
-                  Doktor Virgil ile Camina Drummer arasındaki sahnelerde kullanılan resmi ("siz / biz") kalıplar baştan sona revize edildi; karakterlerin derin dostluğuna ve hikaye atmosferine uygun samimi ("sen") diline dönüştürüldü.
-                </p>
-              </div>
-            </div>
-
-            <div class="p-4 rounded-xl bg-dark-900/70 border border-white/5 flex items-start gap-4">
-              <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 mt-0.5">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
-              </div>
-              <div>
-                <h4 class="text-sm font-bold text-white flex items-center gap-2">
-                  <span>Archangel DLC Seçim Metni ve İmla Düzeltmesi</span>
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-950 text-amber-400 border border-amber-800">Archangel DLC</span>
-                </h4>
-                <p class="text-xs text-slate-300 mt-1 leading-relaxed">
-                  Chrisjen Avasarala ek paketinde yer alan kritik karar ekranındaki yazım hatası (<em>"Annini dinle" &rarr; "Anneni dinle"</em>) düzeltildi ve tüm seçim butonları görsel standartlara uyarlandı.
-                </p>
-              </div>
-            </div>
-
-            <div class="p-4 rounded-xl bg-dark-900/70 border border-white/5 flex items-start gap-4">
-              <div class="w-8 h-8 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0 mt-0.5">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              </div>
-              <div>
-                <h4 class="text-sm font-bold text-white flex items-center gap-2">
-                  <span>Hızlı Altyazı ve Ses Senkronizasyon Ayarlamaları</span>
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-950 text-blue-400 border border-blue-800">Tüm Bölümler</span>
-                </h4>
-                <p class="text-xs text-slate-300 mt-1 leading-relaxed">
-                  Oyunun Wwise ses motoruna bağlı olarak ekranda çok hızlı geçen altyazılar tespit edildi; Türkçe cümle uzunlukları seslendirme süreleriyle senkronize olacak şekilde sıkılaştırıldı ve okuma kolaylığı sağlandı.
-                </p>
-              </div>
-            </div>
-
-            <div class="p-4 rounded-xl bg-dark-900/70 border border-white/5 flex items-start gap-4">
-              <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              </div>
-              <div>
-                <h4 class="text-sm font-bold text-white flex items-center gap-2">
-                  <span>Zen IoStore ve Legacy Pak Motoru Sıfır Hata Doğrulaması</span>
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800">Teknik Altyapı</span>
-                </h4>
-                <p class="text-xs text-slate-300 mt-1 leading-relaxed">
-                  39 yerelleştirme dosyasının tamamı Unreal Engine 4.27 standartlarında derlendi. Steam ve Epic Games sürümlerinde çökme yapmayan çift katmanlı paket mimarisi (2.5 MB) hazırlandı.
-                </p>
-              </div>
-            </div>
-
-            <div class="p-4 rounded-xl bg-dark-900/70 border border-white/5 flex items-start gap-4">
-              <div class="w-8 h-8 rounded-lg bg-purple-500/20 text-purple-400 flex items-center justify-center shrink-0 mt-0.5">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"/></svg>
-              </div>
-              <div>
-                <h4 class="text-sm font-bold text-white flex items-center gap-2">
-                  <span>Lang Belta ve Belter Kültürel Terim Bütünlüğü</span>
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-950 text-purple-300 border border-purple-800">Evren Terminolojisi</span>
-                </h4>
-                <p class="text-xs text-slate-300 mt-1 leading-relaxed">
-                  Kemerli (Belter) argo ve deyimleri The Expanse dizi külliyatıyla tam uyumlu hale getirildi; "beratna", "sasa ke", "pampa", "bosmang" gibi ikonik ifadeler bağlamına göre korundu veya Türkçeleştirildi.
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- SCREENSHOTS GALLERY (INTERACTIVE LIGHTBOX) -->
-        <div class="mb-16">
-          <div class="flex items-center justify-between mb-6">
-            <div>
-              <h3 class="text-2xl font-display font-bold text-white uppercase">Oyundan Türkçe Ekran Görüntüleri</h3>
-              <p class="text-xs text-slate-400">Görselleri büyütmek için üzerlerine tıklayabilirsiniz</p>
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div class="glass-card rounded-xl overflow-hidden group cursor-pointer" onclick="openLightbox('images/screenshot1.webp', 'Bölüm Diyalogları — Türkçe')">
-              <img loading="lazy" decoding="async" src="images/screenshot1.webp" alt="Türkçe Ekran Görüntüsü 1" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
-              <div class="p-3 text-xs text-slate-200 font-mono flex items-center justify-between">
-                <span>Bölüm Diyalogları</span>
-                <span class="text-brand-cyan">🔍 Büyüt</span>
-              </div>
-            </div>
-            <div class="glass-card rounded-xl overflow-hidden group cursor-pointer" onclick="openLightbox('images/screenshot2.webp', 'Karakter Etkileşimleri — Türkçe')">
-              <img loading="lazy" decoding="async" src="images/screenshot2.webp" alt="Türkçe Ekran Görüntüsü 2" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
-              <div class="p-3 text-xs text-slate-200 font-mono flex items-center justify-between">
-                <span>Karakter Etkileşimleri</span>
-                <span class="text-brand-cyan">🔍 Büyüt</span>
-              </div>
-            </div>
-            <div class="glass-card rounded-xl overflow-hidden group cursor-pointer" onclick="openLightbox('images/screenshot3.webp', 'Seçimler ve Menü — Türkçe')">
-              <img loading="lazy" decoding="async" src="images/screenshot3.webp" alt="Türkçe Ekran Görüntüsü 3" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
-              <div class="p-3 text-xs text-slate-200 font-mono flex items-center justify-between">
-                <span>Seçimler ve Menü</span>
-                <span class="text-brand-cyan">🔍 Büyüt</span>
-              </div>
-            </div>
-            <div class="glass-card rounded-xl overflow-hidden group cursor-pointer" onclick="openLightbox('images/dlc_desk.webp', 'Archangel DLC — Avasarala BM Masası')">
-              <img loading="lazy" decoding="async" src="images/dlc_desk.webp" alt="Archangel DLC Avasarala Masası" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
-              <div class="p-3 text-xs text-slate-200 font-mono flex items-center justify-between">
-                <span class="text-amber-300">Archangel DLC</span>
-                <span class="text-amber-400">🔍 Büyüt</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- INSTALLATION GUIDE -->
-        <div id="kurulum-rehberi" class="glass-card rounded-2xl p-8 mb-12 border-cyan-500/30">
-          <h3 class="text-2xl font-display font-bold text-white uppercase mb-6 flex items-center gap-3">
-            <span class="w-8 h-8 rounded-lg bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan text-sm flex items-center justify-center font-mono">🛠️</span>
-            <span>The Expanse: Kurulum Kılavuzu</span>
-          </h3>
-
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-dark-950/70 rounded-xl p-5 border border-white/5">
-              <div class="w-8 h-8 rounded-lg bg-cyan-500/20 text-brand-cyan font-bold font-display text-base flex items-center justify-center mb-3">1</div>
-              <h4 class="font-bold text-white text-sm mb-1">ZIP'i İndirin</h4>
-              <p class="text-xs text-slate-300">
-                Sitemizden indirdiğiniz <code class="text-cyan-300">TheExpanse_Turkce_Yama_AtillaCeviri.zip</code> dosyasını bir klasöre çıkartın.
-              </p>
-            </div>
-
-            <div class="bg-dark-950/70 rounded-xl p-5 border border-white/5">
-              <div class="w-8 h-8 rounded-lg bg-cyan-500/20 text-brand-cyan font-bold font-display text-base flex items-center justify-center mb-3">2</div>
-              <h4 class="font-bold text-white text-sm mb-1">Artemis Klasörünü Kopyalayın</h4>
-              <p class="text-xs text-slate-300">
-                İçinden çıkan <code class="text-cyan-300 font-mono">Artemis</code> klasörünü kopyalayıp oyunun kurulu olduğu ana dizine yapıştırın.
-              </p>
-            </div>
-
-            <div class="bg-dark-950/70 rounded-xl p-5 border border-white/5">
-              <div class="w-8 h-8 rounded-lg bg-cyan-500/20 text-brand-cyan font-bold font-display text-base flex items-center justify-center mb-3">3</div>
-              <h4 class="font-bold text-white text-sm mb-1">Oyunu Başlatın</h4>
-              <p class="text-xs text-slate-300">
-                Oyunu Steam veya Epic üzerinden açın; yama otomatik olarak devreye girecektir.
-              </p>
-            </div>
-          </div>
-
-          <div class="mt-6 p-4 rounded-xl bg-black/60 border border-white/5 font-mono text-xs text-slate-300">
-            <span class="text-slate-500">Örnek Steam Konumu:</span><br>
-            C:\Program Files (x86)\Steam\steamapps\common\TheExpanseATelltaleSeries\
-          </div>
-
-          <div class="mt-4 p-4 rounded-xl bg-cyan-950/40 border border-cyan-500/30 text-xs text-slate-300 flex items-start gap-3">
-            <span class="text-brand-cyan text-base shrink-0 mt-0.5">⚖️</span>
-            <div>
-              <strong class="text-white block mb-0.5">Yasal Uyarı & Lisans Zorunluluğu:</strong>
-              Bu yama oyunun kendisini, çalıştırılabilir dosyalarını veya korsan korumasını aşan yazılımları kesinlikle içermez. Yalnızca orijinal oyuna sahip kullanıcıların dil dosyalarını güncellemesi için hazırlanmış kâr amacı gütmeyen bağımsız bir moddur (5846 Sayılı FSEK). Çalışabilmesi için Steam veya Epic Games üzerinden lisanslı orijinal oyun gereklidir.
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- SECTION 2.6: SPOTLIGHT EVIL WEST (SIRADAKİ PROJE) -->
-    <section id="evilwest" onmouseenter="switchBackground('evilwest')" class="py-24 border-t border-white/10 relative transition-all duration-700">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <!-- Spotlight Banner Card -->
-        <div class="glass-card rounded-3xl p-8 sm:p-12 mb-12 border-amber-500/50 relative overflow-hidden shadow-2xl">
-          <div class="absolute -right-24 -bottom-24 w-96 h-96 bg-amber-600/20 rounded-full blur-3xl pointer-events-none"></div>
-          
-          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            
-            <!-- Left Info -->
-            <div class="lg:col-span-7 space-y-6">
-              <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-950/90 border border-amber-500/50 text-amber-300 text-xs font-mono font-bold tracking-wider uppercase shadow">
-                <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
-                <span>🔥 SIRADAKİ ÇEVİRİ PROJESİ • HAZIRLANIYOR</span>
-              </div>
-              
-              <h2 class="text-4xl sm:text-5xl font-display font-extrabold text-white tracking-tight uppercase leading-tight">
-                EVIL WEST
-                <span class="block text-2xl sm:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-red-500 font-bold mt-1">
-                  %100 Türkçe Yerelleştirme Projesi
-                </span>
-              </h2>
-
-              <p class="text-sm sm:text-base text-slate-200 leading-relaxed">
-                Karanlık bir tehdit Amerikan sınırını yutarken, gizli bir vampir avcısı enstitüsünün son saha ajanlarından biri olan <strong class="text-amber-300">Jesse Rentier</strong> olarak insanlığın son savunma hattısınız. Flying Wild Hog ve Focus Entertainment imzalı bu vahşi batı & doğaüstü gotik aksiyon başyapıtı, Atilla Çeviri standartlarında Türkçeye kazandırılıyor!
-              </p>
-
-              <!-- Technical & Lore Details Grid -->
-              <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 text-xs font-mono">
-                <div class="p-3 rounded-xl bg-dark-950/80 border border-white/5">
-                  <div class="text-slate-400 text-[10px] uppercase">Geliştirici & Yayıncı</div>
-                  <div class="text-amber-300 font-bold mt-0.5">Flying Wild Hog / Focus</div>
-                </div>
-                <div class="p-3 rounded-xl bg-dark-950/80 border border-white/5">
-                  <div class="text-slate-400 text-[10px] uppercase">Oyun Motoru</div>
-                  <div class="text-amber-300 font-bold mt-0.5">Unreal Engine 4</div>
-                </div>
-                <div class="p-3 rounded-xl bg-dark-950/80 border border-white/5">
-                  <div class="text-slate-400 text-[10px] uppercase">Tür & Atmosfer</div>
-                  <div class="text-amber-300 font-bold mt-0.5">TPS / Vahşi Batı & Vampir</div>
-                </div>
-              </div>
-
-              <!-- Metodoloji Güvencesi -->
-              <div class="p-4 rounded-xl bg-amber-950/40 border border-amber-500/30 flex items-start gap-3 text-xs text-slate-300">
-                <svg class="w-5 h-5 text-amber-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                <div class="space-y-1">
-                  <strong class="text-white block font-bold text-xs uppercase tracking-wide">Ham Makine Çevirisi Değildir</strong>
-                  <p class="leading-relaxed">
-                    Tıpkı The Expanse, Code Vein ve The Outer Worlds'te olduğu gibi; Jesse Rentier'ın sert kovboy mizacı, Rentier Enstitüsü'nün bilimsel ve askeri jargonu ile gotik yaratık terminolojisi el emeği editöryal denetimle Türkçeye aktarılacaktır.
-                  </p>
-                </div>
-              </div>
-
-              <!-- Action Buttons -->
-              <div class="pt-4 flex flex-col sm:flex-row items-center gap-4">
-                <a href="https://store.steampowered.com/app/1065310/Evil_West/" target="_blank" rel="noopener" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-amber-500 via-orange-500 to-red-600 text-slate-950 font-bold font-display text-lg tracking-wide hover:brightness-110 transition shadow-xl shadow-orange-950/40">
-                  <svg class="w-6 h-6 fill-current text-slate-950" viewBox="0 0 24 24">
-                    <path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174l3.197-4.662a4.47 4.47 0 01-.824-2.512c0-2.485 2.015-4.5 4.5-4.5.347 0 .684.04 1.008.115l3.208-4.678A11.942 11.942 0 0012 0zm4.5 9c-1.381 0-2.5 1.119-2.5 2.5 0 .385.089.749.246 1.074l-2.029 2.959a4.49 4.49 0 01-1.217-.133l-3.327 4.852C3.125 18.73 1.5 15.565 1.5 12c0-5.799 4.701-10.5 10.5-10.5S22.5 6.201 22.5 12c0 4.095-2.348 7.641-5.753 9.387l-2.457-3.585A4.478 4.478 0 0116.5 16.5c2.485 0 4.5-2.015 4.5-4.5S18.985 9 16.5 9zm0 1.5c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3z"/>
-                  </svg>
-                  <span>Steam'de Oyunu İncele ↗</span>
-                </a>
-
-                <button type="button" onclick="copyEmail(event, this)" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl border border-amber-500/40 bg-dark-850 hover:bg-dark-800 text-amber-300 text-sm font-medium transition cursor-pointer">
-                  <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
-                  <span class="btn-label font-mono">Geri Bildirim / İletişim</span>
-                </button>
-              </div>
-
-            </div>
-
-            <!-- Right Visual Cover -->
-            <div class="lg:col-span-5 flex flex-col items-center">
-              <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-amber-500/40 group max-w-md w-full">
-                <img loading="lazy" decoding="async" src="images/evilwest_cover.webp" alt="Evil West Türkçe Yerelleştirme" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
-                <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-transparent to-transparent opacity-60"></div>
-                <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs font-mono text-white">
-                  <span class="bg-black/80 px-2.5 py-1 rounded backdrop-blur border border-white/10">Rentier Enstitüsü</span>
-                  <span class="bg-amber-500 text-slate-950 font-bold px-2.5 py-1 rounded">YAKINDA</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Project Scope Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="glass-card rounded-2xl p-6 border-amber-500/20">
-            <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-display font-bold text-lg mb-4">
-              🎯
-            </div>
-            <h3 class="text-lg font-display font-bold text-white mb-2">Ana Senaryo & Diyaloglar</h3>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              Jesse Rentier, Edgar Gravenor ve tüm saha ekibinin sinematik hikaye konuşmaları, telsiz anonsları ve görev diyalogları eksiksiz Türkçeleştirilecek.
-            </p>
-          </div>
-
-          <div class="glass-card rounded-2xl p-6 border-amber-500/20">
-            <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-display font-bold text-lg mb-4">
-              ⚡
-            </div>
-            <h3 class="text-lg font-display font-bold text-white mb-2">Cephanelik & Eldiven</h3>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              Elektrikli Rentier Eldiveni geliştirmeleri, altıpatlar, av tüfeği, alev makinesi, kombo yetenekleri ve tüm arayüz terimleri özenle yerelleştirilecek.
-            </p>
-          </div>
-
-          <div class="glass-card rounded-2xl p-6 border-amber-500/20">
-            <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-display font-bold text-lg mb-4">
-              📜
-            </div>
-            <h3 class="text-lg font-display font-bold text-white mb-2">Arşiv Notları & Lore</h3>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              Vahşi Batı'daki gizli vampir kovanları, Rentier Enstitüsü gizli dosyaları ve haritada toplanabilir tüm mektuplar/belgeler Türkçeye kazandırılacak.
-            </p>
-          </div>
-        </div>
-
       </div>
     </section>
 
@@ -1971,15 +800,6 @@
       </div>
     </section>
   </main>
-
-  <!-- LIGHTBOX MODAL -->
-  <div id="lightbox" class="lightbox-modal" onclick="closeLightbox()">
-    <div class="relative max-w-5xl w-full p-4" onclick="event.stopPropagation()">
-      <button class="absolute -top-10 right-4 text-white text-3xl font-bold hover:text-brand-cyan transition" onclick="closeLightbox()">&times;</button>
-      <img id="lightbox-img" src="" alt="Görsel" class="w-full h-auto rounded-2xl shadow-2xl border border-white/20">
-      <div id="lightbox-caption" class="mt-3 text-center text-sm font-mono text-slate-300"></div>
-    </div>
-  </div>
 
   <!-- LEGAL & TAKEDOWN MODAL (5846 FSEK / 5651 / 6698 KVKK) -->
   <div id="legal-modal" class="lightbox-modal" onclick="closeLegalModal()">
@@ -2105,508 +925,8 @@
     </div>
   </footer>
 
-  <!-- REAL GAME WALLPAPERS DYNAMIC ENGINE -->
-  <script>
-    const bgPortal = document.getElementById('bg-portal');
-    const bgExpanse = document.getElementById('bg-expanse');
-    const bgDlc = document.getElementById('bg-dlc');
-    const bgCodevein = document.getElementById('bg-codevein');
-    const bgOuterworlds = document.getElementById('bg-outerworlds');
-    const bgEvilwest = document.getElementById('bg-evilwest');
 
-    let currentPortalWallpaper = 'images/bg_cyberpunk.webp';
-
-    function setPortalTheme(theme) {
-      currentPortalWallpaper = 'images/bg_' + theme + '.webp';
-      bgPortal.style.backgroundImage = 'url(' + currentPortalWallpaper + ')';
-      
-      // Update button highlights
-      ['cyberpunk', 'witcher', 'rdr2', 'detroit'].forEach(t => {
-        const btn = document.getElementById('btn-' + t);
-        if (btn) {
-          if (t === theme) {
-            btn.className = 'px-3.5 py-1.5 rounded-lg font-bold text-cyan-300 bg-cyan-950/80 border border-cyan-500/40 transition';
-          } else {
-            btn.className = 'px-3.5 py-1.5 rounded-lg text-slate-400 hover:text-white transition';
-          }
-        }
-      });
-
-      switchBackground('portal');
-    }
-
-    let activeCatalogFilter = 'all';
-    function setCatalogFilter(status) {
-      activeCatalogFilter = status;
-      ['all', 'live', 'upcoming'].forEach(f => {
-        const btn = document.getElementById('filter-' + f);
-        if (!btn) return;
-        if (f === status) {
-          btn.className = 'px-3.5 py-1.5 rounded-lg text-xs font-mono font-bold text-slate-950 bg-brand-cyan transition cursor-pointer';
-        } else {
-          btn.className = 'px-3.5 py-1.5 rounded-lg text-xs font-mono text-slate-300 hover:text-white transition cursor-pointer';
-        }
-      });
-      filterCatalog();
-    }
-
-    function filterCatalog() {
-      const q = (document.getElementById('catalog-search')?.value || '').toLocaleLowerCase('tr-TR').trim();
-      const cards = document.querySelectorAll('[data-project-card]');
-      let visible = 0;
-      cards.forEach(card => {
-        const st = card.dataset.status || '';
-        const text = (card.dataset.search || '').toLocaleLowerCase('tr-TR');
-        const statusOk = activeCatalogFilter === 'all' || st === activeCatalogFilter;
-        const queryOk = !q || text.includes(q);
-        if (statusOk && queryOk) {
-          card.classList.remove('hidden');
-          visible++;
-        } else {
-          card.classList.add('hidden');
-        }
-      });
-      const emptyEl = document.getElementById('catalog-empty');
-      if (emptyEl) emptyEl.classList.toggle('hidden', visible > 0);
-    }
-
-    function resetCatalogFilter() {
-      const input = document.getElementById('catalog-search');
-      if (input) input.value = '';
-      setCatalogFilter('all');
-    }
-
-    let currentMode = 'portal';
-    let isManualNavigating = false;
-    let navTimeout = null;
-
-    function switchBackground(mode) {
-      if (!mode) return;
-      if (currentMode === mode) return;
-      currentMode = mode;
-
-      const layers = [
-        { el: bgPortal, name: 'portal' },
-        { el: bgExpanse, name: 'expanse' },
-        { el: bgDlc, name: 'dlc' },
-        { el: bgCodevein, name: 'codevein' },
-        { el: bgOuterworlds, name: 'outerworlds' },
-        { el: bgEvilwest, name: 'evilwest' }
-      ];
-
-      layers.forEach(({ el, name }) => {
-        if (!el) return;
-        if (name === mode) {
-          if (el.dataset && el.dataset.bg && !el.style.backgroundImage) {
-            el.style.backgroundImage = "url('" + el.dataset.bg + "')";
-          }
-          el.style.opacity = '1';
-          el.style.transform = 'scale(1.0)';
-        } else {
-          el.style.opacity = '0';
-          el.style.transform = 'scale(1.02)';
-        }
-      });
-    }
-
-    function smoothScrollTo(elementId, bgMode) {
-      if (bgMode) switchBackground(bgMode);
-      isManualNavigating = true;
-      clearTimeout(navTimeout);
-      navTimeout = setTimeout(() => {
-        isManualNavigating = false;
-      }, 1100);
-
-      const targetEl = document.getElementById(elementId);
-      if (targetEl) {
-        const headerOffset = 75;
-        const elementPosition = targetEl.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
-      }
-    }
-
-    function goToSection(elementId, bgMode, e) {
-      if (e && e.preventDefault) e.preventDefault();
-      smoothScrollTo(elementId, bgMode);
-    }
-
-    function goToExpanse(e) {
-      if (e && e.preventDefault) e.preventDefault();
-      smoothScrollTo('expanse', 'expanse');
-    }
-
-    function goToCodeVein(e) {
-      if (e && e.preventDefault) e.preventDefault();
-      smoothScrollTo('codevein', 'codevein');
-    }
-
-    function goToOuterWorlds(e) {
-      if (e && e.preventDefault) e.preventDefault();
-      smoothScrollTo('outerworlds', 'outerworlds');
-    }
-
-    function goToEvilWest(e) {
-      if (e && e.preventDefault) e.preventDefault();
-      smoothScrollTo('evilwest', 'evilwest');
-    }
-
-    function goToDLC(e) {
-      if (e && e.preventDefault) e.preventDefault();
-      smoothScrollTo('dlc-section', 'dlc');
-    }
-
-    // Announcements system (Top bar dismissal, unread badge, category filter)
-    const LATEST_ANNOUNCEMENT_ID = '2026-11-22-tow-v11';
-
-    function dismissTopAnnouncement() {
-      const bar = document.getElementById('top-announcement-bar');
-      if (bar) bar.classList.add('hidden');
-      try { localStorage.setItem('atillaceviri_dismissed_ann', LATEST_ANNOUNCEMENT_ID); } catch (e) {}
-    }
-
-    function markAnnouncementsSeen() {
-      ['nav-ann-badge', 'mobile-ann-badge'].forEach(id => {
-        const el = document.getElementById(id);
-        if (el) el.classList.add('hidden');
-      });
-      try { localStorage.setItem('atillaceviri_seen_ann', LATEST_ANNOUNCEMENT_ID); } catch (e) {}
-    }
-
-    function goToAnnouncements(e) {
-      if (e && e.preventDefault) e.preventDefault();
-      markAnnouncementsSeen();
-      smoothScrollTo('duyurular', 'portal');
-    }
-
-    function filterAnnouncements(type) {
-      ['all', 'update', 'release', 'status'].forEach(t => {
-        const btn = document.getElementById('ann-filter-' + t);
-        if (!btn) return;
-        if (t === type) {
-          btn.className = 'px-3.5 py-1.5 rounded-lg text-xs font-mono font-bold text-slate-950 bg-brand-cyan transition cursor-pointer';
-        } else {
-          btn.className = 'px-3.5 py-1.5 rounded-lg text-xs font-mono text-slate-300 hover:text-white transition cursor-pointer';
-        }
-      });
-      document.querySelectorAll('[data-ann-card]').forEach(card => {
-        const cardType = card.dataset.annType || '';
-        card.classList.toggle('hidden', type !== 'all' && cardType !== type);
-      });
-    }
-
-    (function initAnnouncements() {
-      try {
-        if (localStorage.getItem('atillaceviri_dismissed_ann') === LATEST_ANNOUNCEMENT_ID) {
-          const bar = document.getElementById('top-announcement-bar');
-          if (bar) bar.classList.add('hidden');
-        }
-        if (localStorage.getItem('atillaceviri_seen_ann') === LATEST_ANNOUNCEMENT_ID) {
-          ['nav-ann-badge', 'mobile-ann-badge'].forEach(id => {
-            const el = document.getElementById(id);
-            if (el) el.classList.add('hidden');
-          });
-        }
-      } catch (e) {}
-
-      const annSection = document.getElementById('duyurular');
-      if (annSection && 'IntersectionObserver' in window) {
-        const obs = new IntersectionObserver((entries) => {
-          if (entries.some(en => en.isIntersecting)) {
-            markAnnouncementsSeen();
-            obs.disconnect();
-          }
-        }, { threshold: 0.35 });
-        obs.observe(annSection);
-      }
-    })();
-
-    // Context-aware background transitions & Back-to-Top button
-    function scrollToTop() {
-      isManualNavigating = true;
-      clearTimeout(navTimeout);
-      navTimeout = setTimeout(() => { isManualNavigating = false; }, 1000);
-      switchBackground('portal');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    function toggleMobileMenu() {
-      const menu = document.getElementById('mobile-menu');
-      const btn = document.getElementById('mobile-menu-btn');
-      const openIcon = document.getElementById('icon-menu-open');
-      const closeIcon = document.getElementById('icon-menu-close');
-      if (!menu) return;
-      const isHidden = menu.classList.toggle('hidden');
-      if (btn) btn.setAttribute('aria-expanded', String(!isHidden));
-      if (openIcon) openIcon.classList.toggle('hidden', !isHidden);
-      if (closeIcon) closeIcon.classList.toggle('hidden', isHidden);
-    }
-
-    function closeMobileMenu() {
-      const menu = document.getElementById('mobile-menu');
-      const btn = document.getElementById('mobile-menu-btn');
-      const openIcon = document.getElementById('icon-menu-open');
-      const closeIcon = document.getElementById('icon-menu-close');
-      if (menu && !menu.classList.contains('hidden')) {
-        menu.classList.add('hidden');
-        if (btn) btn.setAttribute('aria-expanded', 'false');
-        if (openIcon) openIcon.classList.remove('hidden');
-        if (closeIcon) closeIcon.classList.add('hidden');
-      }
-    }
-
-    window.addEventListener('scroll', () => {
-      const scrollY = window.scrollY || window.pageYOffset;
-      const backToTopBtn = document.getElementById('back-to-top');
-
-      if (backToTopBtn) {
-        if (scrollY > 500) {
-          backToTopBtn.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
-          backToTopBtn.classList.add('opacity-100', 'translate-y-0');
-        } else {
-          backToTopBtn.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
-          backToTopBtn.classList.remove('opacity-100', 'translate-y-0');
-        }
-      }
-
-      if (isManualNavigating) return;
-
-      const innerH = window.innerHeight;
-
-      // 1. Top of page / Hero / Portal
-      if (scrollY < 280) {
-        switchBackground('portal');
-        return;
-      }
-
-      const evilwestEl = document.getElementById('evilwest');
-      const codeveinEl = document.getElementById('codevein');
-      const dlcEl = document.getElementById('dlc-section');
-      const expanseEl = document.getElementById('expanse');
-      const outerworldsEl = document.getElementById('outerworlds');
-
-      // 2. Evil West Section Check
-      if (evilwestEl) {
-        const ewRect = evilwestEl.getBoundingClientRect();
-        if (ewRect.top <= innerH * 0.70 && ewRect.bottom >= innerH * 0.15) {
-          switchBackground('evilwest');
-          return;
-        }
-      }
-
-      // 3. Code Vein Section Check
-      // Triggers reliably when top of Code Vein enters viewport (<= 70% of innerHeight)
-      // and stays active as long as Code Vein remains on screen
-      if (codeveinEl) {
-        const cvRect = codeveinEl.getBoundingClientRect();
-        if (cvRect.top <= innerH * 0.70 && cvRect.bottom >= innerH * 0.15) {
-          switchBackground('codevein');
-          return;
-        }
-      }
-
-      // 4. DLC Section Check (nested inside Expanse)
-      if (dlcEl) {
-        const dlcRect = dlcEl.getBoundingClientRect();
-        if (dlcRect.top <= innerH * 0.50 && dlcRect.bottom >= innerH * 0.25) {
-          switchBackground('dlc');
-          return;
-        }
-      }
-
-      // 5. Expanse Section Check
-      if (expanseEl) {
-        const expRect = expanseEl.getBoundingClientRect();
-        if (expRect.top <= innerH * 0.70 && expRect.bottom >= innerH * 0.20) {
-          switchBackground('expanse');
-          return;
-        }
-      }
-
-      // 6. Outer Worlds Section Check
-      if (outerworldsEl) {
-        const owRect = outerworldsEl.getBoundingClientRect();
-        if (owRect.top <= innerH * 0.70 && owRect.bottom >= innerH * 0.15) {
-          switchBackground('outerworlds');
-          return;
-        }
-      }
-
-      // 7. Default fallback (e.g. above Outer Worlds in catalog)
-      if (outerworldsEl && outerworldsEl.getBoundingClientRect().top > innerH * 0.70) {
-        switchBackground('portal');
-      }
-    }, { passive: true });
-
-    // Lightbox modal
-    function openLightbox(src, caption) {
-      const modal = document.getElementById('lightbox');
-      const img = document.getElementById('lightbox-img');
-      const cap = document.getElementById('lightbox-caption');
-      img.src = src;
-      cap.textContent = caption;
-      modal.classList.add('active');
-    }
-
-    function closeLightbox() {
-      document.getElementById('lightbox').classList.remove('active');
-    }
-
-    // Legal modal
-    function openLegalModal() {
-      const modal = document.getElementById('legal-modal');
-      if (modal) modal.classList.add('active');
-    }
-
-    function closeLegalModal() {
-      const modal = document.getElementById('legal-modal');
-      if (modal) modal.classList.remove('active');
-    }
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        closeLightbox();
-        closeLegalModal();
-        closeMobileMenu();
-      }
-    });
-
-    // Copy Email to clipboard (Prevents unwanted default Outlook/Mail app launch)
-    function copyEmail(e, btn) {
-      if (e) {
-        e.preventDefault();
-        e.stopPropagation();
-      }
-      const email = 'atillaceviri@gmail.com';
-
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(email);
-      } else {
-        const temp = document.createElement('textarea');
-        temp.value = email;
-        document.body.appendChild(temp);
-        temp.select();
-        document.execCommand('copy');
-        document.body.removeChild(temp);
-      }
-
-      if (btn) {
-        const label = btn.querySelector('.btn-label') || btn.querySelector('span');
-        if (label && !btn.dataset.originalText) {
-          btn.dataset.originalText = label.innerHTML;
-        }
-        if (label) {
-          label.innerHTML = '✓ Kopyalandı!';
-        }
-        btn.classList.add('border-emerald-500/60', 'text-emerald-300');
-
-        clearTimeout(btn._resetTimer);
-        btn._resetTimer = setTimeout(() => {
-          if (label && btn.dataset.originalText) {
-            label.innerHTML = btn.dataset.originalText;
-          }
-          btn.classList.remove('border-emerald-500/60', 'text-emerald-300');
-        }, 2200);
-      }
-
-      showToast();
-    }
-
-    function showToast() {
-      const toast = document.getElementById('toast');
-      if (!toast) return;
-      toast.classList.remove('translate-y-28', 'opacity-0', 'pointer-events-none');
-      toast.classList.add('translate-y-0', 'opacity-100');
-      clearTimeout(window.toastTimer);
-      window.toastTimer = setTimeout(() => {
-        toast.classList.remove('translate-y-0', 'opacity-100');
-        toast.classList.add('translate-y-28', 'opacity-0', 'pointer-events-none');
-      }, 4000);
-    }
-
-    // Copy SHA-256 hash to clipboard
-    function copyHash(hash, btn) {
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(hash);
-      } else {
-        const temp = document.createElement('textarea');
-        temp.value = hash;
-        document.body.appendChild(temp);
-        temp.select();
-        document.execCommand('copy');
-        document.body.removeChild(temp);
-      }
-      if (btn) {
-        const label = btn.querySelector('.hash-label');
-        if (label && !btn.dataset.origLabel) btn.dataset.origLabel = label.textContent;
-        if (label) label.textContent = '✓ SHA-256 Kopyalandı!';
-        clearTimeout(btn._hashTimer);
-        btn._hashTimer = setTimeout(() => {
-          if (label && btn.dataset.origLabel) label.textContent = btn.dataset.origLabel;
-        }, 2000);
-      }
-    }
-
-    // FAQ Accordion toggle
-    function toggleFaq(btn) {
-      const card = btn.parentElement;
-      const body = card.querySelector('.faq-body');
-      const icon = btn.querySelector('.faq-chevron');
-      if (!body) return;
-      const isHidden = body.classList.toggle('hidden');
-      btn.setAttribute('aria-expanded', String(!isHidden));
-      if (icon) icon.classList.toggle('rotate-180', !isHidden);
-    }
-
-    // Live GitHub Releases Download Counter (cached 10 min in sessionStorage)
-    (async function loadDownloadCounts() {
-      const cacheKey = 'atillaceviri_gh_releases_v3';
-      let releases = null;
-      try {
-        const cached = sessionStorage.getItem(cacheKey);
-        if (cached) {
-          const parsed = JSON.parse(cached);
-          if (Date.now() - parsed.ts < 10 * 60 * 1000) releases = parsed.data;
-        }
-      } catch (e) {}
-
-      if (!releases) {
-        try {
-          const res = await fetch('https://api.github.com/repos/atillaceviri/atillaceviri.github.io/releases');
-          if (res.ok) {
-            releases = await res.json();
-            try { sessionStorage.setItem(cacheKey, JSON.stringify({ ts: Date.now(), data: releases })); } catch (e) {}
-          }
-        } catch (e) { return; }
-      }
-      if (!Array.isArray(releases)) return;
-
-      const map = {
-        'outerworlds-v1.0': 'dl-count-outerworlds',
-        'outerworlds-v1.1': 'dl-count-outerworlds',
-        'codevein-v1.0': 'dl-count-codevein',
-        'expanse-v1.0': 'dl-count-expanse'
-      };
-      const totals = {};
-      for (const rel of releases) {
-        const targetId = map[rel.tag_name];
-        if (!targetId) continue;
-        const count = (rel.assets || []).reduce((sum, a) => sum + (a.download_count || 0), 0);
-        totals[targetId] = (totals[targetId] || 0) + count;
-      }
-      for (const [targetId, total] of Object.entries(totals)) {
-        const el = document.getElementById(targetId);
-        if (el && total > 0) {
-          el.textContent = '⬇ ' + total.toLocaleString('tr-TR') + ' İndirme';
-          el.classList.remove('hidden');
-        }
-      }
-    })();
-  </script>
+  <script src="./assets/site.js"></script>
 
   <!-- BACK TO TOP FLOATING BUTTON -->
   <button type="button" id="back-to-top" onclick="scrollToTop()" title="Yukarı Çık" aria-label="Yukarı Çık" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-2xl glass-card border border-cyan-500/40 bg-dark-900/90 hover:border-brand-cyan text-brand-cyan hover:text-white flex items-center justify-center shadow-2xl transition-all duration-300 opacity-0 translate-y-4 pointer-events-none cursor-pointer">
@@ -2628,5 +948,3 @@
     </a>
   </div>
 
-</body>
-</html>
