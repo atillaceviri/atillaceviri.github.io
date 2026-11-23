@@ -39,7 +39,7 @@
   </url>
   <url>
     <loc>https://atillaceviri.github.io/outer-worlds/</loc>
-    <lastmod>2026-11-22</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -57,6 +57,22 @@
     <image:image>
       <image:loc>https://atillaceviri.github.io/images/outerworlds_eridanos.webp</image:loc>
       <image:title>The Outer Worlds Murder on Eridanos DLC Türkçe Yama</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://atillaceviri.github.io/images/outerworlds_showcase_01_kopru_diyalog.webp</image:loc>
+      <image:title>The Outer Worlds Türkçe Yama — Köprü HUD ve ADA Diyaloğu</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://atillaceviri.github.io/images/outerworlds_showcase_02_itibar_menu.webp</image:loc>
+      <image:title>The Outer Worlds Türkçe Yama — Karakter ve Fraksiyon İtibar Menüsü</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://atillaceviri.github.io/images/outerworlds_showcase_03_ada_iletisim.webp</image:loc>
+      <image:title>The Outer Worlds Türkçe Yama — The Unreliable ADA Gemi İletişimi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://atillaceviri.github.io/images/outerworlds_showcase_04_phineas_yayin.webp</image:loc>
+      <image:title>The Outer Worlds Türkçe Yama — Phineas Welles Video Yayını Altyazısı</image:title>
     </image:image>
   </url>
   <url>
